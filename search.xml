@@ -168,21 +168,14 @@ class="math inline">\(\qquad\!\!\)</span>需要引用代码时，如果引用的
 &gt;，区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;
 即可，引用的区块内也可以使用其他的 Markdown
 语法，包括标题、列表、代码区块等。</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;Markdown 标记区块引用的方法是在行的最前面加&gt;</span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt;也可以只在整个段落的第一行最前面加上 &gt;</span></span><br><span class="line">&gt;&gt;区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可.</span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;<span class="emphasis">*我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span></span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;### 我是引用区块内使用标题3语法</span><br><span class="line">&gt;&gt;<span class="code">```java</span></span><br><span class="line"><span class="code">&gt;&gt;      //在引用区块内可以加入代码块</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.net.URL;</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.util.Arrays;</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.util.Date;</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.util.Set;</span></span><br><span class="line"><span class="code">&gt;&gt;```</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; Markdown 标记区块引用的方法是在行的最前面加&gt;</span></span><br><span class="line"><span class="quote">&gt; </span></span><br><span class="line"><span class="quote">&gt; 也可以只在整个段落的第一行最前面加上 &gt;</span></span><br><span class="line"><span class="quote">&gt; &gt; 区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可.</span></span><br><span class="line"><span class="quote">&gt; &gt; </span></span><br><span class="line"><span class="quote">&gt; &gt; <span class="emphasis">*我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span></span></span><br><span class="line"><span class="quote">&gt; &gt; </span></span><br><span class="line"><span class="quote">&gt; &gt; ### 我是引用区块内使用标题3语法</span></span><br><span class="line"><span class="quote">&gt; &gt; ```java</span></span><br><span class="line"><span class="quote">&gt; &gt;       //在引用区块内可以加入代码块</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.net.URL;</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.util.Arrays;</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.util.Date;</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.util.Set;</span></span><br><span class="line"><span class="quote">&gt; &gt; ```</span></span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <blockquote>
-<p>Markdown 标记区块引用的方法是在行的最前面加 &gt;</p>
-<p>也可以只在整个段落的第一行最前面加上 &gt;</p>
-<blockquote>
-<p>区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt; 即可.</p>
-</blockquote>
-<blockquote>
-<p><em>我是内部嵌套区块，我可以使用其他 Markdown 语法哦</em></p>
-</blockquote>
-<blockquote>
-<h3 id="我是引用区块内使用标题3语法">我是引用区块内使用标题3语法</h3>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;&gt;<span class="comment">//在引用区块内可以加入代码块</span></span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.net.URL;</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.util.Arrays;</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.util.Date;</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.util.Set;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<p>Markdown 标记区块引用的方法是在行的最前面加&gt;</p>
+<p>也可以只在整个段落的第一行最前面加上 &gt; &gt;
+区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可. &gt; &gt;
+<em>我是内部嵌套区块，我可以使用其他 Markdown 语法哦</em> &gt; &gt; ###
+我是引用区块内使用标题3语法 &gt; <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在引用区块内可以加入代码块</span></span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h4 id="六列表">（六）、列表：</h4>
 <p><span class="math inline">\(\qquad\!\!\)</span>Markdown
@@ -233,10 +226,9 @@ title 文字，只要在网址后面，用双引号把 title 文字包起来即�
 </ul></li>
 </ul>
 <p><strong>例如</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是 [<span class="string">百度</span>](<span class="link">http://www.baidu.com/“百度”</span>) 内联方式。</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是 [<span class="string">百度</span>](<span class="link">http://www.baidu.com/</span>) 内联方式。</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
-<p>这是 <a href="http://www.baidu.com/%22百度%22">百度</a>
-内联方式。</p>
+<p>这是 <a href="http://www.baidu.com/">百度</a> 内联方式。</p>
 <h4 id="八图片">（八）、图片：</h4>
 <p><span class="math inline">\(\qquad\!\!\)</span>Markdown
 使用一种和链接很相似的语法来标记图片，一个惊叹号
@@ -728,12 +720,12 @@ class="math inline">\(\LaTeX\)</span> 五花八门的公式，还是 Typora
 的部分功能，我都有没介绍到的地方。而且我接触 Markdown
 的时间也不算长，文章如有疏漏不当之处，请各位读者海涵。</p>
 <p><span
-class="math inline">\(\qquad\!\!\)</span>关于本文，文章同步发布于<a
-href="https://lhrg.github.io/Markdown标记语言入门.html"
-class="uri">https://lhrg.github.io/Markdown标记语言入门.html</a>，本文的
-Markdown源码 同步发布于<a
-href="https://lhrg.github.io/Markdown标记语言入门源码.html"
-class="uri">https://lhrg.github.io/Markdown标记语言入门源码.html</a></p>
+class="math inline">\(\qquad\!\!\)</span>关于本文，文章同步发布于 <a
+href="https://lhrg.github.io/Markdown标记语言入门"
+class="uri">https://lhrg.github.io/Markdown标记语言入门</a>，本文的
+Markdown源码 同步发布于 <a
+href="https://lhrg.github.io/Markdown标记语言入门源码"
+class="uri">https://lhrg.github.io/Markdown标记语言入门源码</a>。</p>
 <p><span
 class="math inline">\(\qquad\!\!\)</span>如果你看完这篇文章后不想尝试
 Markdown 的写作，那就权当是增加了知识；如果你看完这篇文章后对用 Markdown
