@@ -4,7 +4,6 @@
     <title>Markdown标记语言入门</title>
     <url>/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="markdown标记语言入门">Markdown标记语言入门</h2>
-<p>[TOC]</p>
 <h3 id="一什么是-markdown">一、什么是 Markdown：</h3>
 <p><span class="math inline">\(\qquad\!\!\)</span>Markdown
 是一种轻量级标记语言，由约翰·格鲁伯（John Gruber）于 <span
@@ -750,6 +749,12 @@ href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTe
 不要太棒的Markdown编辑器</a></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
