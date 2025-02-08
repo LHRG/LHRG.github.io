@@ -1,10 +1,501 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Markdown标记语言入门</title>
+    <url>/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="Markdown标记语言入门"><a href="#Markdown标记语言入门" class="headerlink" title="Markdown标记语言入门"></a>Markdown标记语言入门</h2><p>[TOC]</p>
+<h3 id="一、什么是-Markdown："><a href="#一、什么是-Markdown：" class="headerlink" title="一、什么是 Markdown："></a>一、什么是 Markdown：</h3><p>$\qquad!!$Markdown 是一种轻量级标记语言，由约翰·格鲁伯（John Gruber）于 $2004$ 年创立。$2017$ 年，GitHub 发布了基于 CommonMark 的 Github Flavored Markdown（<a href="https://github.github.com/gfm/">GFM</a>）的正式规范。</p>
+<p>$\qquad!!$约翰·格鲁伯对于 Markdown 的定义是：</p>
+<blockquote>
+<p><a href="https://daringfireball.net/projects/markdown/">Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</a> </p>
+<p>Markdown 是面向 Web作家 的文本到 HTML 转换工具。Markdown 允许您使用易于阅读，易于编写的纯文本格式进行编写，然后将其转换为结构上有效的 XHTML（或HTML）。</p>
+</blockquote>
+<p>$\qquad!!$Markdown 的目标是实现「易读易写」，能够通过简单的标记语法，使普通的文本内容具有一定的格式。<strong>标记语法</strong>即通过一系列的控制字符，使得<strong>写作本身</strong>与<strong>排版的细节</strong>相分离。因此 Markdown 能够让你双手不离开键盘的情况下（只是使用键盘，而不用鼠标或触屏），实现给文本<strong>加粗</strong>，区别各级标题，引用格式，插入图片、链接、表格、数学公式等等功能。例如：<strong>加粗</strong>、<em>倾斜</em>、<del>删除线</del></p>
+<p>$\qquad!!$分离写作和排版还会带来一个意想不到的好处：你可以轻松地、迅速地把文档转换成另一个主题，或者_另一个样式_。</p>
+<span id="more"></span>
+
+<h3 id="二、Markdown-能干什么："><a href="#二、Markdown-能干什么：" class="headerlink" title="二、Markdown 能干什么："></a>二、Markdown 能干什么：</h3><p>$\qquad!!$作为一种为写作而生的语言，它在日常写作方面几乎可以代替 MS Word。你可以用 Markdown：</p>
+<ul>
+<li>写文章</li>
+<li>记笔记</li>
+<li>写 Blog</li>
+<li>写书</li>
+<li>甚至……写论文</li>
+</ul>
+<p>$\qquad!!$由于 Markdown 也是一种适用于网络的书写语言，很多知名的网站都支持用 Markdown 写作：</p>
+<ul>
+<li>简书</li>
+<li>洛谷，国内著名 OJ</li>
+<li>马克飞象，印象笔记的一款工具</li>
+<li>GitHub，全球最大的<del>同性</del>程序员交友网站</li>
+<li>Reddit，知名的娱乐、社交及新闻网站</li>
+<li>Gitbook，写作网站</li>
+</ul>
+<p>$\qquad!!$同时，本文就用 Markown 写作。</p>
+<h3 id="三、Markdown-的优缺点："><a href="#三、Markdown-的优缺点：" class="headerlink" title="三、Markdown 的优缺点："></a>三、Markdown 的优缺点：</h3><p>$\qquad!!$任何事物都具有两面性，虽然 Markdown 的优点不少，但是它还是具有一定的缺陷。</p>
+<h4 id="（一）、优点："><a href="#（一）、优点：" class="headerlink" title="（一）、优点："></a>（一）、优点：</h4><ol>
+<li><p><strong>标准化</strong>：我们都有这种体验，一份 Word 文档，在自己电脑上看还好好的，但是发给他人就乱码了，这多半是由于两个软件平台编码格式不一致导致的。而 Markdown 不存在这样的问题，使用正式规范的编码对文本进行的格式化，在任何支持 Markdown 的平台，都能正常显示。</p>
+<blockquote>
+<p>由于平台显示形态可能不一样，比如标题的颜色、引用线粗细等会不太一样，因此要忠实重现文本，最好用 PDF 版本进行文件的传阅。</p>
+</blockquote>
+</li>
+<li><p><strong>轻量化</strong>：纯文本的 Markdown 文档像记事本一样的快速，简洁，不用因为想写一个小文档，打开了笨重达 $2GB$ 的 MS Word。并且易于学习，新手学习没有门槛，入门简单、熟练快速。</p>
+</li>
+<li><p><strong>易于排版</strong>：可以快速实现文字的排版。只通过键盘输入即可实现排版，不用另外操作排版，可以让作者摆脱排版的困扰，专心写作。不用像用 MS Word 一样一边写一边（凭感觉）排版, 甚至打乱了你写作的节奏。</p>
+</li>
+<li><p><strong>一次编辑多次多平台使用</strong>：因为是纯文本，只要支持 Markdown 的地方都能获得相同的排版效果，不需要重复排版。同时它可在多种平台上获得支持，不像在很多地方并不支持 .doc 和 .docx 格式， 或者支持较弱。 比如 Linux、Mac OS、 笔记应用，以及绝大部分网站。并且很多 MarkDown 编辑器都支持直接将文本转换为 PDF、Word、HTML 等格式。</p>
+</li>
+</ol>
+<h4 id="（二）、缺点："><a href="#（二）、缺点：" class="headerlink" title="（二）、缺点："></a>（二）、缺点：</h4><ol>
+<li><strong>需要记一些语法</strong>。</li>
+<li><strong>难以进行高级排版</strong>：由于很多复杂的排版无法实现，只适用于普通排版要求的文档。</li>
+<li><strong>可能令人分心</strong>：由于严格的标准化，在书写 Markdown 文档的时候通常会非常注意格式排版，比如：中英文标点符号，空格，列表的插入与退出等。</li>
+</ol>
+<h3 id="四、Markdown-的语法："><a href="#四、Markdown-的语法：" class="headerlink" title="四、Markdown 的语法："></a>四、Markdown 的语法：</h3><p>$\qquad!!$看完前面的介绍，大家有没有跃跃欲试的感觉呢？那么接下来我们就来学习一下 Markdown 的基本语法！</p>
+<h4 id="（一）、段落与换行："><a href="#（一）、段落与换行：" class="headerlink" title="（一）、段落与换行："></a>（一）、段落与换行：</h4><p>$\qquad!!$一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的<strong>空行</strong>。普通的 Markdown 段落不可以用空格或制表符来缩进。（所以这个段落前的空白怎么做到的呢？那就是 $\LaTeX$ 的妙用喽！详细请参照下面<strong>内联公式</strong>部分。）</p>
+<blockquote>
+<p>空行：一行之内只包含回车换行、空格、制表符。</p>
+</blockquote>
+<h4 id="（二）、标题："><a href="#（二）、标题：" class="headerlink" title="（二）、标题："></a>（二）、标题：</h4><p>$\qquad!!$Markdown 的标题是在行首插入 $1$ 到 $6$ 个 #，# 和标题文字之间使用一个或多个空格，对应到标题 $1$ 到 $6$ 级。第一级和第二级的标题后自带分割线。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 这是 H1</span><br><span class="line">## 这是 H2</span><br><span class="line">### 这是 H3</span><br><span class="line">#### 这是 H4</span><br><span class="line">##### 这是 H5</span><br><span class="line">###### 这是 H6</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<p><a href="https://imgchr.com/i/ye1QL8"><img src="https://s3.ax1x.com/2021/02/01/ye1QL8.png" alt="ye1QL8.png"></a></p>
+<h4 id="（三）、文字的修饰："><a href="#（三）、文字的修饰：" class="headerlink" title="（三）、文字的修饰："></a>（三）、文字的修饰：</h4><p>$\qquad!!$Markdown 使用星号（ * ）和底线（ _ ）作为修饰字词的符号，被 * 或 _ 包围的字词会被转成用 <code>&lt;em&gt;</code> 标签包围（即<em>斜体</em>），用两个 * 或 _ 包起来的话，则会被转成 <code>&lt;strong&gt;</code>（即<strong>粗体</strong>）。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*单星号斜体*</span><br><span class="line"></span><br><span class="line">_单下划线斜体_</span><br><span class="line"></span><br><span class="line">**双引号加粗**</span><br><span class="line"></span><br><span class="line">__双下划线加粗__</span><br><span class="line"></span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<p><em>单星号斜体</em></p>
+<p><em>单下划线斜体</em></p>
+<p><strong>双星号加粗</strong></p>
+<p><strong>双下划线加粗</strong></p>
+<p><del>删除线</del></p>
+<p>$\qquad!!$但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。如果要在文字前后直接插入普通的星号或底线，你可以用反斜线（\）（参见下面的<strong>反斜杠</strong>部分）。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用反斜线开头的\*被当做是普通的字符\*</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<p>使用反斜线开头的*被当做是普通的字符*</p>
+<h4 id="（四）、代码块："><a href="#（四）、代码块：" class="headerlink" title="（四）、代码块："></a>（四）、代码块：</h4><ol>
+<li><h5 id="小块代码："><a href="#小块代码：" class="headerlink" title="小块代码："></a>小块代码：</h5><p> $\qquad!!$需要引用代码时，如果引用的语句只有一段，不分行，可以用 ` 将语句包起来。</p>
+<blockquote>
+<p>如果你真的要打这个字符的话，可以仿照和 * 这个字符一样的处理方式，在 ` 前加一个反斜杠。</p>
+</blockquote>
+<p> <strong>例如</strong>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`#include&lt;iostream&gt;`</span><br></pre></td></tr></table></figure>
+
+<p> <strong>效果</strong>：</p>
+<p> <code>#include&lt;iostream&gt;</code></p>
+</li>
+<li><h5 id="大块代码："><a href="#大块代码：" class="headerlink" title="大块代码："></a>大块代码：</h5><p> $\qquad!!$Markdown 建立代码块的方法：将 &#96;&#96;&#96; 置于这段代码的首行和末行，独立成一行。 </p>
+<p> $\qquad!!$第一行的 &#96;&#96;&#96; 后面可以加上语言名称，例如 cpp、java、c、pascal 等（不要写成 c++ ）。</p>
+<p> <strong>例如</strong>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```cpp</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">int a,b;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	std::cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">	std::cout&lt;&lt;a+b&lt;&lt;&quot;\n&quot;;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">​```</span><br></pre></td></tr></table></figure>
+
+<p> <strong>效果</strong>：</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> a,b;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">	std::cout&lt;&lt;a+b&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="（五）、区块引用："><a href="#（五）、区块引用：" class="headerlink" title="（五）、区块引用："></a>（五）、区块引用：</h4><p>$\qquad!!$Markdown 标记区块引用的方法是在行的最前面加 &gt; ，也可以只在整个段落的第一行最前面加上 &gt;，区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt; 即可，引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;Markdown 标记区块引用的方法是在行的最前面加&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt;也可以只在整个段落的第一行最前面加上 &gt;</span><br><span class="line">&gt;&gt;区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可.</span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;*我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;### 我是引用区块内使用标题3语法</span><br><span class="line">&gt;&gt;```java</span><br><span class="line">&gt;&gt;      //在引用区块内可以加入代码块</span><br><span class="line">&gt;&gt;      import java.net.URL;</span><br><span class="line">&gt;&gt;      import java.util.Arrays;</span><br><span class="line">&gt;&gt;      import java.util.Date;</span><br><span class="line">&gt;&gt;      import java.util.Set;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">**效果**：</span><br><span class="line"></span><br><span class="line">&gt;Markdown 标记区块引用的方法是在行的最前面加 &gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt;也可以只在整个段落的第一行最前面加上 &gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt; 即可.</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;*我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;### 我是引用区块内使用标题3语法</span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;```java</span><br><span class="line">&gt;&gt;//在引用区块内可以加入代码块</span><br><span class="line">&gt;&gt;import java.net.URL;</span><br><span class="line">&gt;&gt;import java.util.Arrays;</span><br><span class="line">&gt;&gt;import java.util.Date;</span><br><span class="line">&gt;&gt;import java.util.Set;</span><br></pre></td></tr></table></figure>
+
+<h4 id="（六）、列表："><a href="#（六）、列表：" class="headerlink" title="（六）、列表："></a>（六）、列表：</h4><p>$\qquad!!$Markdown 支持有序列表和无序列表，无序列表使用星号、加号或是减号作为列表标记，有序列表则使用数字接着一个英文句点。两种列表方式格式都是：列表标记+空格+列表项，即列表项目标记通常是放在最左边，也可以缩进最多 $3$ 个空格，项目标记后面则一定要接着至少一个空格或制表符。</p>
+<p>$\qquad!!$列表能够支持通过换行自动延续、列表内嵌套列表、列表内使用其它 Markdown 语法等功能。</p>
+<ol>
+<li><h5 id="无序列表："><a href="#无序列表：" class="headerlink" title="无序列表："></a>无序列表：</h5><p> $\qquad!!$星号、加号或是减号三种列表方式效果等同。</p>
+<p> <strong>例如</strong>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br><span class="line"></span><br><span class="line">+   Red</span><br><span class="line">+   Green</span><br><span class="line">+   Blue</span><br><span class="line"></span><br><span class="line">-   Red</span><br><span class="line">-   Green</span><br><span class="line">-   Blue</span><br></pre></td></tr></table></figure>
+
+<p> <strong>效果均为</strong>：</p>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+</li>
+<li><h5 id="有序列表：（其实现在就在一个有序列表当中……）"><a href="#有序列表：（其实现在就在一个有序列表当中……）" class="headerlink" title="有序列表：（其实现在就在一个有序列表当中……）"></a>有序列表：（其实现在就在一个有序列表当中……）</h5><p> $\qquad!!$有序列表则使用数字接着一个英文句点。</p>
+<p> <strong>例如</strong>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.  Red</span><br><span class="line">2.  Green</span><br><span class="line">3.  Blue</span><br></pre></td></tr></table></figure>
+
+<p> <strong>效果</strong>：</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+</li>
+</ol>
+<h4 id="（七）、行内链接："><a href="#（七）、行内链接：" class="headerlink" title="（七）、行内链接："></a>（七）、行内链接：</h4><p>$\qquad!!$在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。</p>
+<p><strong>形如</strong>：<code>[an example](http://example.com/ &quot;title&quot;)</code></p>
+<ul>
+<li><p><code>an example</code> 是想显示出的文字</p>
+</li>
+<li><p><code>http://example.com/</code> 是网站链接, 也可以是本机路径</p>
+</li>
+<li><p><code>&quot;title&quot;</code> 是把鼠标放在这个链接上时显示的文本</p>
+<ul>
+<li>相信你也发现了这个东西似乎没什么用。所以, 这部分是可选的</li>
+<li>对于印刷品，这并没有什么用</li>
+</ul>
+</li>
+</ul>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是 [百度](http://www.baidu.com/“百度”) 内联方式。</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<p>这是 <a href="http://www.baidu.com/%22%E7%99%BE%E5%BA%A6%22">百度</a> 内联方式。</p>
+<h4 id="（八）、图片："><a href="#（八）、图片：" class="headerlink" title="（八）、图片："></a>（八）、图片：</h4><p>$\qquad!!$Markdown 使用一种和链接很相似的语法来标记图片，一个惊叹号 !，接着一个方括号，里面放上图片的替代文字（这些文字将在图片加载失败的时候显示），接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 title 文字。</p>
+<p><strong>形如</strong>：<code>![lable](picture path &quot;title&quot;)</code></p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![YuYl5V.jpg](https://s1.ax1x.com/2020/05/08/YuYl5V.jpg)</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/YuYl5V.jpg" alt="YuYl5V.jpg"></p>
+<center> 我的电脑桌面啦 </center> 
+
+<h4 id="（九）、自动链接："><a href="#（九）、自动链接：" class="headerlink" title="（九）、自动链接："></a>（九）、自动链接：</h4><p>$\qquad!!$Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://www.baidu.com&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<p><a href="https://www.baidu.com/">https://www.baidu.com</a></p>
+<h4 id="（十）、表格："><a href="#（十）、表格：" class="headerlink" title="（十）、表格："></a>（十）、表格：</h4><p>$\qquad!!$表格是 GFM 对 Markdown 原规范的扩展，但几乎所有的编辑器都支持这一语法。表格由两部分组成：表头和内容。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Items          | Price      | Description               |</span><br><span class="line">| -              | :--:       | -:                        |</span><br><span class="line">| T-Shirt        | £9.15      | Suggested in the NCEE     |</span><br><span class="line">| Uniform in H3Z | about ¥100 | design beyond description |</span><br><span class="line">| left aligned   | centered   | right aligned             |</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>Items</th>
+<th align="center">Price</th>
+<th align="right">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T-Shirt</td>
+<td align="center">£9.15</td>
+<td align="right">Suggested in the NCEE</td>
+</tr>
+<tr>
+<td>Uniform in H3Z</td>
+<td align="center">about ¥100</td>
+<td align="right">design beyond description</td>
+</tr>
+<tr>
+<td>left aligned</td>
+<td align="center">centered</td>
+<td align="right">right aligned</td>
+</tr>
+</tbody></table>
+<p>$\qquad!!$上面的分隔符是 |， 也就是 Backspace 和 Enter 中间的键。</p>
+<ul>
+<li>表头（也就是第一行）是必选的</li>
+<li>第二行声明了表格。每格中 -  至少一个， 不过也可以是连续的多个， 没有影响<ul>
+<li>每格中两边的 : 代表对齐方式<ol>
+<li>:- 或者 - 左对齐</li>
+<li>:-: 居中对齐</li>
+<li>-: 右对齐</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>之后的每一行就是表格的具体内容</li>
+</ul>
+<p>$\qquad!!$美观起见，你可以在每一格的文字两边加入若干空格，但没有影响。每一格的文字都可以为空（包括表头），只需有两边的 | 即可，这时表格中的这一格也会为空。</p>
+<h4 id="（十一）、分隔线："><a href="#（十一）、分隔线：" class="headerlink" title="（十一）、分隔线："></a>（十一）、分隔线：</h4><p>$\qquad!!$可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他内容。也可以在星号或是减号中间插入空格。</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * *</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h4 id="（十二）、反斜杠："><a href="#（十二）、反斜杠：" class="headerlink" title="（十二）、反斜杠："></a>（十二）、反斜杠：</h4><p>$\qquad!!$Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用<code>&lt;em&gt;</code>标签倾斜），你可以在星号的前面加上反斜杠。</p>
+<p>$\qquad!!$Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号。加上反斜杠后，这些符号都会以原来的方式显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
+
+<h4 id="（十三）、嵌入-HTML："><a href="#（十三）、嵌入-HTML：" class="headerlink" title="（十三）、嵌入 HTML："></a>（十三）、嵌入 HTML：</h4><p>$\qquad!!$根据 Markdown 的定义或者说原理可知：Markdown 渲染就是把它翻译成 HTML。</p>
+<p>$\qquad!!$那么, 我们可不可以在 Markdown 中直接使用 HTML 呢? 答案是肯定的。有能力的同学, 可以在写的 Markdown 文档中加入 HTML 代码，来实现一些 Markdown 本身无法实现的功能。</p>
+<p><strong>例如</strong>：上文图片下面的那句居中的话：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;center&gt; 我的电脑桌面啦 &lt;/center&gt; </span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<center> 我的电脑桌面啦 </center> 
+
+
+
+<blockquote>
+<p>不过，必须用 HTML 的地方其实很少。而且很多都可以用内联的 $\LaTeX$ 代替。</p>
+</blockquote>
+<p>$\qquad!!$比如，在表格中实现换行：</p>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//HTML 实现换行：</span><br><span class="line">| Header1 | Header2                          |</span><br><span class="line">|---------|----------------------------------|</span><br><span class="line">| item 1  | 1. one&lt;br /&gt;2. two&lt;br /&gt;3. three |</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>Header1</th>
+<th>Header2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>item 1</td>
+<td>1. one<br />2. two<br />3. three</td>
+</tr>
+</tbody></table>
+<p><strong>例如</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//LaTeX 实现换行：</span><br><span class="line">| Header1 | Header2                          |</span><br><span class="line">|---------|----------------------------------|</span><br><span class="line">| item 1  | $ 1. one \\ 2. two \\ 3. three $ |</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong>：（大家有没有觉得用 $\LaTeX$ 不仅仅能够换行，而且渲染出来的数字和英文更美观了呢？）</p>
+<table>
+<thead>
+<tr>
+<th>Header1</th>
+<th>Header2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>item 1</td>
+<td>$ 1. one \ 2. two \ 3. three $</td>
+</tr>
+</tbody></table>
+<h3 id="五、-LaTeX-公式："><a href="#五、-LaTeX-公式：" class="headerlink" title="五、$\LaTeX$ 公式："></a>五、$\LaTeX$ 公式：</h3><p>$\qquad!!$前文中多次提到了一个词：$\LaTeX$，相信大家一定对它已经有所好奇，那么它究竟是什么呢？应该如何使用呢？</p>
+<h4 id="（一）、-LaTeX-简介："><a href="#（一）、-LaTeX-简介：" class="headerlink" title="（一）、$\LaTeX$ 简介："></a>（一）、$\LaTeX$ 简介：</h4><p>$\qquad!!\TeX$ 是一个由美国计算机教授高德纳编写的功能强大的排版软件，而为了让使用者可以更为方便的使用 $\TeX$的强大功能，美国计算机科学家莱斯利·兰伯特在 $20$ 世纪 $80$ 年代初期开发了一种基于 $\TeX$ 的排版系统—— $\LaTeX$。</p>
+<p>$\qquad!!$ $\LaTeX$ 是当今世界上最流行和使用最为广泛的 $\TeX$ 宏集。使用 $\LaTeX$ 基本上不需要使用者自己设计命令和宏等，因为 $\LaTeX$ 已经替你做好了。因此，即使使用者并不是很了解 $\TeX$，也可以在短短的时间内生成高质量的文档。<strong>而对于生成复杂的数学公式，$\LaTeX$ 表现的更为出色</strong>。</p>
+<p>$\qquad!\LaTeX$作为一门能<strong>生成媲美书籍的质量的文章</strong>的语言，和 Markdown 一样可以用来写作，但是这里和这篇文章无关，就不再过多介绍了。不过有兴趣的同学可以参考 Reference 中的 ${}^5$ 自行学习。</p>
+<h4 id="（二）、内联公式："><a href="#（二）、内联公式：" class="headerlink" title="（二）、内联公式："></a>（二）、内联公式：</h4><p>$\qquad!!$虽然 $\LaTeX$ 作为一门独立的排版系统，但是它的行内数学公式却可以在 Markdown 中作为内联公式所存在。就我个人而言，如此喜欢使用 Markdown，与能够生成复杂、漂亮的数学公式的内联公式密不可分。</p>
+<p>$\qquad!!$在 Markdown 文档中，将数学公式写在两个 $ 之间，便代表插入了行内数学公式。</p>
+<h4 id="（三）、部分语法："><a href="#（三）、部分语法：" class="headerlink" title="（三）、部分语法："></a>（三）、部分语法：</h4><p>$\qquad!!$由于 $\LaTeX$ 的功能十分强大，支持的公式类型也极其之多，在这里仅仅介绍一部分我个人认为比较常用的语法，其它更多可参考 Reference 中的 ${}^6$ 自行学习。</p>
+<ol>
+<li><p>上标下标：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$a^2 a_2 a^&#123;2+2&#125; a_&#123;i,j&#125; a^2_2 &#123;&#125;^2_1\!X^3_4$</span><br><span class="line">// \!的作用在下面空格一栏有讲述。</span><br></pre></td></tr></table></figure>
+
+<p> $a^2 \ \ a_2 \ \ a^{2+2} \ \ a_{i,j} \ \ a^2_2 \ \ {}^2_1!X^3_4$</p>
+</li>
+<li><p>根号：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\surd \sqrt&#123;2&#125; \sqrt[n]&#123;&#125; \sqrt[n]&#123;x&#125;$</span><br></pre></td></tr></table></figure>
+
+<p> $\surd \ \ \sqrt{2} \ \ \sqrt[n]{} \ \ \sqrt[n]{x}$</p>
+</li>
+<li><p>运算符、巨运算符：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$+ - \pm \mp \times \div$</span><br></pre></td></tr></table></figure>
+
+<p> $+ \ \ - \ \ \pm \ \ \mp \ \ \times \ \ \div$</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\sum_&#123;i=1&#125;^na_i \sum\limits_&#123;i=1&#125;^na_i$</span><br><span class="line">// 求 a_1+……+a_n</span><br><span class="line">$\prod_&#123;i=1&#125;^na_i \prod\limits_&#123;i=1&#125;^na_i$</span><br><span class="line">// 求 a_1*……*a_n</span><br></pre></td></tr></table></figure>
+
+<p>  $\sum_{i&#x3D;1}^na_i \ \ \sum\limits_{i&#x3D;1}^na_i \ \ \prod_{i&#x3D;1}^na_i \ \ \prod\limits_{i&#x3D;1}^na_i$</p>
+</li>
+<li><p>分数、百分数：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\frac&#123;1&#125;&#123;2&#125;=0.5 \tfrac&#123;1&#125;&#123;2&#125;=0.5 \dfrac&#123;1&#125;&#123;2&#125;=0.5$</span><br><span class="line">$\dfrac&#123;1&#125;&#123;x+\dfrac&#123;3&#125;&#123;y+\dfrac&#123;1&#125;&#123;5&#125;&#125;&#125;$</span><br><span class="line">// 从美观的角度来看，我通常使用 \dfrac&#123;&#125;&#123;&#125; 作为分数</span><br></pre></td></tr></table></figure>
+
+<p> $\frac{1}{2}&#x3D;0.5 \ \ \tfrac{1}{2}&#x3D;0.5 \ \ \dfrac{1}{2}&#x3D;0.5 \ \ \dfrac{1}{x+\dfrac{3}{y+\dfrac{1}{5}}}$</p>
+</li>
+<li><p>标准函数：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\sin a \cos b \tan c \left\vert a \right\vert$</span><br><span class="line">$\min(x,y) \max(x,y) \gcd(m,n) \operatorname&#123;lcm&#125;(m,n)$</span><br><span class="line"> //未预先定义的标准函数，均可用 \operatorname&#123;&#125;() 的格式定义</span><br></pre></td></tr></table></figure>
+
+<p>  $\sin a \ \ \cos b \ \ \tan c \ \ \left\vert a \right\vert \ \ \min(x,y) \ \ \max(x,y) \ \ \gcd(m,n) \ \ \operatorname{lcm}(m,n)$</p>
+</li>
+<li><p>集合符号：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\&#123; \&#125; \emptyset \varnothing $</span><br></pre></td></tr></table></figure>
+
+<p> ${ } \ \ \emptyset \ \ \varnothing $</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\in \notin \not\in \ni \not\ni$</span><br><span class="line">// \not 是在下一个字符上画斜杠。</span><br></pre></td></tr></table></figure>
+
+<p> $\in \ \ \notin \ \ \not\in \ \ \ni \ \ \not\ni$</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\cap \cup \complement_U A$</span><br></pre></td></tr></table></figure>
+
+<p> $\cap \ \ \cup \ \ \complement_U A$</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\subset \supset \subseteqq \subsetneqq \supseteqq \supsetneqq$</span><br></pre></td></tr></table></figure>
+
+<p> $\subset \ \ \supset \ \ \subseteqq \ \ \subsetneqq \ \ \supseteqq \ \ \supsetneqq$</p>
+</li>
+<li><p>关系符号：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$= \ne \neq \equiv \not\equiv \approx$</span><br></pre></td></tr></table></figure>
+
+<p> $&#x3D; \ \ \ne \ \ \neq \ \ \equiv \ \ \not\equiv \ \ \approx$</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$&lt; &gt; \leqslant \geqslant$</span><br></pre></td></tr></table></figure>
+
+<p> $&lt; \ \ &gt; \ \ \leqslant \ \ \geqslant$</p>
+</li>
+<li><p>几何符号：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\parallel \perp \angle \sphericalangle \measuredangle 45^\circ$</span><br></pre></td></tr></table></figure>
+
+<p> $\parallel \ \ \perp \ \ \angle \ \ \sphericalangle \ \ \measuredangle \ \ 45^\circ$</p>
+</li>
+<li><p>逻辑符号：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\forall \exists \nexists \therefore \because \And \&amp;$</span><br></pre></td></tr></table></figure>
+
+<p> $\forall \ \ \exists \ \ \nexists \ \ \therefore \ \ \because \ \ \And \ \ &amp;$</p>
+</li>
+<li><p>希腊字母：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\alpha \beta \gamma \eta \theta \mu \pi \rho \omega \phi$</span><br></pre></td></tr></table></figure>
+
+<p>$\alpha \beta \gamma \eta \theta \mu \pi \rho \omega \phi$</p>
+</li>
+<li><p>空格和换行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$x\!y \\ xy \\ x\,y \\ x\;y \\ x\ y \\ x\quad y \\ x\qquad y$</span><br></pre></td></tr></table></figure>
+
+<p>$x!y 宽度为-\dfrac{m}{6}\ xy 宽度为0\ x,y 宽度为\dfrac{m}{6}\ x;y 宽度为\dfrac{2m}{7}\ x\ y 宽度为\dfrac{m}{3}\ x\quad y 宽度为m\ x\qquad y宽度为2m$</p>
+<blockquote>
+<p>在文档中，段落前空两格大概是 $\dfrac{5m}{3}$ 的宽度，所以在段首键入 <code>$\qquad\!\!$</code> 即可做到。</p>
+</blockquote>
+</li>
+<li><p>其它：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\TeX \LaTeX$</span><br></pre></td></tr></table></figure>
+
+<p>$\TeX \ \ \LaTeX$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 二项式系数</span><br><span class="line">$\dbinom&#123;n&#125;&#123;m&#125;=\dbinom&#123;n&#125;&#123;n-m&#125;=C_n^m=C_n^&#123;n-m&#125;$</span><br></pre></td></tr></table></figure>
+
+<p>$\dbinom{n}{m}&#x3D;\dbinom{n}{n-m}&#x3D;C_n^m&#x3D;C_n^{n-m}$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 方程组</span><br><span class="line">$\begin&#123;cases&#125;2x+9y-5z=10\\4x+20y+z=24\\x-\dfrac&#123;1&#125;&#123;2&#125;y+3z=8\end&#123;cases&#125;$</span><br></pre></td></tr></table></figure>
+
+<p>$\begin{cases}2x+9y-5z&#x3D;10\4x+20y+z&#x3D;24\x-\dfrac{1}{2}y+3z&#x3D;8\end{cases}$</p>
+</li>
+</ol>
+<p>$\qquad!!$虽然看起来挺多，但是其实还有颜色、字体更多的公式和符号的语法没有介绍，更多可参考 Reference 中的 ${}^6$ 自行学习。</p>
+<h3 id="六、Markdown-编辑器-Typora："><a href="#六、Markdown-编辑器-Typora：" class="headerlink" title="六、Markdown 编辑器 Typora："></a>六、Markdown 编辑器 Typora：</h3><p>$\qquad!!$学会了 Markdown 的语法后，大家就可以在很多网站上进行相应的编辑。但是如果想在本地进行利用 Markdown 书写，并且导出为各种格式的文档，就需要一款 Markdown 编辑器。在众多的 Markdown 编辑器中，在这里推荐给大家一款相当好用的 Markdown 编辑器：Typora.</p>
+<h4 id="（一）、什么是-Typora"><a href="#（一）、什么是-Typora" class="headerlink" title="（一）、什么是 Typora?"></a>（一）、什么是 Typora?</h4><p>$\qquad!!$Typora 是一款轻便、简洁、<strong>免费</strong>、轻量级的 Markdown 编辑器，它是一款跨平台的 Markdown 写作软件，具备写作 Markdown 的绝大部分功能，你可以在 Windows,Mac OS，甚至各大 Linux 发行版上使用它。</p>
+<p>$\qquad!!$作为一款 <strong>富文本的编辑模式 +</strong> <strong>Markdown 源格式</strong> 的编辑器，Typora 支持<strong>即时渲染</strong>技术，即**“所见即所得”**。我们可以像编辑 Word 文档一样流畅地编辑 Markdown 文档。这是 Typora 与其它各种 Markdown 编辑器最大的区别，不用像其它编辑器一样拥有繁重的工具栏以及必须分为左右两列：++ 源码 ++|++ 显示 ++，十分便捷。</p>
+<h4 id="（二）、外观："><a href="#（二）、外观：" class="headerlink" title="（二）、外观："></a>（二）、外观：</h4><p>$\qquad!!$图标样式：</p>
+<p><a href="https://imgchr.com/i/yu4Oat"><img src="https://s3.ax1x.com/2021/02/02/yu4Oat.png" alt="yu4Oat.png" style="zoom:50%;" /></a></p>
+<p>$\qquad!!$光是图标是不是就已经感觉非常简洁了呢？还有更加简洁的就是，其它的 Markdown 编辑器一般都有一个工具栏并且一半是编辑窗口，一半是预览窗口：<a href="https://imgchr.com/i/yu50eA"><img src="https://s3.ax1x.com/2021/02/02/yu50eA.png" alt="yu50eA.png"></a></p>
+<p>$\qquad!!$但是 Typora 的窗口：<a href="https://imgchr.com/i/yu5jm9"><img src="https://s3.ax1x.com/2021/02/02/yu5jm9.png" alt="yu5jm9.png"></a></p>
+<p>既不存在工具栏也仅仅为单独一个界面。</p>
+<h4 id="（三）、主题："><a href="#（三）、主题：" class="headerlink" title="（三）、主题："></a>（三）、主题：</h4><p>$\qquad!!$细心的同学们一定能注意到上面 Typora 页面顶部有一个<strong>主题</strong>菜单，选择后发现其中有五个不同的主题选项：Github,Newsprint,Night,Pixyll,Whitey.</p>
+<p><a href="https://imgchr.com/i/yuIJ7n"><img src="https://s3.ax1x.com/2021/02/02/yuIJ7n.png" alt="yuIJ7n.png"></a></p>
+<p>$\qquad!!$这里放一张来自 Typora 官网的图片，从左到右依次为 Github,Newsprint,Night,Whitey 主题的页面。</p>
+<p>$\qquad!!$看到了这么几个主题，有没有想都体验一遍的冲动？不用着急，Typora 不仅仅支持这五个自带的主题，更支持定制化主题，开发者可以开发主题。如果你对 CSS 有所涉及，便能做出专属于自己的主题。</p>
+<h4 id="（四）、对于-Markdown-的支持："><a href="#（四）、对于-Markdown-的支持：" class="headerlink" title="（四）、对于 Markdown 的支持："></a>（四）、对于 Markdown 的支持：</h4><p>$\qquad!!$除了仅仅支持普通的 Markdown 语法外，Typora 还有更加便捷的 Markdown 使用方式。</p>
+<p>$\qquad!!$首先是一些有关的设置：</p>
+<blockquote>
+<p>文件 $\rightarrow$ 偏好设置 $\rightarrow$ Markdown</p>
+</blockquote>
+<p><a href="https://imgchr.com/i/yuor28"><img src="https://s3.ax1x.com/2021/02/02/yuor28.png" alt="yuor28.png"></a></p>
+<p>$\qquad!!$这些设置还是蛮重要的，否则内联公式 $\LaTeX$、&#x3D;&#x3D;高亮&#x3D;&#x3D; 等扩展性的语法均无法使用。</p>
+<p>$\qquad!!$再者，以 Typora 较为突出的 表格、代码块、公式块 三个方面进行一下简单的介绍：</p>
+<ol>
+<li><p>表格：</p>
+<blockquote>
+<p>ctrl+t &#x2F; 鼠标右键 $\rightarrow$ insert &#x2F; 段落 $\rightarrow$ 表格</p>
+</blockquote>
+<p> 然后它会出现让我们选择<strong>行列数</strong>的窗口，这样的话就不用十分麻烦地去敲 Markdown 中表格的语法了。</p>
+<p> <a href="https://imgchr.com/i/yuTSxO"><img src="https://s3.ax1x.com/2021/02/02/yuTSxO.png" alt="yuTSxO.png"></a></p>
+<p> $4\times4$ 的表格：</p>
+<p> <a href="https://imgchr.com/i/yuozRK"><img src="https://s3.ax1x.com/2021/02/02/yuozRK.png" alt="yuozRK.png"></a></p>
+<p> 但是这样就无法去编辑其格式无法控制对齐了啊？没事的，通过左上角的<strong>调整表格</strong>，轻松可以做到。</p>
+</li>
+<li><p>代码块：</p>
+<blockquote>
+<p>ctrl+shift+k &#x2F; 鼠标右键 $\rightarrow$ insert &#x2F; 段落 $\rightarrow$ 代码块</p>
+</blockquote>
+<p> Typora 可以通过你指定的语言来高亮代码，并且支持上百种语言，足够一般的用途。</p>
+<p> <a href="https://imgchr.com/i/yuT5TA"><img src="https://s3.ax1x.com/2021/02/02/yuT5TA.png" alt="yuT5TA.png"></a></p>
+</li>
+<li><p>公式块：</p>
+<blockquote>
+<p>ctrl+shift+m &#x2F; 鼠标右键 $\rightarrow$ insert &#x2F; 段落 $\rightarrow$ 公式块</p>
+</blockquote>
+<p> Typora 不仅仅支持行内式，也支持行外的公式块。由于相当于处于 $$ 与 $$ 之间，所以会被强制居中。这种十分大气的行外式特别适合巨运算符的书写：</p>
+<p> <a href="https://imgchr.com/i/yuHCEd"><img src="https://s3.ax1x.com/2021/02/02/yuHCEd.png" alt="yuHCEd.png"></a></p>
+</li>
+</ol>
+<blockquote>
+<p>这三点不仅仅可以利用 Typora 自身的属性操作，别忘了也可以直接用 Markdown 的语法进行操作哦！</p>
+</blockquote>
+<h4 id="（五）、专注模式与打字机模式："><a href="#（五）、专注模式与打字机模式：" class="headerlink" title="（五）、专注模式与打字机模式："></a>（五）、专注模式与打字机模式：</h4><p>$\qquad!!$Typora 同时支持两种写作模式：专注模式与打字机模式。</p>
+<ol>
+<li><p>专注模式（Focus Mode）：</p>
+<blockquote>
+<p>F8 &#x2F; 视图 $\rightarrow$ 专注模式</p>
+</blockquote>
+<p> 在这个模式下，当你在编辑某一行文字的时候其他行会变成灰色。</p>
+<p> <a href="https://imgchr.com/i/yuvkdO"><img src="https://s3.ax1x.com/2021/02/03/yuvkdO.png" alt="yuvkdO.png"></a></p>
+<p> 专注模式比较适合与全屏同时开启，连工具栏都不存在，自然简洁到超级舒服。</p>
+</li>
+<li><p>打字机模式：</p>
+<blockquote>
+<p>F9 &#x2F; 视图 $\rightarrow$ 打字机模式</p>
+</blockquote>
+<p> 在这个模式下，你的光标会始终处于屏幕中间，我们的眼光就能始终正对屏幕中央。就我个人来讲非常喜欢使用这个模式，不仅仅是因为不用动眼睛，更因为光标的自动换行能够更加便于仅键盘进行操作。</p>
+<p> <a href="https://imgchr.com/i/yuvskF"><img src="https://s3.ax1x.com/2021/02/03/yuvskF.png" alt="yuvskF.png"></a></p>
+<p> 相信大家能够捕捉到光标的位置。</p>
+</li>
+</ol>
+<blockquote>
+<p>这两种模式并不相斥，更是能够同时使用的哦！</p>
+</blockquote>
+<h4 id="（六）、字数统计、拼写检查与源代码模式："><a href="#（六）、字数统计、拼写检查与源代码模式：" class="headerlink" title="（六）、字数统计、拼写检查与源代码模式："></a>（六）、字数统计、拼写检查与源代码模式：</h4><p>$\qquad!!$相信大家一定对前面图片上页面底部的几个图标产生了好奇，下面就来简单地介绍一下：</p>
+<ol>
+<li><p>字数统计：</p>
+<p> 和 Word 文档一样，Typora 也支持实时统计文档的字数，位于页面的右下角：</p>
+<p> <a href="https://imgchr.com/i/yuxEn0"><img src="https://s3.ax1x.com/2021/02/03/yuxEn0.png" alt="yuxEn0.png"></a></p>
+<p> <em>哇！这篇文章也已经六千多词了欸！</em></p>
+</li>
+<li><p>拼写检查：</p>
+<p> 和 Word 文档一样，Typora 也支持实时的拼写检查，位于字数统计旁边：</p>
+<p> <a href="https://imgchr.com/i/yuxM9J"><img src="https://s3.ax1x.com/2021/02/03/yuxM9J.png" alt="yuxM9J.png" style="zoom:50%;" /></a></p>
+<p> <em>虽然在打中文的时候从来没见过它报错……</em></p>
+</li>
+<li><p>源代码模式：</p>
+<p> 即显示文档的 Markdown 源码的一种模式，开关位于页面左下角旁：<a href="https://imgchr.com/i/yuxNND"><img src="https://s3.ax1x.com/2021/02/03/yuxNND.png" alt="yuxNND.png"></a></p>
+<p> 开启后就能够以纯文本的格式显示文档的 Markdown 源码：</p>
+<p> <a href="https://imgchr.com/i/yuxw3d"><img src="https://s3.ax1x.com/2021/02/03/yuxw3d.png" alt="yuxw3d.png"></a></p>
+<p> <em>说实话我还真没开着源代码模式打过文档。</em></p>
+</li>
+</ol>
+<h4 id="（七）、侧边栏与自生成目录："><a href="#（七）、侧边栏与自生成目录：" class="headerlink" title="（七）、侧边栏与自生成目录："></a>（七）、侧边栏与自生成目录：</h4><p>$\qquad!!$还差页面最右下角的一个图标没有介绍了。没错！你没猜错！就是<strong>侧边栏</strong>。</p>
+<ol>
+<li><p>侧边栏：</p>
+<p> 在显示侧边栏后，会发现上面有两个子目录：文件与大纲。</p>
+<p> 文件就是显示该文档所在的目录结构以及该文档所在的目录里其它可被导入 Typora 的文档：</p>
+<p> <a href="https://imgchr.com/i/yuzkPe"><img src="https://s3.ax1x.com/2021/02/03/yuzkPe.png" alt="yuzkPe.png" style="zoom:50%;" /></a></p>
+<p> 大纲即由现在编辑的文档的标题组成的目录结构：</p>
+<p> <a href="https://imgchr.com/i/yuz3GQ"><img src="https://s3.ax1x.com/2021/02/03/yuz3GQ.png" alt="yuz3GQ.png" style="zoom:50%;" /></a></p>
+</li>
+<li><p>自生成目录：</p>
+<p> 在文章开始写入 <code>[TOC]</code> 将自动在文章生成目录：</p>
+<p> <a href="https://imgchr.com/i/yuztrq"><img src="https://s3.ax1x.com/2021/02/03/yuztrq.md.png" alt="yuztrq.md.png"></a></p>
+<p> <em>并且能够支持文档内部的超链接哦！</em></p>
+</li>
+</ol>
+<h4 id="（八）、文本导出："><a href="#（八）、文本导出：" class="headerlink" title="（八）、文本导出："></a>（八）、文本导出：</h4><p>$\qquad!!$文本导出也能够算是 Typora 非常方便的一大特性，Typora 本身能够支持导出 PDF 文档、两种样式的 HTML 文档以及图像！</p>
+<p>$\qquad!!$同时也可以导出 Word,Epub,LaTeX 等其它多种文件格式，不过需要安装 pandoc 进行辅助。不过无须多虑的是，在并未安装 pandoc 时，点击 Word 文档等即可进入 Typora 对于 pandoc 的安装引导，十分方便地安装完甚至不用学 pandoc 的各种文件转换命令即可在 Typora 中直接使用。</p>
+<h4 id="（九）、下载方式："><a href="#（九）、下载方式：" class="headerlink" title="（九）、下载方式："></a>（九）、下载方式：</h4><p>$\qquad!!$讲了这么多，相信大家已经对用 Typora 编写 Markdown 跃跃欲试了！那么在哪里能够下载呢？</p>
+<p>$\qquad!!$进入 Typora 官网 <a href="https://www.typora.io/">https://www.typora.io/</a> 即可！</p>
+<p><a href="https://imgchr.com/i/yKSkwV"><img src="https://s3.ax1x.com/2021/02/03/yKSkwV.png" alt="yKSkwV.png"></a></p>
+<p>$\qquad!!$下滑到底部后，即可选择下载哪种 Typora ，下载完安装后即可使用！</p>
+<h3 id="七、结语："><a href="#七、结语：" class="headerlink" title="七、结语："></a>七、结语：</h3><p>$\qquad!!$完稿于 2021&#x2F;2&#x2F;3 凌晨。</p>
+<p>$\qquad!!$写了一段时间的班刊终于完美收官了！相信大家看完之后一定会有所收获。</p>
+<p>$\qquad!!$文章的内容和标题<strong>相照应</strong>，仅仅是一篇<del>自我感觉良好的</del> Markdown 入门教程。无论是 Markdown 的扩展，还是 $\LaTeX$ 五花八门的公式，还是 Typora 的部分功能，我都有没介绍到的地方。而且我接触 Markdown 的时间也不算长，文章如有疏漏不当之处，请各位读者海涵。</p>
+<p>$\qquad!!$关于本文，文章同步发布于<a href="https://lhrg.github.io/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8.html">https://lhrg.github.io/Markdown标记语言入门.html</a>，本文的 Markdown源码 同步发布于<a href="https://lhrg.github.io/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E6%BA%90%E7%A0%81.html">https://lhrg.github.io/Markdown标记语言入门源码.html</a></p>
+<p>$\qquad!!$如果你看完这篇文章后不想尝试 Markdown 的写作，那就权当是增加了知识；如果你看完这篇文章后对用 Markdown 写作充满了期待，那就现在就用 Markdown 写一篇文章吧！相信你也会体验到这个有数百万人使用的语言的优美之处！</p>
+<p>$\qquad!!$最后，由衷地感谢班主任老师及同学们组织的这次班刊编写活动，给了我写这篇文章的一个机会；感谢我参考的文章的作者，让我有了这篇文章的素材；也要感谢帮助我审稿校验的朋友们，是你们给予了我投稿的支持；更要感谢每一位读完这篇文章的读者，衷心地希望这篇文章能够使大家有所受益！</p>
+<hr>
+<p>Reference:</p>
+<ol>
+<li><a href="https://www.cnblogs.com/ubospica/p/11065405.html">Markdown 标记语言指北</a> <em>学长的文章哦！</em></li>
+<li><a href="https://zhuanlan.zhihu.com/p/112327926">Markdown标记语法，从入门到熟练</a></li>
+<li><a href="https://www.luogu.com.cn/blog/luogu/how-to-use-markdown">洛谷 Markdown 格式手册</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/68293222">也许 Markdown 并不是一个好选择</a></li>
+<li><a href="https://www.luogu.com.cn/blog/IowaBattleship/latex-ru-men">LaTeX入门</a></li>
+<li><a href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTeX数学公式大全</a></li>
+<li><a href="https://www.cnblogs.com/-guz/p/10258557.html">Typora —一款简洁的Markdown编辑器</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/44998516">Typora - 不要太棒的Markdown编辑器</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
- <span id="more"></span>
+<span id="more"></span>
 
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
