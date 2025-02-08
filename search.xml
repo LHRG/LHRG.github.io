@@ -19,6 +19,1880 @@ Atomic Physics Chapter 5: The LS-coupling scheme</a></p>
       </tags>
   </entry>
   <entry>
+    <title>79博客学习笔记</title>
+    <url>/79%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="博客学习笔记">79博客学习笔记</h2>
+<p>注：利用 <code>$\operatorname&#123;&#125;$</code> 标准函数形式表示相应牌。</p>
+<h3 id="第一章-麻雀的基础">第一章 麻雀的基础</h3>
+<h4 id="麻雀的基础-1麻雀是">麻雀的基础 1—麻雀是?</h4>
+<ol type="1">
+<li>麻将的目的：雀力日进！</li>
+</ol>
+<h4 id="麻雀的基础-2麻雀和概率">麻雀的基础 2—麻雀和概率</h4>
+<ol type="1">
+<li>现代麻将的游戏性，果然其本质不是“役”而是“形”。</li>
+<li>即使是打出了最合适的一手，有时也是会失败的。这就是麻将。</li>
+<li>不要因为一时成功而喜悦，也不要因为一时的失败而沮丧；要以长远的目光来进行判断。</li>
+</ol>
+<span id="more"></span>
+<h4 id="麻雀的基础-3听牌和向听">麻雀的基础 3—听牌和向听</h4>
+<ol type="1">
+<li>麻将的和牌形：
+<ol type="1">
+<li>四面子+一雀头</li>
+<li>七组不同的对子</li>
+<li>国士无双</li>
+</ol></li>
+<li>听牌：还差一张牌就能够完成和了形的状态就叫做听牌。有役的话就能够和牌了。</li>
+<li>向听数：距离听牌还需要多少手，这个最小回数就叫做“向听数”。</li>
+<li>麻将中距离听牌最远的是“六向听”。（考虑七对子）</li>
+</ol>
+<h4 id="麻雀的基础-4面子和搭子">麻雀的基础 4—面子和搭子</h4>
+<ol type="1">
+<li><p>麻将中有顺子和刻子两种面子。顺子比刻子更容易凑齐，因此要以顺子为基础去做牌。</p></li>
+<li><p>搭子：</p>
+<table>
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 4%" />
+<col style="width: 34%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>名称</th>
+<th>有效牌</th>
+<th>进张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span
+class="math inline">\(\operatorname{12\backslash89}\)</span></td>
+<td>边张</td>
+<td><span
+class="math inline">\(\operatorname{3\backslash7}\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{n\!−\!1\,n\!+\!1}\
+(n\in[2,8]\cap\N)\)</span></td>
+<td>坎张</td>
+<td><span class="math inline">\(\operatorname{n}\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{n\,n\!+\!1}\
+(n\in[2,7]\cap\N)\)</span></td>
+<td>两面</td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(8\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>两面比边张和嵌张的有效牌多出了一倍，是最好的形。“制作两面”是做牌基础中的基础。</p></li>
+<li><p>它们价值的排序如下:
+<strong>两面&gt;&gt;嵌张&gt;边张</strong></p></li>
+</ol>
+<h4 id="麻雀的基础-5数牌和字牌">麻雀的基础 5—数牌和字牌</h4>
+<ol type="1">
+<li><p>三元牌（均为役牌）的宝牌提示顺序是“<strong>白→发→中</strong>”的循环关系</p></li>
+<li><p>风牌：</p>
+<ol type="1">
+<li>场风牌是役牌</li>
+<li>自风牌是役牌</li>
+<li>场风与自风牌相同则为两番的连风牌</li>
+<li>其他为连风牌，不是役牌</li>
+</ol></li>
+<li><p>数牌：<span
+class="math inline">\(\operatorname{34567}&gt;\operatorname{28}&gt;\operatorname{19}\)</span></p>
+<p><a href="https://imgse.com/i/xlGcHe"><img
+src="https://s1.ax1x.com/2022/10/04/xlGcHe.png"
+alt="xlGcHe.png" /></a></p>
+<p><a href="https://imgse.com/i/pSYg7aq"><img
+src="https://s1.ax1x.com/2023/01/24/pSYg7aq.png"
+alt="pSYg7aq.png" /></a></p></li>
+</ol>
+<h4 id="麻雀的基础-6对子一">麻雀的基础 6—对子(一)</h4>
+<ol type="1">
+<li><p>对子的作用有：</p>
+<ol type="1">
+<li>雀头</li>
+<li>面子的替补</li>
+<li>七对子的组成部分</li>
+</ol></li>
+<li><p>雀头：</p>
+<ol type="1">
+<li><p>雀头很容易做成，但是在晚巡 6block
+无雀头情况下可以在拆搭子的同时注意雀头的候补情况。</p></li>
+<li><p>利用复合型做雀头：</p>
+<ul>
+<li><strong>顺子摸成亚两面后得六张进张。</strong></li>
+<li><strong>顺子摸成四连形后得六张进张。</strong></li>
+<li><strong>暗刻摸成小螺丝后得七张进张。</strong></li>
+<li><strong>暗刻摸成大螺丝后得十一张进张。</strong></li>
+</ul></li>
+<li><p>暗刻切掉一张，也可以形成雀头：<strong>在无雀头、暗刻+搭子的听牌形时，应该将暗刻切掉一张，形成雀头听牌。</strong></p></li>
+</ol></li>
+<li><p><strong>面子优先法则</strong>：比起容易形成的雀头，更加花费时间的面子要优先考虑，这是做牌通向和牌的一条近路。</p></li>
+</ol>
+<h4 id="麻雀的基础-7对子二">麻雀的基础 7—对子(二)</h4>
+<ol type="1">
+<li>对子有着<strong>“当含有两组对子的时候作为面子替补的价值会变高”</strong>的性质。</li>
+<li>随着对子数量的增加，其面子替补作用会变弱，会越来越难形成面子。</li>
+</ol>
+<h4 id="麻雀的基础-8基本形与复合型">麻雀的基础 8—基本形与复合型</h4>
+<ol type="1">
+<li>手牌是由“面子”、“对子”、“搭子”、“孤张牌”所组成的。</li>
+<li>由以上两种要素组成的复合型会产生基本形不具有的性质，了解复合型的各种性质是非常重要的。</li>
+</ol>
+<h4 id="麻雀的基础-9复合型一">麻雀的基础 9—复合型(一)</h4>
+<h5 id="三张复合型">三张复合型</h5>
+<ol type="1">
+<li><p>对子复合型：</p>
+<p>这种形比对子作用要稍微大一些。
+与搭子的其中一张重叠的形，其进张数比仅仅是搭子的进张数多出了可以形成刻子的
+2 张。</p>
+<table>
+<thead>
+<tr>
+<th>复合型的种类</th>
+<th>进张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>边张对</td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+<tr>
+<td>坎张对</td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+<tr>
+<td>两面对</td>
+<td><span class="math inline">\(10\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>不要过于早的拆掉对子+搭子的复合型来固定对子或者搭子使进张数尽量多是基本的打法。</strong></p></li>
+<li><p><strong>要避免在一向听去固定含有不要牌的搭子而损失 4
+张进张数的这种情况。</strong></p></li>
+<li><p>补强牌：使搭子形成对子复合型的牌。</p></li>
+<li><p>多个对子复合型的处理：</p>
+<ul>
+<li>两个对子的情况：一般会比较想把两个对子都留下，比较搭子的部位，<strong>拆掉较弱的搭子</strong>。</li>
+<li>三个对子的情况：一般会拆掉其中一对，<strong>拆掉最强搭子的对子</strong>，把补强牌留在弱搭子上。（固定好型）</li>
+</ul></li>
+</ul></li>
+<li><p>两坎：</p>
+<p>两个连接起来的坎张就叫做两坎。</p>
+<ul>
+<li>五种形式：<span class="math inline">\(\operatorname{135\ 246\ 357\
+468\ 579}\)</span></li>
+<li>进张数：<span class="math inline">\(8\)</span></li>
+<li><strong>连续的两个坎张叫做两坎，是次于两面的好形。在序盘的时候能够发挥作用，但是随着与听牌距离的减少，两坎会成为与两面相差甚远的愚形。</strong></li>
+<li>面对 <span class="math inline">\(\operatorname{122346\ 233457\
+344568\ 455679\ 134556\ 245667\ 356778\ 467889}\)</span>
+的形状时注意可拆解为顺子+两坎。</li>
+<li>特殊作用：用于引挂。</li>
+<li>长两坎：<span class="math inline">\(\operatorname{134568\
+245679}\)</span></li>
+</ul></li>
+</ol>
+<h4 id="麻雀的基础-10复合型二">麻雀的基础 10—复合型(二)</h4>
+<h5 id="四张复合型面子孤张牌">四张复合型（面子+孤张牌）</h5>
+<p>可以鸣牌时四张复合型的价值都会有一定程度的提升。</p>
+<ol type="1">
+<li><p>四连形：</p>
+<ul>
+<li><p>六种形式：<span class="math inline">\(\operatorname{1234\ 2345\
+3456\ 4567\ 5678\ 6789}\)</span></p></li>
+<li><p>进张：</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>边张&amp;坎张</th>
+<th>两面</th>
+<th>三面</th>
+<th>对子</th>
+<th>有效牌张数</th>
+<th>好形张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\operatorname{1234}\)</span></td>
+<td><span class="math inline">\(\operatorname{26}\)</span></td>
+<td><span class="math inline">\(\operatorname{35}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{14}\)</span></td>
+<td><span class="math inline">\(6\)</span> 种 <span
+class="math inline">\(20\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(7\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{2345}\)</span></td>
+<td><span class="math inline">\(\operatorname{7}\)</span></td>
+<td><span class="math inline">\(\operatorname{134}\)</span></td>
+<td><span class="math inline">\(\operatorname{6}\)</span></td>
+<td><span class="math inline">\(\operatorname{25}\)</span></td>
+<td><span class="math inline">\(7\)</span> 种 <span
+class="math inline">\(24\)</span> 张</td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{3456}\)</span></td>
+<td><span class="math inline">\(\operatorname{18}\)</span></td>
+<td><span class="math inline">\(\operatorname{45}\)</span></td>
+<td><span class="math inline">\(\operatorname{27}\)</span></td>
+<td><span class="math inline">\(\operatorname{36}\)</span></td>
+<td><span class="math inline">\(8\)</span> 种 <span
+class="math inline">\(28\)</span> 张</td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{4567}\)</span></td>
+<td><span class="math inline">\(\operatorname{29}\)</span></td>
+<td><span class="math inline">\(\operatorname{56}\)</span></td>
+<td><span class="math inline">\(\operatorname{38}\)</span></td>
+<td><span class="math inline">\(\operatorname{47}\)</span></td>
+<td><span class="math inline">\(8\)</span> 种 <span
+class="math inline">\(28\)</span> 张</td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{5678}\)</span></td>
+<td><span class="math inline">\(\operatorname{3}\)</span></td>
+<td><span class="math inline">\(\operatorname{679}\)</span></td>
+<td><span class="math inline">\(\operatorname{4}\)</span></td>
+<td><span class="math inline">\(\operatorname{58}\)</span></td>
+<td><span class="math inline">\(7\)</span> 种 <span
+class="math inline">\(24\)</span> 张</td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{6789}\)</span></td>
+<td><span class="math inline">\(\operatorname{48}\)</span></td>
+<td><span class="math inline">\(\operatorname{57}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{69}\)</span></td>
+<td><span class="math inline">\(6\)</span> 种 <span
+class="math inline">\(20\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(7\)</span> 张</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://imgse.com/i/pSYyJVP"><img
+src="https://s1.ax1x.com/2023/01/24/pSYyJVP.png"
+alt="pSYyJVP.png" /></a></p></li>
+<li><p><strong>请记住 <span
+class="math inline">\(\operatorname{3456}\)</span> 和 <span
+class="math inline">\(\operatorname{4567}\)</span> 是麻将 <span
+class="math inline">\(4\)</span>
+张牌组合中进张数最多的。</strong>手牌中含有这种形的时候可以当作<strong>两个两面</strong>看待。</p></li>
+<li><p>虽然 <span class="math inline">\(\operatorname{1234}\)</span> 和
+<span class="math inline">\(\operatorname{6789}\)</span> 几乎和孤立牌的
+<span class="math inline">\(\operatorname{4\ 6}\)</span>
+机能一样，但是它们很容易形成雀头，所以拿到也别立马拆了。（也可以看作四连形种的<span
+class="math inline">\(\operatorname{1\ 9}\)</span> 具有解放强力数牌
+<span class="math inline">\(\operatorname{4\ 6}\)</span>
+的能力）</p></li>
+<li><p>四连形是唯一一种有两种拆成面子+单张方式的四张复合型。</p></li>
+<li><p>四连形的好形率较低，就形状考虑一般不留双四连形。</p></li>
+</ul></li>
+<li><p>中膨形：</p>
+<ul>
+<li><p>七种形式：<span class="math inline">\(\operatorname{1223\ 2334\
+3445\ 4556\ 5667\ 6778\ 7889}\)</span></p></li>
+<li><p>进张：</p>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 14%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>边张&amp;坎张</th>
+<th>两面</th>
+<th>对子</th>
+<th>有效牌张数</th>
+<th>好形张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span
+class="math inline">\(\operatorname{1223\backslash7889}\)</span></td>
+<td><span
+class="math inline">\(\operatorname{14\backslash69}\)</span></td>
+<td><span
+class="math inline">\(\operatorname{3\backslash7}\)</span></td>
+<td><span
+class="math inline">\(\operatorname{2\backslash8}\)</span></td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(12\)</span> 张</td>
+<td><span class="math inline">\(1\)</span> 种 <span
+class="math inline">\(3\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{n\!−\!1\,n\,n\,n\!+\!1}\
+(n\in[3,7]\cap\N)\)</span></td>
+<td></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!−\!1\,n\!+\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(\operatorname{n}\)</span></td>
+<td><span class="math inline">\(5\)</span> 种 <span
+class="math inline">\(16\)</span> 张</td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://imgse.com/i/pSYgORU"><img
+src="https://s1.ax1x.com/2023/01/24/pSYgORU.png"
+alt="pSYgORU.png" /></a></p></li>
+<li><p><span class="math inline">\(\operatorname{1223}\)</span> 和 <span
+class="math inline">\(\operatorname{7889}\)</span>
+两种形进张数很狭窄，而且容易形成恶形，所以它们不是很好使用的形。但与孤立牌的
+<span class="math inline">\(\operatorname{2\ 8}\)</span>
+相比，它们拥有<strong>容易构成一杯口和当形成边张+嵌张时容易做成雀头的优点</strong>。</p></li>
+<li><p><span class="math inline">\(\operatorname{2334\sim6778}\)</span>
+也几乎可以当作<strong>两个两面</strong>看，<strong>且容易构成一杯口</strong>，它们是非常贵重的形。</p></li>
+<li><p>中部中膨形的好形进张与中部四连形相同，且好形率更高，在形状重视时更易被留下。</p></li>
+</ul></li>
+<li><p>亚两面：</p>
+<ul>
+<li><p>十二种形式：<span class="math inline">\(\operatorname{1123\ 2234\
+3345\ 4456\ 2344\ 5567\ 3455\ 6678\ 4566\ 5677\ 6788\
+7899}\)</span></p></li>
+<li><p>这种形制作两面的能力与孤立牌没有什么太大的差别。（尤其在手牌不缺对子时）</p></li>
+<li><p>优点：</p>
+<ol type="1">
+<li>直接用来听牌：由于是复合型，解决了没有雀头的问题，能够听 <span
+class="math inline">\(6\)</span> 张。</li>
+<li>有转形一杯口的可能性。</li>
+<li>不规则的三面形转换。（包括但不限于有双碰进张烟囱形的 <span
+class="math inline">\(\operatorname{n\,n\,n\,n\!+\!1\,n\!+\!2\qquad
+n\,n\,n\,n\!−\!1\,n\!−\!2}\)</span>）</li>
+</ol></li>
+<li><p>因为可以拆成两面+坎张，所以在可副露的情况下可以通过，吃牌将坎张做成顺子进而改良为顺子+两面。</p></li>
+<li><p>进张：</p>
+<p><a href="https://imgse.com/i/pStiPRx"><img
+src="https://s1.ax1x.com/2023/01/24/pStiPRx.png"
+alt="pStiPRx.png" /></a></p>
+<p><a href="https://imgse.com/i/pStikQK"><img
+src="https://s1.ax1x.com/2023/01/24/pStikQK.png"
+alt="pStikQK.png" /></a></p></li>
+</ul></li>
+<li><p>螺丝形：</p>
+<ul>
+<li>大螺丝：暗刻+两面。小螺丝：暗刻+边/坎张</li>
+<li>缺对子听牌时：大螺丝三面听牌，小螺丝两面听牌。</li>
+<li>具有形成烟囱形等复合好形的能力。</li>
+<li>但是单独从进张和好形进张数目来讲，螺丝型甚至不如没有暗刻的单张数牌，所以在不缺对子的情况下，留下暗刻是一种基本的打法。</li>
+<li>坎对等对子复合型优于相应的螺丝形。</li>
+</ul></li>
+<li><p>跳一形：</p>
+<ul>
+<li><p>十种形式：<span class="math inline">\(\operatorname{1345\ 2456\
+3567\ 4678\ 5789\ 1235\ 2346\ 3457\ 4568\ 5679}\)</span></p></li>
+<li><p>进张：</p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr>
+<th>行</th>
+<th>边张&amp;坎张</th>
+<th>两面</th>
+<th>三面</th>
+<th>对子</th>
+<th>有效牌张数</th>
+<th>好形张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\operatorname{1345}\)</span></td>
+<td><span class="math inline">\(\operatorname{36}\)</span></td>
+<td><span class="math inline">\(\operatorname{2}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{1}\)</span></td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+<td><span class="math inline">\(1\)</span> 种 <span
+class="math inline">\(4\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{2456}\)</span></td>
+<td><span class="math inline">\(\operatorname{147}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{3}\)</span></td>
+<td><span class="math inline">\(\operatorname{2}\)</span></td>
+<td><span class="math inline">\(5\)</span> 种 <span
+class="math inline">\(18\)</span> 张</td>
+<td><span class="math inline">\(1\)</span> 种 <span
+class="math inline">\(4\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{3567}\)</span></td>
+<td><span class="math inline">\(\operatorname{158}\)</span></td>
+<td><span class="math inline">\(\operatorname{2}\)</span></td>
+<td><span class="math inline">\(\operatorname{4}\)</span></td>
+<td><span class="math inline">\(\operatorname{3}\)</span></td>
+<td><span class="math inline">\(6\)</span> 种 <span
+class="math inline">\(22\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(8\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{4678}\)</span></td>
+<td><span class="math inline">\(\operatorname{269}\)</span></td>
+<td><span class="math inline">\(\operatorname{3}\)</span></td>
+<td><span class="math inline">\(\operatorname{5}\)</span></td>
+<td><span class="math inline">\(\operatorname{4}\)</span></td>
+<td><span class="math inline">\(6\)</span> 种 <span
+class="math inline">\(22\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(8\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{5789}\)</span></td>
+<td><span class="math inline">\(\operatorname{37}\)</span></td>
+<td><span class="math inline">\(\operatorname{46}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{5}\)</span></td>
+<td><span class="math inline">\(5\)</span> 种 <span
+class="math inline">\(18\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(8\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{1235}\)</span></td>
+<td><span class="math inline">\(\operatorname{37}\)</span></td>
+<td><span class="math inline">\(\operatorname{46}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{5}\)</span></td>
+<td><span class="math inline">\(5\)</span> 种 <span
+class="math inline">\(18\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(8\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{2346}\)</span></td>
+<td><span class="math inline">\(\operatorname{148}\)</span></td>
+<td><span class="math inline">\(\operatorname{7}\)</span></td>
+<td><span class="math inline">\(\operatorname{5}\)</span></td>
+<td><span class="math inline">\(\operatorname{6}\)</span></td>
+<td><span class="math inline">\(6\)</span> 种 <span
+class="math inline">\(22\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(8\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{3457}\)</span></td>
+<td><span class="math inline">\(\operatorname{259}\)</span></td>
+<td><span class="math inline">\(\operatorname{8}\)</span></td>
+<td><span class="math inline">\(\operatorname{6}\)</span></td>
+<td><span class="math inline">\(\operatorname{7}\)</span></td>
+<td><span class="math inline">\(6\)</span> 种 <span
+class="math inline">\(22\)</span> 张</td>
+<td><span class="math inline">\(2\)</span> 种 <span
+class="math inline">\(8\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{4568}\)</span></td>
+<td><span class="math inline">\(\operatorname{369}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{7}\)</span></td>
+<td><span class="math inline">\(\operatorname{8}\)</span></td>
+<td><span class="math inline">\(5\)</span> 种 <span
+class="math inline">\(18\)</span> 张</td>
+<td><span class="math inline">\(1\)</span> 种 <span
+class="math inline">\(4\)</span> 张</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{5679}\)</span></td>
+<td><span class="math inline">\(\operatorname{47}\)</span></td>
+<td><span class="math inline">\(\operatorname{8}\)</span></td>
+<td></td>
+<td><span class="math inline">\(\operatorname{9}\)</span></td>
+<td><span class="math inline">\(4\)</span> 种 <span
+class="math inline">\(14\)</span> 张</td>
+<td><span class="math inline">\(1\)</span> 种 <span
+class="math inline">\(4\)</span> 张</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>让人意外的是，<span
+class="math inline">\(\operatorname{1235}\)</span> 和 <span
+class="math inline">\(\operatorname{5789}\)</span>
+由于面子处在两端，其连续形的作用被消弱，和孤张牌的 <span
+class="math inline">\(\operatorname{5}\)</span> 差不多了。
+(优点是可以利用“吃”来做成两组面子，否则一定是愚形)</p></li>
+<li><p>不过这个和 <span class="math inline">\(\operatorname{1\
+9}\)</span> 单独一张相比还是有很大差别的。 <strong><span
+class="math inline">\(\operatorname{1345}\)</span> 的 <span
+class="math inline">\(\operatorname{1}\)</span> 和 <span
+class="math inline">\(\operatorname{5679}\)</span> 的 <span
+class="math inline">\(\operatorname{9}\)</span> 要比单独的 <span
+class="math inline">\(\operatorname{2}\)</span> 和 <span
+class="math inline">\(\operatorname{8}\)</span>
+要更加有用</strong>。</p></li>
+<li><p>强化坎张：拆普通坎张优于拆 <span
+class="math inline">\(\operatorname{13456}\)</span> 中的 <span
+class="math inline">\(\operatorname{1}\)</span>，因为强化坎张维持了改良的可能性。打单张
+<span class="math inline">\(\operatorname{28}\)</span> 优于拆 <span
+class="math inline">\(\operatorname{1345}\)</span> 中的 <span
+class="math inline">\(\operatorname{1}\)</span>，因为强化坎张维持了改良的可能性。</p></li>
+<li><p><span
+class="math inline">\(\operatorname{2}&lt;\operatorname{2456}\)</span>
+的 <span
+class="math inline">\(\operatorname{2}&lt;\operatorname{3}\)</span></p></li>
+<li><p><span
+class="math inline">\(\operatorname{4}&lt;\operatorname{4678}\leqslant\operatorname{3567}\)</span></p></li>
+<li><p><span class="math inline">\(\operatorname{3567\ 3457&gt;4678\
+2346&gt;5789\ 1235\geqslant5_{(3\sim7)}&gt;2456\ 4568&gt;1345\
+5679&gt;2\ 8}\)</span></p></li>
+<li><p>进张：</p>
+<p><a href="https://imgse.com/i/pSNdT39"><img
+src="https://s1.ax1x.com/2023/01/26/pSNdT39.png"
+alt="pSNdT39.png" /></a></p>
+<p><a href="https://imgse.com/i/pSNd7cR"><img
+src="https://s1.ax1x.com/2023/01/26/pSNd7cR.png"
+alt="pSNd7cR.png" /></a></p>
+<p><a href="https://imgse.com/i/pSNdHj1"><img
+src="https://s1.ax1x.com/2023/01/26/pSNdHj1.png"
+alt="pSNdHj1.png" /></a></p>
+<p><a href="https://imgse.com/i/pSNdLB6"><img
+src="https://s1.ax1x.com/2023/01/26/pSNdLB6.png"
+alt="pSNdLB6.png" /></a></p>
+<p><a href="https://imgse.com/i/pSNdqnx"><img
+src="https://s1.ax1x.com/2023/01/26/pSNdqnx.png"
+alt="pSNdqnx.png" /></a></p></li>
+</ul></li>
+</ol>
+<h4 id="麻雀的基础-11麻将的听牌型一">麻雀的基础 11—麻将的听牌型(一)</h4>
+<ol type="1">
+<li><p>基本的听牌型：</p>
+<table>
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 8%" />
+<col style="width: 34%" />
+<col style="width: 4%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>名称</th>
+<th>所听牌</th>
+<th>张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\operatorname{n}\)</span></td>
+<td>单骑听牌</td>
+<td><span class="math inline">\(\operatorname{n}\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{12\backslash89}\)</span></td>
+<td>边张听牌</td>
+<td><span
+class="math inline">\(\operatorname{3\backslash7}\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{n\!−\!1\,n\!+\!1}\
+(n\in[2,8]\cap\N)\)</span></td>
+<td>坎张听牌</td>
+<td><span class="math inline">\(\operatorname{n}\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{nn\,mm}\)</span></td>
+<td>双碰听牌</td>
+<td><span class="math inline">\(\operatorname{n\,m}\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{n\,n\!+\!1}\
+(n\in[2,7]\cap\N)\)</span></td>
+<td>两面听牌</td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(8\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>两面听牌的优势是非常明显的。</li>
+<li>单骑听牌一眼看上去虽然糟糕，但是由于其变化多，而且要是听场上已经舍掉的一张字牌的话，和牌率是非常高的。有时候比听牌数多的听牌更加有效果。</li>
+</ul></li>
+<li><p>四连形和亚两面形：</p>
+<table>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 4%" />
+<col style="width: 43%" />
+<col style="width: 3%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>名称</th>
+<th>所听牌</th>
+<th>张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\,n\!+\!1\,n\!+\!2\,n\!+\!3}\
+(n\in[1,6]\cap\N)\)</span></td>
+<td>四连形</td>
+<td><span class="math inline">\(\operatorname{n\,n\!+\!3}\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\,n\!+\!1\,n\!+\!2\,n\!+\!2\backslash
+n\,n\,n\!+\!1\,n\!+\!2\ (n\in[1,7]\cap\N)}\)</span></td>
+<td>亚两面</td>
+<td><span class="math inline">\(\operatorname{n\!−\!1\,n\!+\!2\backslash
+n\,n\!+\!3}\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>四连形可以看作是两个单骑听牌。</li>
+<li>亚两面形一部分与雀头一体化，比纯粹的两面听牌要少 2 张听牌数。</li>
+</ul></li>
+<li><p>暗刻复合型：</p>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 6%" />
+<col style="width: 45%" />
+<col style="width: 3%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>名称</th>
+<th>所听牌</th>
+<th>张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\operatorname{1112\backslash
+1222\backslash 8889\backslash 8999}\)</span></td>
+<td>边张单骑</td>
+<td><span
+class="math inline">\(\operatorname{23\backslash13\backslash79\backslash78}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\,n\!+\!2\,n\!+\!2\,n\!+\!2\backslash
+n\,n\,n\,n\!+\!2}\ (n\in[1,7]\cap\N)\)</span></td>
+<td>坎张单骑</td>
+<td><span class="math inline">\(\operatorname{n\,n\!+\!1\backslash
+n\!+\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\,n\!+\!1\,n\!+\!1\,n\!+\!1\backslash
+n\,n\,n\,n\!+\!1}\ (n\in[2,7]\cap\N)\)</span></td>
+<td>两面单骑</td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\!+\!2\backslash
+n\!−\!1\,n\!+\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(11\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>这是以暗刻为轴的不规则听牌，使用频率是相当高的。</li>
+</ul></li>
+<li><p>基本三面张：</p>
+<table>
+<thead>
+<tr>
+<th>形</th>
+<th>所听牌</th>
+<th>张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\operatorname{23456}\)</span></td>
+<td><span class="math inline">\(\operatorname{147}\)</span></td>
+<td><span class="math inline">\(11\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{34567}\)</span></td>
+<td><span class="math inline">\(\operatorname{258}\)</span></td>
+<td><span class="math inline">\(11\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{45678}\)</span></td>
+<td><span class="math inline">\(\operatorname{369}\)</span></td>
+<td><span class="math inline">\(11\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>含单骑形式： | 形 | 所听牌 | 张数 | |
+--------------------------------------------- | -------------------- |
+---- | | <span class="math inline">\(\operatorname{23456+147}\)</span>
+筋三选二（可重复） | <span
+class="math inline">\(\operatorname{147}\)</span> | <span
+class="math inline">\(9\)</span> | | <span
+class="math inline">\(\operatorname{34567+258}\)</span>
+筋三选二（可重复） | <span
+class="math inline">\(\operatorname{258}\)</span> | <span
+class="math inline">\(9\)</span> | | <span
+class="math inline">\(\operatorname{45678+369}\)</span>
+筋三选二（可重复） | <span
+class="math inline">\(\operatorname{369}\)</span> | <span
+class="math inline">\(9\)</span> |</p>
+<ul>
+<li><strong><span
+class="math inline">\(e.g.\operatorname{234455566}\)</span> 切 <span
+class="math inline">\(5\)</span>（<span
+class="math inline">\(\operatorname{345566677}\)</span> 切 <span
+class="math inline">\(6\)</span>  <span
+class="math inline">\(\operatorname{456677788}\)</span> 切 <span
+class="math inline">\(7\)</span>  <span
+class="math inline">\(223334456\)</span> 切 <span
+class="math inline">\(3\)</span>  <span
+class="math inline">\(334445567\)</span> 切 <span
+class="math inline">\(4\)</span>  <span
+class="math inline">\(445556678\)</span> 切 <span
+class="math inline">\(5\)</span>），形成三面好形听牌，这个形还可以形成一杯口，而且和牌的效率也更高。</strong></li>
+</ul></li>
+</ol>
+<h4 id="麻雀的基础-12麻将的听牌形二">麻雀的基础 12—麻将的听牌形(二)</h4>
+<p><strong>不管是多么复杂的形，应付多面张听牌的基本就是“3
+张一样的牌可以看作暗刻，也可以看
+作雀头+一个单张“。这样基本就可以搞定所有的多面听牌了。</strong></p>
+<ol type="1">
+<li><p>不规则两面听牌：</p>
+<table>
+<thead>
+<tr>
+<th>形</th>
+<th>所听牌</th>
+<th>张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\operatorname{1345666}\)</span></td>
+<td><span class="math inline">\(\operatorname{12}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{2456777}\)</span></td>
+<td><span class="math inline">\(\operatorname{23}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{35678888}\)</span></td>
+<td><span class="math inline">\(\operatorname{34}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{4678999}\)</span></td>
+<td><span class="math inline">\(\operatorname{45}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{1112346}\)</span></td>
+<td><span class="math inline">\(\operatorname{56}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{2223457}\)</span></td>
+<td><span class="math inline">\(\operatorname{67}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{3334568}\)</span></td>
+<td><span class="math inline">\(\operatorname{78}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\operatorname{4445679}\)</span></td>
+<td><span class="math inline">\(\operatorname{89}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>不规则三面听牌：</p>
+<table>
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 39%" />
+<col style="width: 3%" />
+</colgroup>
+<thead>
+<tr>
+<th>形</th>
+<th>所听牌</th>
+<th>张数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\!−\!1\,n\,n\,n\!+\!1\,n\!+\!1}\
+(n\in[2,8]\cap\N)+\operatorname{n\!−\!1\,n\,n\!+\!1}\)</span>
+三选一</td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\!+\!1}\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\,n\,n\!+\!1\,n\!+\!1\,n\!+\!2\,n\!+\!2\,n\!+\!3\,n\!+\!3}\
+(n\in[1,6]\cap\N)+\operatorname{mm}\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\,n\!+\!3\,m}\)</span></td>
+<td><span class="math inline">\(6\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\!−\!1\,n\!−\!1\,n\,n\!+\!1}\
+(n\in[2,7]\cap\N)\backslash\operatorname{n\,n\!+\!1\,n\!+\!1\,n\!+\!2\,n\!+\!2\,n\!+\!2}\
+(n\in[1,6]\cap\N)+\operatorname{mm}\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\!+\!2\,m}\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!−\!2\,n\!−\!2\,n\!−\!1\,n\!−\!1\,n\,n\!+\!1}\
+(n\in[3,7]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(9\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\!+\!1\,n\!+\!1\,n\!+\!2\,n\!+\!2\,n\!+\!2}\
+(n\in[3,7]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\,n\!+\!1}\)</span></td>
+<td><span class="math inline">\(9\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!−\!2\,n\!−\!2\,n\!−\!1\,n\,n\,n\!+\!1}\
+(n\in[3,7]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(9\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\,n\!+\!1\,n\!+\!2\,n\!+\!2\,n\!+\!2}\
+(n\in[3,7]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\,n\!+\!1}\)</span></td>
+<td><span class="math inline">\(9\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!3\,n\!−\!3\,n\!−\!3\,n\!−\!1\,n\,n\!+\!1\,n\!+\!2}\
+(n\in[4,7]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!−\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(10\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!−\!1\,n\,n\!+\!1\,n\!+\!3\,n\!+\!3\,n\!+\!3}\
+(n\in[3,6]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!+\!1\,n\!+\!2}\)</span></td>
+<td><span class="math inline">\(10\)</span></td>
+</tr>
+<tr>
+<td><span
+class="math inline">\(\operatorname{n\!−\!2\,n\!−\!2\,n\!−\!2\,n\,n\!+\!2\,n\!+\!2\,n\!+\!2}\
+(n\in[3,7]\cap\N)\)</span></td>
+<td><span
+class="math inline">\(\operatorname{n\!−\!1\,n\,n\!+\!1}\)</span></td>
+<td><span class="math inline">\(11\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>四面以上的听牌型：略</p></li>
+</ol>
+<h3 id="第二章牌效率">第二章:牌效率</h3>
+<h4 id="牌效率-1根据牌理打牌">牌效率 1—根据牌理打牌</h4>
+<ol type="1">
+<li>根据牌理打牌：牌理指的就是为了有效率地完成 4
+面子+一组雀头的理论。</li>
+<li>以一局作为单位来说的话，麻将就是比赛“对局 4 人中谁能够最快的组成 4
+面子+一组雀头”的游戏。</li>
+<li>麻将手牌有<strong>“速度”、“打点”、“防御力”</strong>三个要素，其中“速度”是最重要的。其中的原因是“速度”能够给予“打点”和“防御力”以掩护。尽早和牌可以阻止对手可能和出的牌，实际的收益也可以看作“和了的点数”+“各种未知的收益”。</li>
+<li>被手役迷惑双眼而不去和牌是非常不可取的行为。</li>
+</ol>
+<h4 id="牌效率-2有效牌和张数">牌效率 2—有效牌和张数</h4>
+<p><strong>有效牌=进张+改良</strong></p>
+<ol type="1">
+<li>张数和概率：
+<ul>
+<li>“张数越多就越有利”，这是麻将中的一个基本定理。</li>
+<li>麻将不是比第六感的游戏，而是比“得失感觉的敏锐性”的游戏。</li>
+</ul></li>
+<li>进张数：
+<ul>
+<li>进张：所有能使手牌向听数前进的牌叫做手牌的进张。</li>
+<li>我们可以通过数出手牌的进张数来评价一副手牌的好坏。</li>
+</ul></li>
+<li>改良：
+<ul>
+<li>改良：所有能使手牌的进张数增加的牌叫做手牌的改良。</li>
+<li>可以在进张数相同时比较两副牌的改良，但是相比改良而言，进张数的优势有更高的价值。也就是说进张数应该比改良要优先考虑。</li>
+</ul></li>
+</ol>
+<h4 id="牌效率-3浮牌理论">牌效率 3—浮牌理论</h4>
+<ol type="1">
+<li>基本牌理：
+<ul>
+<li>对子-&gt;刻子：更加容易鸣牌(容易打出)的字牌和靠近两端的牌比较有利。</li>
+<li>形成面子的能力：<span
+class="math inline">\(\operatorname{3\sim7}&gt;\operatorname{2\&amp;8}&gt;\operatorname{1\&amp;9}&gt;\)</span>
+字牌</li>
+<li>字牌：连风牌&gt;自风牌（非连风牌）&gt;普通役牌&gt;场风牌（非连风牌）&gt;客风牌。但是场上切出一张之后，其价值就会大大减弱。要是切出两张的话，就几乎派不上什么用场了。这个时候拿着的话，几乎都是用作安全牌了吧。</li>
+</ul></li>
+<li>牌的相互作用：
+<ul>
+<li>筋牌廉价定理：<strong>同时拿着筋牌，会导致其一张牌的价值下降。</strong></li>
+<li>拿着筋牌会由于进张牌重复导致进张牌的张数减少。特别是 <span
+class="math inline">\(\operatorname{14}\)</span> 的 <span
+class="math inline">\(\operatorname{1}\)</span> 和 <span
+class="math inline">\(\operatorname{69}\)</span> 的 <span
+class="math inline">\(\operatorname{9}\)</span>
+几乎没有作为面子替补的机能，应该尽早切掉。</li>
+</ul></li>
+<li>间四有形成两坎好形的可能。</li>
+</ol>
+<h4 id="牌效率-4搭子理论一">牌效率 4—搭子理论(一)</h4>
+<ol type="1">
+<li><p>基本牌理：</p>
+<ul>
+<li><p>一个搭子的评价要点有以下 <span class="math inline">\(5\)</span>
+个：</p>
+<ol type="1">
+<li>进张数（能够完成面子的牌的数量）</li>
+<li>改良（变换为两面，三面，两嵌等）</li>
+<li>打点</li>
+<li>听牌时是否容易和牌</li>
+<li>山存量</li>
+</ol></li>
+<li><p><strong>两面&gt;两嵌&gt;嵌张&gt;边张</strong></p></li>
+</ul></li>
+<li><p>实际的比较：</p>
+<ul>
+<li>要拆掉嵌张搭子的时候，多数情况都是从外到内的顺序切。但是考虑的牌的危险程度，从内往外切也是可以的。</li>
+<li>当进张数相同时，应当先比较改良。</li>
+<li>一般情况下，避免 二度受 的效率更高。</li>
+</ul></li>
+</ol>
+<h4 id="牌效率-5搭子理论二">牌效率 5—搭子理论(二)</h4>
+<h5 id="关于两坎">关于两坎</h5>
+<p>虽然它的进张数有 <span class="math inline">\(8\)</span>
+张，但是需要使用 <span class="math inline">\(3\)</span>
+张手牌并且最终成为听牌形时只能够是嵌张。
+两嵌的机能性还是远远不及两面。</p>
+<ol type="1">
+<li>两坎和双碰的比较：
+<ul>
+<li>当有雀头可以形成两面的中张牌时，
+一般情况下选择“嵌张+双碰”比两嵌的改良要有利一些。</li>
+<li>在具有很好改良的情况下一般双碰更优。</li>
+<li>已经鸣牌的手牌。双碰进张会比较有利。</li>
+<li>但是依旧有一些情况选择两坎的改良会更优。（平和形重视）</li>
+<li>选择两嵌还是双碰需要比较各自的改良张数。<strong>一般情况下，双碰的更加有利的情况多一些</strong>。</li>
+</ul></li>
+</ol>
+<h4 id="牌效率-6搭子理论三">牌效率 6—搭子理论(三)</h4>
+<h5 id="复合搭子的处理方法">复合搭子的处理方法</h5>
+<ol type="1">
+<li>两面+嵌张形</li>
+<li>其他的复合型</li>
+</ol>
+<h4 id="牌效率-7切牌选择的思考方法">牌效率 7—切牌选择的思考方法</h4>
+<p>思考方法：</p>
+<ol type="1">
+<li>把手牌模式化，掌握了手牌进张数最广的一种切牌方法。</li>
+<li>学会更加优越的比较方法</li>
+</ol>
+<p>牌理概论：</p>
+<ol type="1">
+<li><p>初期（三向听以下）基本牌理：</p>
+<p>对于初期阶段的手牌，最好是去比较“<strong>切这个牌会有什么样的损失</strong>”。没有去拘泥于“降低向听数”的必要。应该考虑留下一些手役的可能和将来的防御问题。</p></li>
+<li><p>两向听基本牌理：</p>
+<p>一向听集中理论：“一向听”到“听牌”的过程是麻将中最困难的一个阶段，所以在两向听的阶段宁愿牺牲一点进张数，让一向听的阶段进张数更多。</p></li>
+<li><p>一向听基本牌理：</p>
+<p>这个时候进入听牌的进张数就是最重要的评价指标了。当进张数没有差别的时候，比较改良的张数是较为有效的对应方法。</p></li>
+<li><p>听牌基本牌理：</p>
+<p>能够和牌的张数无疑是最重要的。但是对于荣和来讲，也不是张数越多就越容易和牌。如果听的是比较容易被打出来的牌，可以说是一个好的听牌。当张数没有差别的时候，考虑手牌的变化张数是很重要的。尤其是单骑听牌，手牌变化是很丰富的。</p></li>
+</ol>
+<h4 id="牌效率-8初期牌理一">牌效率 8—初期牌理(一)</h4>
+<ol type="1">
+<li><p>序盘时切牌的顺序：</p>
+<p>未现的客风牌（内部比较里宝率） 早于 已现的<span
+class="math inline">\(\operatorname{14\backslash69}\)</span> 的 <span
+class="math inline">\(\operatorname{1\backslash9}\)</span>
+早于（比较张数和防守）已现的客风牌（内部比较里宝率） 早于
+已现的非连风场风牌 早于 已现的三元牌 早于 已现的自风牌 早于 未现的<span
+class="math inline">\(\operatorname{14\backslash69}\)</span> 的 <span
+class="math inline">\(\operatorname{1\backslash9}\)</span> 早于 单张
+<span class="math inline">\(\operatorname{1\backslash9}\)</span> 早于
+未现的非连风场风牌 早于 未现的三元牌（内部比较里宝率） 早于 未现的自风牌
+早于 单张<span
+class="math inline">\(\operatorname{2\backslash8}\)</span>
+早于未现的自风连风牌 早于 边张搭子</p>
+<p><a href="https://imgse.com/i/ppiW3M8"><img
+src="https://s1.ax1x.com/2023/03/01/ppiW3M8.png"
+alt="ppiW3M8.png" /></a></p></li>
+<li><p>由于孤立的字牌是最难形成面子的部分，所以切掉没有役的风牌绝对是正确的。但是，有明显不需要的数牌的时候，考虑到将来的防守，可以先从数牌开始切。</p></li>
+<li><p>从牌理上看，孤立的老头牌比任何一种对子和搭子的价值都要低。</p></li>
+</ol>
+<h4 id="牌效率-9初期牌理二">牌效率 9—初期牌理(二)</h4>
+<ol type="1">
+<li><p>六搭子一雀头形：单纯比较搭子即可</p>
+<p>六搭子形应该把损失最小的那个搭子拆掉，把手牌中唯一一组雀头拆掉是绝对不可以的。</p></li>
+<li><p>五搭子+浮牌：基本的方法就是比较留下的孤立牌即可</p>
+<p>五搭子形基本上只要把价值最低的那张浮牌切掉就可以了。有二度进张的边张搭子等不好的搭子的时候，把搭子拆掉留下浮牌会比较有利。</p></li>
+</ol>
+<h4 id="牌效率-10两向听的牌理一">牌效率 10—两向听的牌理(一)</h4>
+<h5 id="三搭子一面子一雀头形">三搭子一面子一雀头形：</h5>
+<ul>
+<li>比较浮牌是基本。</li>
+<li>三对子形可以损双碰进张去要改良。（根据手牌不同，把 <span
+class="math inline">\(3\)</span> 张一组的搭子变成 <span
+class="math inline">\(2\)</span>
+张一组的单独搭子，去留下浮牌会比较有利。这种情况几乎都是把 <span
+class="math inline">\(3\)</span> 对子形中的其中一个对子变成两面。）</li>
+<li>两面搭子齐的情况下侧重于留安。</li>
+</ul>
+<h4 id="牌效率-11两向听的牌理二">牌效率 11—两向听的牌理(二)</h4>
+<h5 id="四搭子一面子一雀头无浮牌形">四搭子一面子一雀头无浮牌形：</h5>
+<ul>
+<li>拆掉机能最差的一组搭子是基本。（另一种方法是把多张的搭子变为单独的搭子，维持
+<span class="math inline">\(4\)</span> 搭子。）</li>
+<li>在很难判断的情况下(没有明显机能弱小的搭子)，可以先把手牌中的两面搭子先进行固定来扩大自己判断空间。</li>
+</ul>
+<h4 id="牌效率-12两向听的牌理三">牌效率 12—两向听的牌理(三)</h4>
+<ol type="1">
+<li><p>四搭子一雀头有浮牌形：</p>
+<p>判断留不留下浮牌是关键。</p></li>
+<li><p>无雀头形：</p>
+<p>以面子优先，同时注重一向听集中。</p></li>
+<li><p>七对子相关：</p>
+<ul>
+<li>面子手来说是三向听，七对子是两向听：一般情况下是留下对子和面子的复合型，圆滑地向面子手前进。</li>
+<li>面子手和七对子都是两向听：无特殊手役时，无平和确则留下七对子的可能性比较好；全两面搭子自己向平和形前进。</li>
+</ul></li>
+</ol>
+<h4 id="牌效率-13一向听的牌理一">牌效率 13—一向听的牌理(一)</h4>
+<ol type="1">
+<li><p>基本的思考方法：</p>
+<p><a href="https://imgse.com/i/pSIvk0f"><img
+src="https://s1.ax1x.com/2023/02/13/pSIvk0f.png"
+alt="pSIvk0f.png" /></a></p></li>
+<li><p>基本情况：</p>
+<p>十分形的标准：进张数 <span
+class="math inline">\(&gt;16\)</span>。</p>
+<p>首先比较进张和形状，其次从手役和防守等角度考虑。</p></li>
+<li><p>非十分形：综合考虑</p></li>
+</ol>
+<h4 id="牌效率-14一向听的牌理二">牌效率 14—一向听的牌理(二)</h4>
+<h5 id="搭子超载">搭子超载</h5>
+<ul>
+<li><p>在比较坎张时，注意拆二度受和保留三张复合型。</p></li>
+<li><p>在比较两面等时，注意“一面子+两坎”的组合。</p></li>
+</ul>
+<h4 id="牌效率-15一向听的牌理三">牌效率 15—一向听的牌理(三)</h4>
+<h5 id="两搭子一向听">两搭子一向听</h5>
+<ul>
+<li><p>两面两面一向听的话应该留下双碰进张听牌的可能。如果双碰进张已经很薄的话，用安全牌进行替换会比较好。</p></li>
+<li><p>保留好形留下双碰和弱搭子进张会更广。</p></li>
+<li><p>只有 <span class="math inline">\(1\sim2\)</span>
+张进张数差别的时候，应该优先考虑改良和听牌时的听牌形。</p></li>
+<li><p>“双碰+两面”和“嵌张+两面”的比较要注意考虑手役和改良。</p></li>
+</ul>
+<h4 id="牌效率-16一向听的牌理四">牌效率 16—一向听的牌理(四)</h4>
+<h5
+id="找头一向听两搭子面对亚两面的雀头取舍">找头一向听两搭子面对亚两面的雀头取舍：</h5>
+<ul>
+<li>不固定雀头，保持“搭子+搭子”的形是进张最广的。</li>
+<li>有暗刻的无雀头形+两搭子的向听，把雀头固定下来是绝对不可取的。</li>
+<li>当搭子是复合两面的时候，不确定雀头才是更加有利的。</li>
+<li>无暗刻有一个搭子是愚形的情况，拆掉愚形搭子是有力的一手。</li>
+<li>无暗刻有两个搭子是愚形的情况，为了速度还是全牌效吧。</li>
+</ul>
+<h4 id="牌效率-17一向听的牌理五">牌效率 17—一向听的牌理(五)</h4>
+<p>找头一向听一搭子：</p>
+<ul>
+<li>改良很重要。</li>
+<li>面对多面进张的复合型要敢于拆愚形搭子。</li>
+<li>比较进张数是基本，当进张数几乎没什么差别的时候，“听牌形”和“改良”就有考虑的必要了。</li>
+</ul>
+<h4 id="牌效率-18一向听的牌理六">牌效率 18—一向听的牌理(六)</h4>
+<h5 id="靠张一向听">靠张一向听</h5>
+<ul>
+<li>进张数非常广。</li>
+<li>很容易形成愚形听牌。</li>
+<li>数字相同的数牌，形成了连续形的靠张比单独的靠张总体要更强。（好形率更高）</li>
+<li>由于靠张一向听的进张数非常的广，所以能形成良形听牌的进张数是最应该重视的要素。</li>
+<li>听牌太差也有拒听的考量。</li>
+</ul>
+<h4 id="牌效率-19听牌时的牌理">牌效率 19—听牌时的牌理</h4>
+<p>听牌时没有选择的情况比较多，但是在有所选择的时候，选择最容易和牌的情况是基本。</p>
+<ol type="1">
+<li>听牌的张数：别忘记三面，但多种张数少依旧不优。</li>
+<li>变化的比较：坎张与双碰的比较改良。</li>
+</ol>
+<h4 id="牌效率-20向听倒退">牌效率 20—向听倒退</h4>
+<ul>
+<li><p>向听倒退最终能让牌形成快速和牌的形的情况是不多的。</p></li>
+<li><p>做手役鸣牌。</p></li>
+<li><p>听牌几乎没有。</p></li>
+<li><p>向听倒退就是为了提升打点的技术</p></li>
+</ul>
+<ol type="1">
+<li>不选择听牌：过于愚形的听牌不如看眼断平。</li>
+<li>两向听倒退：进向听机会很少并且进向之后听牌很差，不如退向听看眼断平。</li>
+<li>序盘向听倒退：最常见的就是染手。</li>
+</ol>
+<h3 id="第三章手役">第三章:手役</h3>
+<h4 id="手役-1手役的考虑方法一">手役 1—手役的考虑方法(一)</h4>
+<p><a href="https://imgse.com/i/pSL3wdJ"><img
+src="https://s1.ax1x.com/2023/02/18/pSL3wdJ.png"
+alt="pSL3wdJ.png" /></a></p>
+<p>手役的难度和点数并不一定是平衡的，没有必要一味的追求难度高的役种。</p>
+<h4 id="手役-2手役的考虑方法二">手役 2—手役的考虑方法(二)</h4>
+<ol type="1">
+<li><p>手役是形成的：</p>
+<p>配合自己的摸牌来作手役是一个准则，<strong>“定打”是绝对禁止的。（<code>定打</code><span
+class="math inline">\(\not=\)</span><code>最终形</code>）</strong></p></li>
+<li><p>手役的优点：</p>
+<p><strong>提升打点，获得副露权（提升速度）。</strong></p></li>
+<li><p>手役的缺点：</p>
+<ul>
+<li>使进张数减少（速度减慢）。</li>
+<li>能够使用的牌被限定了。</li>
+<li>手役有时候会拉速度和防守的后腿。</li>
+</ul></li>
+</ol>
+<h4 id="手役-3役牌">手役 3—役牌</h4>
+<ol type="1">
+<li>留下役牌。</li>
+<li>役牌还是断幺？
+<ul>
+<li><strong>一般情况下还是断幺更有利，准备鸣牌的话，还是断幺更加容易一些。而且也更容易与平和等其他役复合。</strong></li>
+<li>打点相同的时候，确定的手役比不确定的手役更有利。</li>
+</ul></li>
+<li>关于鸣牌：
+<ul>
+<li>一般情况下，第一次鸣牌也没关系。</li>
+<li>需要第二次鸣牌的情况要么是手牌太好，要么就是手牌太差。</li>
+<li>不碰的情况：
+<ol type="1">
+<li>后期的大 top，牌不快不大的不碰。</li>
+<li>AL 不放铳优先的局面，不快点不碰。</li>
+<li>平场的早巡好牌有望立直的不碰。</li>
+<li>全好形役牌雀头不碰。</li>
+<li>搭子没几个全是垃圾的不碰。</li>
+</ol></li>
+</ul></li>
+</ol>
+<h4 id="手役-4平和">手役 4—平和</h4>
+<p>平和是最容易作成的役之一。只要效率把握的好，手牌自然能够形成平和。</p>
+<ol type="1">
+<li>两面的变化：两面改良重视。</li>
+<li>两坎：平和形重视时，留下两坎放弃双碰。</li>
+<li>拆对子：
+<ul>
+<li>有条件的情况下，拆掉包括但不限于役牌的对子，兼顾断幺平和，以门断平为目标。</li>
+<li>不仅一个对子的情况下，注意复合型的情况，根据牌效和防守拆掉最合适的对子。</li>
+</ul></li>
+</ol>
+<h4 id="手役-5断幺">手役 5—断幺</h4>
+<p>断幺最大的好处就是鸣牌之后也能和牌，这个我们应该尽量利用。</p>
+<ol type="1">
+<li>向着断幺打牌</li>
+<li>确定断幺：
+<ul>
+<li>搭子超载的情况下拆掉靠边的搭子。</li>
+<li>有雀头 <span class="math inline">\(\operatorname{6899}\)</span>
+的情况切 <span class="math inline">\(\operatorname{9}\)</span>
+狂看断幺。</li>
+</ul></li>
+<li>考虑鸣牌：牺牲一定的进张争取迅速副露断幺。</li>
+</ol>
+<h4 id="手役-6染手一">手役 6—染手(一)</h4>
+<h5 id="从手牌来看是否要去做">从手牌来看是否要去做</h5>
+<ul>
+<li><p><span class="math inline">\(10+\)</span>
+同色牌比较整齐且其他牌比较零散一般情况下可以做染手。</p></li>
+<li><p>不用染手的牌不要强行去染手，<strong>为染手去拆已经形成的面子是禁止的</strong>。</p></li>
+<li><p>特殊情况比如同色的牌非常整齐，其他的牌有且仅有一个面子，为了能够让打点大幅上升，还是可以拆面子染手的。</p></li>
+<li><p>有两个役牌对子的话，尽可能的染手作满贯。同时应该从比较不起眼的牌开始切，降低他人的警戒心。</p></li>
+<li><p>边打边弃的牌，当混一色相当遥远有可能中途弃和的时候，
+从中间的牌开始切让对手提高警惕从而巩固自己的防守也是一种打法。</p></li>
+<li><p>很痛苦的混一色要重视防守，没有见到和牌希望之前不要轻易鸣牌。</p></li>
+</ul>
+<h4 id="手役-7染手二">手役 7—染手(二)</h4>
+<h5 id="混一色的手筋">混一色的手筋</h5>
+<ol type="1">
+<li>过渡打牌</li>
+<li>先打：迷彩战术</li>
+<li>让形变强：多记一记多面听的牌形，可以用门清狂等程序训练。</li>
+</ol>
+<h4 id="手役-8三色">手役 8—三色</h4>
+<ol type="1">
+<li>滑动：以四连形为滑动窗口滑动到三色情况。</li>
+<li>两天秤：在有两种色的对称的两面/四连形时有机会牺牲部分进张数保留相邻的两种三色的可能性的方法
+。</li>
+<li>剩余牌的利用：在搭子超载时灵活地选择可以利用上剩余牌的形式拆搭子，灵活运用剩余牌去做手役。</li>
+</ol>
+<h4 id="手役-9对子手一">手役 9—对子手(一)</h4>
+<h5 id="七对子-or-对对和">七对子 or 对对和</h5>
+<ol type="1">
+<li>六组对子：七对子已经听牌的话，不要乱去碰。</li>
+<li>五组对子：
+<ul>
+<li><strong>这个时候根据手牌情况，向听倒退，选择对对有很多好处</strong>。</li>
+<li>幺九牌比较容易鸣牌，数牌 <span
+class="math inline">\(\operatorname{3\sim7}\)</span> 不容易鸣牌。</li>
+<li>有容易鸣牌的对子，有 <span class="math inline">\(3900\)</span>
+点以上的收入，巡目尚早。满足以上条件，从七对子一向听转对对才是正确的。</li>
+<li>形状比较好的情况下，有役牌或断幺
+chance，也不一定要固定七对子和对对和。</li>
+</ul></li>
+<li>四组对子+一组暗刻：
+<ul>
+<li>选择四暗刻的两向听是符合理论的打法。</li>
+<li>从向听数的比较来看，对对的听牌难易度比七对子有着压倒性的优势。而且还有三暗刻、四暗刻的可能性，应该保留对对。</li>
+<li>做成一个暗刻的话，那就是七对子和对对的天枰，碰牌出来的话就碰！</li>
+<li>但是，要是有场上已经切了两张牌的对子（已经不可能形成刻子的对子）的话，应当选择七对子。</li>
+</ul></li>
+</ol>
+<h4 id="手役-10对子手二">手役 10—对子手(二)</h4>
+<ol type="1">
+<li><p>七对子和面子手的分歧点：</p>
+<ul>
+<li>一般情况下，七对子和面子手的向听数一样的时候，面子手进张数更多，听牌更加容易。</li>
+<li>当面子手的向听数比七对子更低的时候，就向着面子手前进就好。</li>
+<li>面子手不好的时候要留下七对子的可能性。</li>
+</ul></li>
+<li><p>七对子的听牌：</p>
+<p>单骑听牌要根据其和牌程度有意图地进行选择：</p>
+<p><a href="https://imgse.com/i/pSx8prt"><img
+src="https://s1.ax1x.com/2023/02/23/pSx8prt.png"
+alt="pSx8prt.png" /></a></p></li>
+</ol>
+<h3 id="第四章宝牌和赤牌">第四章:宝牌和赤牌</h3>
+<h4 id="宝牌和赤牌-1宝牌的对策一">宝牌和赤牌 1—宝牌的对策(一)</h4>
+<p>要考虑宝牌进张去打牌。打点和进张都不好的时候，不要放弃宝牌的进张。</p>
+<h4 id="宝牌和赤牌-2宝牌的对策二">宝牌和赤牌 2—宝牌的对策(二)</h4>
+<ol type="1">
+<li>含有宝牌 <span class="math inline">\(\operatorname{a}\)</span> 的
+<span
+class="math inline">\(\operatorname{aa\!+\!1a\!+\!1\,a\!−\!1a\!−\!1a}\)</span>
+应该作为比一般两面坎张更好的牌应该先拆。</li>
+<li><strong>心里要怀着让宝牌牌上用场的想法打牌，固定宝牌和让未来的宝牌尽量留下的打法一般是更优的。</strong></li>
+</ol>
+<h4 id="宝牌与赤牌-3宝牌-2-以上的情况">宝牌与赤牌 3—宝牌 2
+以上的情况</h4>
+<ol type="1">
+<li>别太贪心：
+<ul>
+<li>正因为是大牌，所以才应该追求和牌的容易度。</li>
+<li>有多张宝牌，听的牌多就算让手牌价值下降一点也没关系。</li>
+<li>鸣牌也能够满贯，没有错过的理由啊。</li>
+</ul></li>
+<li>鸣牌前提的准备：
+<ul>
+<li>留役牌等重叠。</li>
+<li>切幺九牌尽快食断。</li>
+</ul></li>
+</ol>
+<h4 id="宝牌与赤牌-4切宝牌的时机">宝牌与赤牌 4—切宝牌的时机</h4>
+<ol type="1">
+<li>役牌和宝牌的情况：
+<ul>
+<li>役牌的宝牌：第一打或者听牌时。</li>
+<li>不要牌要比宝牌先切出去。</li>
+<li>综合场况，亲子关系，有无鸣牌，是否有现等情况判断切宝牌的时机。</li>
+</ul></li>
+<li>其他的情况：大多数情况下进张广度优先于宝牌考虑。</li>
+</ol>
+<h4 id="宝牌与赤牌-5宝牌和手役的选择">宝牌与赤牌 5—宝牌和手役的选择</h4>
+<ol type="1">
+<li>听牌时的选择：基本的就是选择听牌最多的。</li>
+<li>一向听的时候：
+<ul>
+<li>确定的一番一般情况下比不确定的两番有利。</li>
+<li>宝牌和手役的选择，按照进张是否广来进行判断是很少失败的。</li>
+</ul></li>
+<li>序盘的选择：序盘的话，留下宝牌和手役两方的可能性很多时候能形成好型。</li>
+</ol>
+<h4 id="宝牌与赤牌-6赤牌麻将的基本">宝牌与赤牌 6—赤牌麻将的基本</h4>
+<ol type="1">
+<li>比起手役，应该更加重视进张的宽度。</li>
+<li>不要拘泥于门前清。</li>
+<li>全带是不利的。</li>
+<li>考虑赤牌的进张。</li>
+</ol>
+<h3 id="第五章鸣牌">第五章:鸣牌</h3>
+<h4 id="鸣牌-1鸣牌的优点与缺点">鸣牌 1—鸣牌的优点与缺点</h4>
+<p>优点：<strong>速度上升</strong></p>
+<ol type="1">
+<li>加速听牌</li>
+<li>能够做成门清难以做成的役</li>
+<li>消除边张、嵌张等急需进张的地方</li>
+<li>能够做成新的面子改变所听的牌</li>
+<li>鸣牌还有破掉其他人的一发，隔掉他家的摸牌等等作用。</li>
+</ol>
+<p>缺点：<strong>打点下降，防御力下降</strong></p>
+<ol type="1">
+<li>降低打点</li>
+<li>手牌容易被看破</li>
+<li>防御力减弱</li>
+<li>固定了手牌，限定了手役的可能性</li>
+</ol>
+<h4 id="鸣牌-2副露判断的基本">鸣牌 2—副露判断的基本</h4>
+<p>应该以鸣牌时优点与缺点那边更大作为判断的标准。应该以鸣牌时优点与缺点那边更大作为判断的标准。</p>
+<h4 id="鸣牌-3碰与吃一">鸣牌 3—碰与吃(一)</h4>
+<ul>
+<li><p><strong>碰是 <span class="math inline">\(4\)</span> 倍速，吃是
+<span class="math inline">\(2\)</span> 倍速。</strong></p></li>
+<li><p>用碰消除一发的风险是很大的，消除一发还是用吃更加安全。</p></li>
+<li><p>能够吃的进张有着门清限定 <span class="math inline">\(2\)</span>
+倍的价值， 能够碰的进张有着门清限定 <span
+class="math inline">\(4\)</span> 倍的价值。</p></li>
+</ul>
+<h4 id="鸣牌-4碰与吃二">鸣牌 4—碰与吃(二)</h4>
+<ol type="1">
+<li>碰材的优劣</li>
+<li>要考虑吃的副露方式：
+<ul>
+<li>考虑吃了之后剩余的顺子 slide 的可能性。</li>
+<li>考虑吃了之后形成多面听的可能性。</li>
+<li>吃牌的时候一定要养成确认“鸣牌的方式对剩下的形是否有差别”的习惯。</li>
+</ul></li>
+</ol>
+<h4 id="鸣牌-5杠一">鸣牌 5—杠(一)</h4>
+<ol type="1">
+<li>杠的优点：
+<ol type="1">
+<li>使符数增高。</li>
+<li>宝牌增加。</li>
+<li>增加自己的摸牌。</li>
+<li>岭上开花。</li>
+<li>能够让特定的牌不能使用（限暗杠）。</li>
+</ol></li>
+<li>杠的缺点：
+<ol type="1">
+<li>有增加他家宝牌的可能性。</li>
+<li>容易暴露自己的手牌点数和手役。</li>
+<li>会使进张减少。</li>
+</ol></li>
+</ol>
+<h4 id="鸣牌-6杠二">鸣牌 6—杠(二)</h4>
+<h5 id="不开杠的选择">不开杠的选择</h5>
+<ol type="1">
+<li>手牌烂的一批</li>
+<li>使自己听牌变差的时候</li>
+<li>使手牌进张减少的时候</li>
+<li>有人立直的时候</li>
+<li>自己遥遥领先的时候</li>
+<li>门清的大明杠</li>
+</ol>
+<h4 id="鸣牌-7鸣牌与向听数">鸣牌 7—鸣牌与向听数</h4>
+<ol type="1">
+<li>不改变向听数的鸣牌：不改变向听数的鸣牌是禁止的，能改良或提高和率/打点的情况除外。</li>
+<li>副露数与向听数：
+<ul>
+<li>三副露：听牌、要是一向听的话也要有满贯的手牌（比如清一色）</li>
+<li>两副露：一向听以上，两向听要是给力的好形，打点要有 <span
+class="math inline">\(3900\)</span> 点。</li>
+</ul></li>
+</ol>
+<h4 id="鸣牌-8食断">鸣牌 8—食断</h4>
+<ol type="1">
+<li>即使断幺，好不容易有一手好牌，鸣牌的话太浪费了。</li>
+<li>宝牌或赤牌有 2 张以上。</li>
+<li>和牌就 OK 的情况。</li>
+<li>门清来不及的时候。</li>
+<li>牌型很烂，打点又不高的牌是不能鸣牌的，尤其是食断这种防御力低而且容易放铳的手牌。</li>
+</ol>
+<h4 id="鸣牌-9对对">鸣牌 9—对对</h4>
+<ol type="1">
+<li>只有 <span class="math inline">\(4\)</span>
+组对子就去做对对有点欠缺考虑。</li>
+<li>刻子和对子加起来要有 <span class="math inline">\(5\)</span>
+组这样的手牌就可以去做对对了。</li>
+<li>四暗刻的一向听该怎么办?不去听自摸就能够满贯的牌，我觉得有点优柔寡断了。</li>
+<li>做牌过度是要禁止的：有两面听牌没必要要单骑对对。</li>
+</ol>
+<h4 id="鸣牌-10混一色">鸣牌 10—混一色</h4>
+<ol type="1">
+<li>不应鸣牌的手牌：
+<ul>
+<li>只要是门清混一色的好形一向听都有门清听牌的价值。</li>
+<li>手牌的形状太次了。</li>
+</ul></li>
+<li>应该鸣的牌，应该放过的牌：
+<ul>
+<li>不鸣给自己制造愚形的牌。</li>
+<li>不鸣鸣完听牌很差的牌。</li>
+</ul></li>
+</ol>
+<h4 id="鸣牌-11后付1">鸣牌 11—后付(1)</h4>
+<ol type="1">
+<li>以防御力优先的鸣牌。</li>
+<li>赤牌的速度麻将中的后付也是很常见的。</li>
+<li>尽量防止暴露役牌对子为 dora 的后付。</li>
+</ol>
+<h4 id="鸣牌-12后付2">鸣牌 12—后付(2)</h4>
+<ol type="1">
+<li>急需的牌出现的时候：待牌比较少时的消除愚形。</li>
+<li>二手准备的后付：仅靠役牌的手牌是不好鸣牌的，但要是有三色或者一气的话会更加有效果。</li>
+<li>无论如何都想和牌的胜负关键。</li>
+</ol>
+<h4 id="鸣牌-13鸣牌的技巧1">鸣牌 13—鸣牌的技巧(1)</h4>
+<ol type="1">
+<li>食延：通过吃来让面子增加。（混一色、断幺……）</li>
+<li>双重面子的处理：可以通过鸣牌消除二度受的时候，应该尽可能的鸣牌。</li>
+<li><strong>但是，也要注意一下理牌</strong>：就要事先想好要鸣的牌，然后对手牌进行适当的理牌或者在吃之前早点把要副露的两张牌放到自己右边。</li>
+</ol>
+<h4 id="鸣牌-14鸣牌的技巧2">鸣牌 14—鸣牌的技巧(2)</h4>
+<p>关于食断要多考虑</p>
+<h4 id="鸣牌-15鸣牌的技巧3">鸣牌 15—鸣牌的技巧(3)</h4>
+<ol type="1">
+<li>破一发</li>
+<li>干涉碰</li>
+<li>转移海底、消除海底</li>
+<li>不以和牌为目标的杠</li>
+</ol>
+<h3 id="第六章立直">第六章:立直</h3>
+<h4 id="立直-1立直的优点与缺点">立直 1—立直的优点与缺点</h4>
+<ol type="1">
+<li>立直的优点：
+<ul>
+<li>很容易就能成役。</li>
+<li>有一发和里宝牌的可能性。</li>
+<li>让对手不能自由地打牌。（四暗刻通过立直延长巡目）</li>
+<li>让对手知道你听牌，而去追求荣和。</li>
+</ul></li>
+<li>立直的缺点：
+<ul>
+<li>必须拿出 <span class="math inline">\(1000\)</span> 点点棒。</li>
+<li>让他家知道自己已经听牌，荣和的期望不高。</li>
+<li>立直后除了所听的牌以及能够暗杠的牌，所有的牌都只能摸切。</li>
+<li>不能改变手牌。</li>
+</ul></li>
+</ol>
+<h4 id="立直-2立直还是默听1">立直 2—立直?还是默听?(1)</h4>
+<h5 id="平场情况看手牌">平场情况看手牌</h5>
+<ol type="1">
+<li>像役满一样的高打点手牌立直也没有打点的提升，Dama。（四暗刻除外）</li>
+<li>默听能有跳满的手牌，听牌又是两面的话还是不立直会更有利。</li>
+<li>好型+早巡的时候，立直更有利是现在的标准。</li>
+<li>这样有役且有 <span class="math inline">\(8000\)</span>
+打点的愚型，Dama。</li>
+<li>跳满以上的牌，大多默听。满贯确定的愚形听牌基本上都是默听，不过序盘的好型听牌立直也不错。</li>
+</ol>
+<h4 id="立直-3立直还是默听2">立直 3—立直?还是默听?(2)</h4>
+<h5 id="听牌十分形看场况">听牌十分形看场况</h5>
+<ol type="1">
+<li>那么，两面等不错的听牌，得点在 <span
+class="math inline">\(5200\)</span> 以下的，
+从结论上讲，“平场是全部应该立直的”。</li>
+<li>即使是平和 nomi 也要立直。</li>
+<li>立直一般优于手牌的手役变化。</li>
+</ol>
+<h4 id="立直-4立直还是默听3">立直 4—立直?还是默听?(3)</h4>
+<h5 id="牌的形状不太好的情况">牌的形状不太好的情况</h5>
+<ol type="1">
+<li>无役听牌：
+<ul>
+<li>有
+Dora，改良少偏向于立直。无役有宝牌和赤牌的愚形听牌立直是上等选择。</li>
+<li>改良比较丰富的手牌，默听也是考虑范围之一。</li>
+<li>没有
+Dora，立直的得点提高效率不太高。先默听，有人立直的话还能有弃和的选择。</li>
+<li>早巡形状太差了也要考虑拒听。</li>
+</ul></li>
+<li>有役听牌：
+<ul>
+<li>改良很少（Dora 较少）的情况还是要去立直的。</li>
+<li>对于手役，默听有 <span class="math inline">\(5200\)</span>
+就默听，<span class="math inline">\(2600\)</span> 的话就立直。</li>
+</ul></li>
+</ol>
+<h4 id="立直-5立直理论1">立直 5—立直理论(1)</h4>
+<ol type="1">
+<li>即立直是基本：
+<ul>
+<li>听牌时立直和默听的判断：要立直就马上立直；默听的话，只要场上形式没变就保持默听。</li>
+<li>立直越迟，一发的几率就越小。</li>
+</ul></li>
+<li>自摸的基准：
+<ul>
+<li>不要怕“这种听牌是不会被打出来的”。</li>
+</ul></li>
+</ol>
+<h4 id="立直-6立直理论2">立直 6—立直理论(2)</h4>
+<ol type="1">
+<li>引挂在内，延展在外</li>
+<li>暗刻优先：无平和形时增加符数。</li>
+<li>情报要少</li>
+</ol>
+<h4 id="立直-7立直的听牌取向1">立直 7—立直的听牌取向(1)</h4>
+<ol type="1">
+<li><p>张数</p></li>
+<li><p>点数听牌张数没有差别，那就选择得点更高的。</p></li>
+<li><p>所听牌被打出的容易程度</p>
+<p><a href="https://imgse.com/i/pp2kT3V"><img
+src="https://s1.ax1x.com/2023/03/30/pp2kT3V.png"
+alt="pp2kT3V.png" /></a></p></li>
+</ol>
+<h4 id="立直-8立直的听牌取向2">立直 8—立直的听牌取向(2)</h4>
+<h5
+id="张数少的高打点张数多的低打点">张数少的高打点，张数多的低打点</h5>
+<ol type="1">
+<li>打点有微差：更侧重于张数。</li>
+<li>1 翻的差距：张数有一倍的差距的话，打点只有一倍提升也不要选择。</li>
+<li>2 翻的差距：
+<ul>
+<li>无 dora：选择手役。</li>
+<li>dora 1：根据场况判断。</li>
+<li>dora 2：两面立直/愚形默听</li>
+<li>dora 3：好形立直。</li>
+</ul></li>
+<li>3 翻以上的差距：几乎都是高打点。</li>
+</ol>
+<h3 id="第七章防守">第七章:防守</h3>
+<h4 id="防守-1防守的基本">防守 1—防守的基本</h4>
+<ul>
+<li><p>防守的基本：立直的处理&amp;弃和</p></li>
+<li><p>防守与进攻的战略：</p>
+<p><a href="https://imgse.com/i/ppwyaAx"><img
+src="https://s1.ax1x.com/2023/03/23/ppwyaAx.png"
+alt="ppwyaAx.png" /></a></p>
+<ol type="1">
+<li>弃和：放弃自己和牌，彻底地进入防守状态。</li>
+<li>兜牌：一边避免放铳，一边向着听牌或者和牌前进的打法。</li>
+<li>防守需要重视</li>
+</ol></li>
+</ul>
+<h4 id="防守-2安全牌">防守 2—安全牌</h4>
+<p>安全牌：三家现物；上家同巡切牌；无国士无双听牌时，第四张字牌；完全的
+no chance。</p>
+<h4 id="防守-3筋1">防守 3—筋(1)</h4>
+<ul>
+<li><strong>大体的数据显示，所有的立直中三分之二的立直都是两面听牌。</strong>为了不铳两面听牌的理论就叫做“筋”。</li>
+<li>6 个基本筋、3 条筋</li>
+</ul>
+<h4 id="防守-4筋2">防守 4—筋(2)</h4>
+<ul>
+<li><p>远筋（半筋）</p>
+<p><a href="https://imgse.com/i/ppwcJT1"><img
+src="https://s1.ax1x.com/2023/03/23/ppwcJT1.png"
+alt="ppwcJT1.png" /></a></p></li>
+<li><p>相对安全的筋：</p>
+<ul>
+<li>老头牌没听边张和嵌张听牌型，所以要比其他的筋更安全。</li>
+<li>宝牌周边的牌，即使是筋牌也是危险的。筋牌引挂的立直还是比较多的。</li>
+</ul></li>
+</ul>
+<h4 id="防守-5壁">防守 5—壁</h4>
+<ol type="1">
+<li><p>No Chance：</p>
+<p><a href="https://imgse.com/i/ppwggb9"><img
+src="https://s1.ax1x.com/2023/03/23/ppwggb9.png"
+alt="ppwggb9.png" /></a></p></li>
+<li><p>One Chance：one chance
+在早巡是可信的，但在终盘千万不要信。</p></li>
+<li><p>双重 one chance：<strong>no chance &gt; 双重 one chance &gt;&gt;
+one chance</strong></p></li>
+</ol>
+<h4 id="防守-6弃和的切牌顺序1">防守 6—弃和的切牌顺序(1)</h4>
+<ol type="1">
+<li>弃和的基本思路：从安全度高地牌开始切。</li>
+<li>现物的优先度：将来可能有危险的牌先切，有多张现物的时候，应该保留共同的安全牌。</li>
+</ol>
+<h4 id="防守-7弃和的切牌顺序2">防守 7—弃和的切牌顺序(2)</h4>
+<ol type="1">
+<li>地狱单骑。</li>
+<li>只有双碰和单骑才能和的牌：
+<ul>
+<li>字牌，有筋的老头牌，以及 no chance 都是这样的牌。</li>
+<li>要是场上已经切除一张的话，双碰的可能性就比较小了，还是比较安全的。</li>
+<li>双碰役牌能够有一翻，因此要尽量晚切。</li>
+</ul></li>
+<li>两面听牌不可能和的牌：筋牌、或者是有壁的 <span
+class="math inline">\(\operatorname{2\sim8}\)</span>
+尽可能的选择切掉双碰可能性不大的听牌。</li>
+<li>棘手的情况：
+<ul>
+<li>切貌似能通过的牌：早外、one chance 等。</li>
+<li>切即使铳了点数也不高的牌：幺九牌不点断幺，不切 dora 及其周边。</li>
+<li>拆对子、拆暗刻：打一过二和打一过三。</li>
+</ul></li>
+</ol>
+<h4 id="防守-8弃和的切牌顺序3">防守 8—弃和的切牌顺序(3)</h4>
+<p>距离立直宣言牌越远的那张数牌的外筋是安全的。</p>
+<h4 id="防守-9兜牌">防守 9—兜牌</h4>
+<p>兜牌即一边扣住危险牌，一边向着和牌或者是听牌前进的打法。</p>
+<p>一般情况下，对手立直之后：</p>
+<ol type="1">
+<li>自己没有听牌也要向着听牌或者和牌前进。</li>
+<li>如果对日对自己不利的话。即使自己听牌也会拆掉手牌。</li>
+</ol>
+<p>具体方法：</p>
+<ol type="1">
+<li>拆对子</li>
+<li>拆搭子</li>
+<li>拆暗刻</li>
+<li>七对子</li>
+</ol>
+<p>兜牌需要注意的地方：要能“兜”，不忘记防守的基本是“弃和”。</p>
+<h4 id="防守-10副露的防守">防守 10—副露的防守</h4>
+<ol type="1">
+<li>首先是读听牌：
+<ul>
+<li><strong>三副露可以视作听牌</strong></li>
+<li><strong>所染手的牌出现溢出多半已听牌</strong></li>
+<li>所切牌看起来很恐怖的话多半已经听牌</li>
+<li>反复的毫不犹豫地摸切也是听牌的迹象</li>
+</ul></li>
+<li>推测打点高还是低</li>
+<li>危险牌是哪些？注意特殊役种以及后付的概率。</li>
+</ol>
+<h4 id="防守-11扣牌1">防守 11—扣牌(1)</h4>
+<ol type="1">
+<li>扣牌的意义：通过扣牌，可以防止对手听牌，进而防止对手和牌。</li>
+<li>扣牌的缺点：拿着与自己手牌无关的牌，会导致自己听牌速度减慢。</li>
+<li>应该扣牌的情况：
+<ul>
+<li>对手已经鸣牌</li>
+<li>对手的点数对你构成威胁</li>
+<li>确定是对手的危险牌，不要在序盘就开始扣牌</li>
+<li>自己是扣牌对象的上家的时候</li>
+</ul></li>
+</ol>
+<h4 id="防守-12扣牌2">防守 12—扣牌(2)</h4>
+<h5 id="具体情况">具体情况</h5>
+<ol type="1">
+<li>下家染手</li>
+<li>后付的字牌</li>
+<li>攻守兼备的扣牌</li>
+</ol>
+<h4 id="防守-13不放铳的打法">防守 13—不放铳的打法</h4>
+<ol type="1">
+<li>留下安全牌（留安）</li>
+<li>选择安全的牌切</li>
+<li>穴熊战术（配牌弃和）</li>
+</ol>
+<h4 id="防守-14立直的读牌一">防守 14—立直的读牌(一)</h4>
+<p>读牌读“牌的危险度”和“牌的安全度”。对于有一定舍牌特征的立直，能够把握“危险的牌”和“相当安全的牌”才是真正的读牌。</p>
+<p>几个“危险度比较高的牌”的例子：</p>
+<ul>
+<li><p>五的里筋：<strong>正是因为早巡切了利用价值很高的数牌 <span
+class="math inline">\(\operatorname{5}\)</span>，
+所以不难想象，他手牌里有 <span
+class="math inline">\(\operatorname{23}\)</span> 或者 <span
+class="math inline">\(\operatorname{78}\)</span>
+的搭子。</strong></p></li>
+<li><p>间四间：</p>
+<p><a href="https://imgse.com/i/ppwzsxO"><img
+src="https://s1.ax1x.com/2023/03/23/ppwzsxO.png"
+alt="ppwzsxO.png" /></a></p>
+<p>“<strong>早巡切掉</strong>”是关键词。</p></li>
+<li><p>被拆掉的两面搭子的里筋：拆掉两面搭子的立直，要小心其二度进张。</p></li>
+<li><p>拆掉嵌张搭子的立直的跨筋。</p></li>
+</ul>
+<h4 id="防守-15立直的读牌2">防守 15—立直的读牌(2)</h4>
+<ol type="1">
+<li>安全牌前的跨筋：切掉安全牌的立直，是由两个固定的两面搭子来的，几乎不会有双碰进张。</li>
+<li>逆切的跨筋：拆掉嵌张搭子的立直，逆切的筋牌安全度较高。</li>
+<li>双碰、嵌张的否定</li>
+</ol>
+<h3 id="第八章状况判断">第八章:状况判断</h3>
+<h4 id="状况判断-1状况判断的基本">状况判断 1—状况判断的基本</h4>
+<ol type="1">
+<li>两个状况：场况、点棒状况。</li>
+<li>状况和战略</li>
+</ol>
+<h4 id="状况判断-2要有顺位意识">状况判断 2—要有顺位意识</h4>
+<h4 id="状况判断-3状况与做牌1">状况判断 3—状况与做牌(1)</h4>
+<h5 id="考虑巡目">考虑巡目</h5>
+<ol type="1">
+<li>以舍牌排数分类：
+<ul>
+<li>序盘（<span class="math inline">\(1\)</span>～<span
+class="math inline">\(6\)</span>）</li>
+<li>中盘（<span class="math inline">\(7\)</span>～<span
+class="math inline">\(12\)</span>）</li>
+<li>终盘（<span class="math inline">\(13\)</span>～<span
+class="math inline">\(18\)</span>）</li>
+</ul></li>
+<li>基本想法：
+<ul>
+<li>序盘追求手役的可能性，追求好形。</li>
+<li>中盘首先考虑听牌，根据自己的手牌同时为他家的进攻做准备。</li>
+<li>到了终盘自己的手牌没有战斗力就要重视防守了。</li>
+</ul></li>
+</ol>
+<h4 id="状况判断-4状况与做牌2">状况判断 4—状况与做牌(2)</h4>
+<h5 id="考虑场况">考虑场况</h5>
+<ol type="1">
+<li>对比较薄的牌的对应</li>
+<li>对较强的花色要有意识</li>
+<li>副露的对应</li>
+</ol>
+<h4 id="状况判断-5状况与做牌3">状况判断 5—状况与做牌(3)</h4>
+<h5 id="考虑点棒">考虑点棒</h5>
+<p>原点以下注重打点，原点以上注重速度。</p>
+<ol type="1">
+<li>提高打点：
+<ul>
+<li>门清立直</li>
+<li>dora</li>
+<li>染手</li>
+<li>自己的目标是亲家时，以打点为重是基础。</li>
+</ul></li>
+<li>提高速度：
+<ul>
+<li>提高副露断幺的意识。</li>
+</ul></li>
+</ol>
+<h4 id="状况判断-6状况与立直判断">状况判断 6—状况与立直判断</h4>
+<ol type="1">
+<li>应该立直的牌默听：
+<ul>
+<li>山越的宝字牌单骑</li>
+<li>立直家的现物</li>
+</ul></li>
+<li>南场的立直判断。</li>
+</ol>
+<h4 id="状况判断-7all-last-的战术一">状况判断 7—ALL LAST 的战术(一)</h4>
+<ol type="1">
+<li><p>自摸缩小的点差：</p>
+<p><a href="https://imgse.com/i/ppcdTc8"><img
+src="https://s1.ax1x.com/2023/03/29/ppcdTc8.png"
+alt="ppcdTc8.png" /></a></p>
+<ul>
+<li><p>1300/2600 比较常见。</p></li>
+<li><p><strong>要注意“满贯自摸的逆转圈内”迎来
+AL，或者在“满贯自摸的逆转圈 外”迎来 AL。</strong></p></li>
+</ul></li>
+<li><p>逆转的做牌：</p>
+<ul>
+<li>处于下位（4&amp;部分3）追求速度很难逆转有机会可以去做大牌。</li>
+<li>处于上位（部分3&amp;2）尽量追求速度能逆转就行。</li>
+</ul></li>
+<li><p>鸣牌判断：和牌就能够 TOP
+的情况，只要重视速度就好了。后附，食断都可以。</p></li>
+</ol>
+<h4 id="状况判断-8all-last-的战术二">状况判断 8—ALL LAST 的战术(二)</h4>
+<h5 id="al-的立直判断">AL 的立直判断</h5>
+<ol type="1">
+<li>AL 自己 TOP
+有役听牌应该默听。如果别人的牌只是没什么翻盘机会的食断的话，有时候有役也可以立，铳了也没关系。不过这样的话就要有被第二位满贯直击也无法逆转的点差。</li>
+<li>一发中里宝或者自摸中1里宝就能够逆转的状况的话，即立是正确的。 特别是
+3900点 以内的点差，默听是损失非常大的打法。</li>
+<li>太过于期待苛刻的条件也是需要禁止的。</li>
+</ol>
+<h4 id="状况判断-9all-last-的战术三">状况判断 9—ALL LAST 的战术(三)</h4>
+<ol type="1">
+<li>难以逆转可以考虑拒听防守。</li>
+<li>自摸或直击即逆转的情况下旁击可以考虑见逃。</li>
+<li>电报</li>
+</ol>
+<h3 id="第九章攻守判断">第九章:攻守判断</h3>
+<h4 id="攻守判断-1攻守判断的原则">攻守判断 1—攻守判断的原则</h4>
+<ol type="1">
+<li>不要以结果判断好坏：<strong>对结果论说不！</strong></li>
+<li>要有目的意识。</li>
+<li>设定自己的标准。</li>
+</ol>
+<h4 id="攻守判断-2判断材料">攻守判断 2—判断材料</h4>
+<ol type="1">
+<li>自己和牌的容易度：有机会和出的牌就进攻，这是攻守判断基本中的基本。</li>
+<li>打点</li>
+<li>牌的危险度</li>
+<li>推测对手的打点：由于副露的打点容易被看透，所估计出来的打点也要成为攻守判断的材料。立直的不确定因素太多，除了有杠等特殊情况之外，主要还是看对手是亲家，还是子家。</li>
+<li>弃和的成功率</li>
+</ol>
+<h4 id="攻守判断-3攻守判断的标准">攻守判断 3—攻守判断的标准</h4>
+<p><span style="font-size: 2em; font-weight: bold;">Reference</span></p>
+<ol type="1">
+<li>79博客-目录书签跳转版.pdf</li>
+<li>Seventh9先生の麻雀教室(改二).pdf</li>
+<li>部分图片来自于B站UP主 星野Poteto：<a
+href="https://space.bilibili.com/303003611/lists/622694">合集·(大概)很好懂的牌效率</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>日本麻将</category>
+      </categories>
+      <tags>
+        <tag>日本麻将</tag>
+        <tag>立直麻将</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown标记语言入门</title>
     <url>/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h2 id="markdown标记语言入门">Markdown标记语言入门</h2>
@@ -795,6 +2669,236 @@ href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTe
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<center>
+Hello World!
+</center>
+]]></content>
+  </entry>
+  <entry>
+    <title>十二时辰</title>
+    <url>/%E5%8D%81%E4%BA%8C%E6%97%B6%E8%BE%B0/</url>
+    <content><![CDATA[<center>
+<h3>
+十二时辰
+<h4>
+音阙诗汀
+</center>
+<p>音阙诗汀“十二时辰”系列歌曲在未统一为一个专辑时分别的专辑文案，见猎心喜，整理如下。</p>
+<p><em>文案版权归 音阙诗汀 所有，如有侵权请联系删除。</em></p>
+<h5 id="子时">子时</h5>
+<p>这江湖啊，有些人把命拴在酒葫芦上，有些人把命悬在刀尖上，有些人要柴米油盐酱醋茶，有些人要腥风血雨走天涯。他不巧，全占了。这人世间唯命运不可捉摸，他当年把全部家当都换了一把剑。满心以为这辈子就要和这冷东西相依为命，却做梦也没想到自己还有亲手把它卖了的一天。</p>
+<p>那是个梨花沾雨的清晨，小姑娘穿了一身喜庆的红裙子，抬头冲树上睡觉的他大声喊：“哥！我要成亲了！”</p>
+<p>他好悬没一头从树上栽下去。</p>
+<p>天要下雨，娘要嫁人。姑娘大了，留不住了。</p>
+<p>但是嫁人得有嫁妆啊！他那些买命钱哪能脏了姑娘的喜绸？</p>
+<p>思来想去，浑身上下也就只有这把剑值几个钱。</p>
+<p>他又想起那个天天来他摊子上赊瓜吃的小白脸，说是什么当铺的老板。
+成了，这嫁妆有了！</p>
+<p>虽称不上十里红妆，但也是体体面面地送了姑娘出嫁。</p>
+<p>姑娘出阁的时候，大哭大叫要他背着出门。他又想拿剑柄敲她脑袋，却抬手摸了个空。</p>
+<p>他只说：“嫁妆都是我出的，你以后不能叫我哥了，改口吧，叫爹。”</p>
+<p>然后他就被姑娘一脚踹了出去，差点连喜酒都没喝上。</p>
+<p>弯月当空，他抬头看了。</p>
+<p>是下弦。</p>
+<p>街头巷尾串过几只老鼠，他从老茶摊旁边顺了块板砖。</p>
+<p>“放下屠刀，立地成佛。”</p>
+<p>普度众生的口号太适合这个大喜的日子了。</p>
+<p>月光透进巷尾一个小楼的窗子，俊秀的青年神情郑重地把一把长剑收进匣子。剑锋上洗不掉的血印随着光渐次暗去。青年把匣子束之高阁之前，需要记下典当之人的信息。可想了半天没想起那人的名字，于是便写下：</p>
+<p>“凶剑无名，天下第一刺客。”</p>
+<p>“死当。”</p>
+<hr />
+<h5 id="丑时">丑时</h5>
+<p>十年前盛名在外的如意楼倒了，倒之前，楼主放出了风声，代为保管的江湖密钥被侠盗所窃，与此同时，失窃的还有与偌大宝藏相关的一幅画。</p>
+<p>此后，江湖掀起一阵狂热的寻人潮来，那为百姓做了无数好事的侠盗，成了油锅里的蚱蜢，再无安生可言。</p>
+<p>被江湖人士踏遍的如意楼成了废弃之地，废墟中，老人颤颤巍巍的把断了的剑收回怀中，叹了口气：这江湖啊，要不太平了。</p>
+<p>月光白惨惨的打下，传闻里的侠盗抱着个姑娘，明明是冷峻的容颜，却因眉尾的一道伤显得格外狰狞了起来，他低着头，回想起她替他挡的一刀，怀里的金簪愈发的滚烫了起来。</p>
+<p>“你一定会好的。”</p>
+<p>巷尾的拐角处，他一瘸一拐的向外走去。</p>
+<p>又一年四月，新坟上，落魄青年提着酒，下意识的摸了摸怀里，温热的，却空无一物，他笑了笑，没能出声，又往地上倒去。</p>
+<p>寂静的小楼上，青年看了看匣子里的金簪，做工精致，簪上的蝴蝶展翅欲飞，簪尾却有不少摩挲的痕迹，他郑重其事的将匣子放回原处，便走出了小楼。</p>
+<p>月光下，黄纸隐隐闪烁着几个字：“金簪隔阴阳，天下第一侠盗”</p>
+<p>“死当”</p>
+<hr />
+<h5 id="寅时">寅时</h5>
+<p>“我托人送信给您，完全是抱着一种试一试也无妨的心态，却没有想到，您真的会屈尊找我。”少女努力撑起身子，倚靠在床榻边，面色苍白，气若游丝，薄薄的嘴唇却努力勾勒出上扬弧度。</p>
+<p>青年随便找了张椅子坐下，看了眼床边的火盆，打出一把折扇，微微扇开充塞在屋子里的苦涩药味。</p>
+<p>“你在信中说，自己生来体弱，从未出过大门。那你是如何得知天机阁的？”青年问道。</p>
+<p>“书里写着啊。”少女的眸子亮晶晶的：“我终日缠绵病榻，于养病无聊之际，便看书打发时间。你不晓得，古往今来，天下之事，书里面全都写着。”</p>
+<p>青年挑了挑眉毛，道：“那你打算用什么典当？又准备典当什么？天机阁接待普通人，也是要收些代价的。”</p>
+<p>少女垂下眼睫，脸上掠过一丝红晕：“说来好笑。书看多了，心里便忍不住生出妄想。我想和窗外的鸟儿一样自由。我想健康起来，然后亲眼去看一看外面的天地，用双足丈量每一寸河山。我不想永远做一只井底之蛙，被困在方寸的天空里，枉废一生。至于典当物……我看过的所有书籍，行吗？”</p>
+<p>青年听着少女天真的发言，有些好笑地摇头道：“我不缺书。”</p>
+<p>“可我再没有什么宝物了。”少女略显失望。</p>
+<p>青年起身走到病床边，收起折扇敲了敲窗前装满泥土的花盆：“你喜欢种花？”</p>
+<p>少女摇头道：“喜欢算不上。这是我去年种下的。我有个傻念头，觉得这盆花和我有某种联系。比如，当它发芽时，我的身体便会好起来。虽然一直都没有动静，但我觉得它只是在破土之前，要花更多的时间，在泥土深处酝酿生命。也许是明年，也许是后年，总有一天，它一定会抽出新芽的。”</p>
+<p>青年拿起花盆，在手中端详一阵，道：“这个，我收下了。”</p>
+<p>少女错愕地睁圆了眼睛，望着青年离去的背影，耳边只落下两个字：</p>
+<p>“死当。”</p>
+<hr />
+<h5 id="卯时">卯时</h5>
+<p>清晨的雾还没散，栅栏里的母鸡在公鸡响亮的打鸣声里下了两个蛋。耳朵上还别着一根稻草的少年翘着腿躺在草垛上学公鸡打鸣。</p>
+<p>樵夫上山之前和少年打了个招呼，少年估摸着时间差不多了，就又跑到庙街去蹲点。</p>
+<p>那些有钱人家的夫人们就喜欢在这破晓时分驾着锦帷彩带的马车去敬香礼佛，图个清净。</p>
+<p>往日少年总蹲在庙门口支个简陋的摊子卖他的“长寿丹”。正品山楂丸，活血化痰，健脾开胃，延年益寿没毛病。</p>
+<p>只不过今日他不是来等这些阔气的夫人们的，而是在等一个能掐会算的“神仙”。</p>
+<p>神仙打着哈欠走到庙门口的时候就被不知道从哪儿窜出来的少年一把抱住了腿。</p>
+<p>他低头看了一眼两眼放光的少年，伸出两指在他眉间点了一下，说了句：
+“还不到时候。”</p>
+<p>少年蔫巴巴地垂下了头，他知道今日神仙也不会让他交换。能和神仙做交换的都是些大人物，都是些他只能在话本里见到的大人物。他第一次见神仙的时候，神仙就是这句话——</p>
+<p>还不到时候。</p>
+<p>到底什么时候才到啊？少年叹着气和神仙讲着自己的宏图大志。他要游遍天下河山，无所不知，无所不至，要让天下人都知道自己的名字！</p>
+<p>神仙不知道有没有听进去，只是看起来对他的长寿丹很感兴趣。</p>
+<p>少年等不及了，人生匆匆不过几载春秋，他要踏上他梦寐以求的江湖路了。</p>
+<p>临行前，他又去庙街堵了神仙，把自己从山上采的一串新鲜山楂强塞到了人家怀里，然后就头也不回的走了。</p>
+<p>他不知神仙高兴地拎着那串山楂回到了自己的小楼，拿出了一个已陈封条的宝匣。小心翼翼地取下封条，那匣子里是一串枯萎的残枝，已经辨认不出品类。他把枯枝取了出来，又把少年给的山楂放了进去，才满意地把封条贴上。那封条上的字迹有些陈旧了，写着：</p>
+<p>“昔日长寿丹，江湖百晓生”</p>
+<p>他想了想又提笔在黄纸上添了几个字：</p>
+<p>“旧友惠赠”</p>
+<hr />
+<h5 id="辰时">辰时</h5>
+<p>日头正盛，炎热的气息顺着树荫直愣愣的向下传递，却在一座凉亭边戛然而止，无端透露出些惧怕来。</p>
+<p>镜头拉近，两位青年于石桌上对坐着，一双俊秀的手把弄着白玉棋盘，身着白衣的公子轻声开口：“这日子过于无趣了些”，他歪了歪头，对另一边的青年说道：“阁主，打个赌吧。”青年懒散的打了个哈欠，说道：“赌什么？”</p>
+<p>公子抿了抿唇，道“赌我这十年同袍，理当迷途知返。”</p>
+<p>轶夜，杀机四伏，玲珑府上，臃肿的中年男子狞笑着，将嗷嗷哭嚎的孩童摔在地上，剑光闪过，他抹了脖子，最后一句话甩出：“我败了，但尔等告诉公子，我死，这府上其他人也别想独活。”蒙了面的黑衣人看着他摔死了自己的老来子，瞠目结舌。下一刻，火光四起。</p>
+<p>白昼渐起，消磨了夜色带来的血腥气，黑衣人跪在公子下侧，“公子，属下无能。”公子略微有些晃神，叹道“罢了，是某看走眼了。”</p>
+<p>小楼上，青年吹了吹口哨，将白玉棋盘收入囊中，哼着小曲轻笑：“你这神机妙算，也有高估了人性的一天？”</p>
+<hr />
+<h5 id="巳时">巳时</h5>
+<p>“您看我浑身上下什么值钱，您开口。”这人大马金刀地坐在青年面前，一副什么都不在乎，什么都能割舍的表情。</p>
+<p>青年也算是见了不少人了，第一次见这么混不吝的。来当东西空手来，那气势却像是带了一身的金银珠宝。</p>
+<p>呵，这辈子论起摆架子，他还真就没怕过谁。</p>
+<p>“天机阁，不接俗客。”</p>
+<p>“我不是俗客，我很有名。”他正襟危坐，神情庄重。</p>
+<p>青年竖起耳朵，等他报个响亮的名头。</p>
+<p>“我爹是锦衣侯。”</p>
+<p>“完了？那你呢？”</p>
+<p>“锦衣侯他儿子。”</p>
+<p>“慢走不送。”</p>
+<p>青年直接把桌上的茶杯一收。</p>
+<p>“哎等等！等等！”那人非常没有风度地整个扑在了桌子上，“魔刀匠侯！”</p>
+<p>他咬着牙报出了这个让他羞耻的名号。</p>
+<p>青年停了一瞬，似乎从这个名字里窥见了一个江湖血雨中的背影。</p>
+<p>恩仇难休，浮华如梦。</p>
+<p>“你想换什么？”</p>
+<p>他听到这问话，傲气的眉头低下。“换几年寿命，能换几年换几年。”</p>
+<p>“好啊。”青年答应了，“我要你用它换，十年寿命。换不换？”</p>
+<p>青年指了指他腰间一根短玉笛。这人如今穿着落魄，须发凌乱，只有腰间</p>
+<p>那短笛仔细地套了个软绸，精心地挂在腰间。</p>
+<p>“您可真会挑。”他苦笑，但还是解下笛子递了过去。</p>
+<p>他离开时的背影和青年记忆中的背影重叠，只不过一个走向了尸山血海的</p>
+<p>风雨江湖，一个走向了草长莺飞的归乡之路。</p>
+<p>他欣然地将短笛收入匣，仍旧郑重地写下封条：</p>
+<p>“乡音玉笛，魔刀匠侯”</p>
+<p>“死当”</p>
+<hr />
+<h5 id="午时">午时</h5>
+<p>太阳刚下山，闹市也安静了下去，稀稀落落的人群散去，一个留着络腮胡的大汉躲在角落，一边咬牙切齿的梗着脖子杀鸡，一边抖着手默念着什么，血溅出的瞬间，他眼皮倏的一跳，侧开脸。</p>
+<p>“啊！他！一个！晕血的人！为什么！要去！报名！刽子手！”</p>
+<p>他用力的擦掉溅在额头的血迹，大半年了，他终于从抖抖索索不敢下手做到了放血干净利落，这艰辛不提，单单是死在他手下的鸡鸭冤魂，就一大摞了，那死相之惨，让人无法直视。</p>
+<p>十字路口的人渐渐聚集，茶馆里看热闹的有叹息的亦有，“老天无眼，竟要收了青天大老爷的命去！”</p>
+<p>午门外，说时迟那时快，监斩官一声令下：</p>
+<p>“午时到！来人！斩首！”</p>
+<p>而蒙着面的大汉提着刀，盼了又盼，终于盼到了他有用武之地的一天。</p>
+<p>收工后，一位头发花白的男子颤颤巍巍地向他行着礼：“多谢壮士救命之恩”，满脸络腮胡的他难得的红了脸，“小事小事，莫要言谢了。”</p>
+<p>鸟儿叽叽喳喳的晃得树枝咿呀的响，天机阁楼上，叼着笔的青年支着头，看着水镜里的画面，露出兴味的笑，又想起那天大汉磕磕巴巴找他求一具偷天换日假傀儡的事。</p>
+<p>“这傀儡，你拿什么来换”</p>
+<p>大汉咬咬牙，“阁主，有什么能看的上的，某皆愿来换。”</p>
+<p>“既然你晕血，便把那蒙眼巾予我罢了。”</p>
+<p>这大汉与那官，分明是毫无关系的陌生人，却又偏偏为他求到他这里来，也算是，缘分一场吧。</p>
+<p>磊落故事曾说罢，问尽赤诚不如人。</p>
+<hr />
+<h5 id="未时">未时</h5>
+<p>“明天城门外，他真的会经过吗”她吃着早春的梅花糕，含含糊糊地问道，“这事关我一生的幸福，你可莫诓我。”</p>
+<p>青年摸了摸少女的脑袋，含笑道，“既然与我做了公平交换，那大可不必忧心。”</p>
+<p>少女一口气咽下梅花糕，似是有些噎着，噤了会儿，叹了口气“希望到时候哥哥不要怪我呀。”</p>
+<p>未时，城门外，某处似是惊了马，所过之处净是混乱一片，弯弯曲曲的路上，少女伫立在中间，望着飞驰而来的马儿，似乎有些躲闪不及。</p>
+<p>说时迟那时快，冷峻的将军从侧边而来，一拉缰绳，下一刻便将少女拥入怀中，而少女发丝长长地坠落下来，露出个惊喜的笑容：“哥哥，你不躲我啦。”她咬着唇，一头撞入他的胸口。将军板着脸未说话，微红的耳垂却泄露了些什么。</p>
+<p>时间线拉长，兜兜转转的心事被戳穿，又是窗外红烛，少女红着脸吻上小将军的脸颊，那爱意旖旎而纯粹。</p>
+<p>而小楼里的阁主道完贺，便起身告辞了。小姑娘嘿嘿一笑，心里想着“一张手帕换个相公，不亏不亏。”</p>
+<hr />
+<h5 id="申时">申时</h5>
+<p>青年站在石桥旁的树下，午后的碎光隔了树荫打在他脸上。他眯着眼睛看着街坊邻居张灯结彩地布置着一年一度的七夕灯会。</p>
+<p>看了眼天色，尚早。他要等的人也还没来。索性伸了个懒腰，在树下打个盹。</p>
+<p>恍惚做了个梦。</p>
+<p>黄粱一梦，一梦黄粱。人间如梦如流光，岁月转瞬，不知今夕何夕。</p>
+<p>那对痴情人先后找上了门，明明都是要赴死，表情却都很快活。问世间情为何物？他这种老怪物不是很懂年轻人的想法。</p>
+<p>飞蛾扑火，彼此奔赴，九死无生却百死不悔。</p>
+<p>痴人啊，痴人。</p>
+<p>这万劫不复的死路都叫这对人虔诚地叩出了生门。他往来多少岁月，终究还是做了一笔亏本买卖。哦不对，是两笔。</p>
+<p>睁开眼的时候已经是灯火连城，人声鼎沸。</p>
+<p>一片花团锦簇的人海里，一对羞涩的小情侣向他这边走过来。</p>
+<p>“先生，”少年冲他腼腆一笑，施了一礼。白衣纶巾，文质彬彬。</p>
+<p>他瞧着稀奇，魔头这是被菩萨点化了？</p>
+<p>正想着，菩萨也朝他笑了笑，还把手里的花灯塞给了他，她头上的海棠步摇随着她的动作摇了几圈。</p>
+<p>像极了梦中那满天纷飞的花雨。</p>
+<p>他看着这前尘尽忘的一对人，也没想叙旧。直接把当年他们留在他这的东西递了过去。</p>
+<p>一对鸳鸯相思袋。</p>
+<p>一句“愿你们永结同心，百年好合。”竟然把这对人弄了个大红脸。青年是做梦也没想到这两个煞神也能有今天。</p>
+<p>与二人别后，他拎着那盏花灯隐入人海。指缝里漏出几片撕碎的黄纸，飞散之前，隐隐看到不知多少年岁的字迹。极力辨认，也只能看到什么仙啊魔啊的。怕是不知哪个话本里的神异故事，也终究随风化作点点荧光散入灯火。</p>
+<p>人潮之中，少年紧紧拉着姑娘的手走向一片繁花处。</p>
+<p>一见如故，白首倾盖，岂知不是故人来？</p>
+<hr />
+<h5 id="酉时">酉时</h5>
+<p>夕阳渐落，京城戏馆门前人头攒动，围堵得水泄不通。当年名角的关门弟子今晚初次亮相，一票难求。</p>
+<p>灯火昏黄，戏馆后台妆镜前，他提笔蘸墨，将眼角斜勾入鬓，口中喃喃着刻进骨子里的戏词。</p>
+<p>数年前，他挤在戏台外围，险些被人群推倒踩烂，一双目光却痴痴锁在台上名角一颦一笑之间。</p>
+<p>戏幕落，他跪在后台堂下，瘦弱的身子甚至撑不起一袭素褂，语气却意外地坚定：“我要学戏。”</p>
+<p>十年苦功，坐念唱打，他连血带泪咽在肚子里，从未想过放弃。年少时惊鸿一瞥，是他无数黑暗日子里唯一的光。</p>
+<p>他想成角。他要成角。</p>
+<p>青年冷眼打量着他。天机阁从不缺野心勃勃的客人。</p>
+<p>“我认了当年的名角做师父。他没等到我今晚亮相便因病离世。当年初登舞台时，他便是拿着这把泥金扇一曲成名。”</p>
+<p>青年没有伸手去接那把扇子，似乎还在犹豫。</p>
+<p>他略笑了笑，同样冷眼看着阁主道：“你不肯收，我也不会求你。我原就有一曲成名的把握。来这里，不过求个心安稳妥。便万一遇上人力不可控之意外，将来，我还是要成角的。”说着，欲将扇子回收。</p>
+<p>“慢着。”青年按住他手上动作：“你师父的戏，值得发扬，我一向喜欢。他的遗物，值得珍藏，我会好生保管。”</p>
+<p>“多谢。”</p>
+<p>“何愁梨园无尽苦，一朝凤鸣天下知。”</p>
+<p>他，该成角。</p>
+<hr />
+<h5 id="戌时">戌时</h5>
+<p>“你来干什么？”阁楼上，青年悠悠开口，“我没办法救回已经不在地府的人。”</p>
+<p>“我想再见她一面”双眼通红胡子渣拉的男子艰难地开口“我知道，是我害了她，我愿意用我余生去偿还，可是我...可是我还没来得及...没来得及...”一滴眼泪从他眼角滑落，大抵最坚强的人，崩溃也只在一瞬间。</p>
+<p>回忆一闪而过，他和她青梅竹马，相识于微末，成长于烽火之中，年少的意气与抱负，缠成丝丝环绕的线，在故事的一半中，便笃定了不太美好的结局。</p>
+<p>他为一个梦从塞北到闽南，算不上救了苍生，但确确实实累积了大半的仇家。直到那一日，战事爆发，他看见放在桌案上的纸条，看见底下万千将士殷红而充满朝气的脸，又恍惚中看见她晏晏的笑容，交换啊...怎么交换...爱和忠义，从来，做不到两全。</p>
+<p>他双手颤抖着，强行终止了回忆。他甚至还记得那场战事结束后她回来的场景，甚至于她眼角的泪痣都历历在目，后来，后来他才知道，她用来生换来了这短短几个月...</p>
+<p>“她，还能再...”男子抬着头，泣不成声地问，青年摇了摇头，“人鬼殊途，</p>
+<p>你既有此执念，我只能做到让你们再见一面，但转世，别想了。”</p>
+<p>一刹寂静。</p>
+<p>青年回过头，“另外，等价交换，她留给你的那封信，留在这里。”</p>
+<hr />
+<h5 id="亥时">亥时</h5>
+<p>他是个短命鬼，还没及冠就一命呜呼了。但他长得太好，还没走上奈何桥就被鬼差带回了人间。说是不忍看此人间绝色香消玉殒，要许他一个好差事。</p>
+<p>打更。</p>
+<p>不过打的不是一般的更，阴阳两界总有那么些不开眼的走错了路。他得负责把阳间的送回阳间去，阴间的带到阴间来。</p>
+<p>好处是能继续像人一样活着。像人，但不是人。半鬼之身，能通阴阳。鬼差走的时候送了他一个破锣，说是出差的路上捡的，让他将就着用。他也不挑，每晚准时敲着他的破锣，拉着像唱戏一样的长调子唱更。</p>
+<p>人间烟火气总在万家灯火升起时。他喜欢这样的日子，也喜欢夜市的吃食。但是夜路走多了，总会遇到讨厌鬼。</p>
+<p>“这位姑娘，您见过青衣么？”</p>
+<p>“您长眼了么？我是男的。”</p>
+<p>他用锣锤把讨厌鬼隔开。三个月了，这个不知道打哪儿来的讨厌鬼天天准时准点地出现。脑子也不太清醒，就坐在他阴阳关的门口，往前一步是新开始，往后一步是旧日子。可他偏是死坐在那儿一动不动。</p>
+<p>只是每到亥时见到他，就拉着他的衣角问这么一句。</p>
+<p>他拿他没办法，拖也拖不走，打又打不得。只能认命地帮他找青衣。戏楼的姑娘，画舫的歌姬，他挨个打听了个遍，也没找到那个青衣。</p>
+<p>焦头烂额的他找上了鬼差，让他帮忙找找。鬼差比他干脆，直接把那赖在阴阳关前不走的家伙丢给了孟婆。一碗汤灌下去，直接丢回了人间。</p>
+<p>“学会了么？”</p>
+<p>他大为敬佩，不愧是前辈。</p>
+<p>备受敬仰的前辈挥挥手走了，去了常去的那家小楼。那长得像书生一样的老板今儿正在打扫藏宝阁。还有闲心铺开纸写诗，他好奇地凑过去，见纸上笔走龙蛇的写：</p>
+<p>“生的看不透，</p>
+<p>死的看不够。</p>
+<p>人间走三步，</p>
+<p>一步一回头。”</p>
+<p>歪诗一首。</p>
+<p>他顺着笔墨的方向正好看到他拿来当镇纸的宝匣，那陈黄的封条上竟然有了涂改的痕迹：</p>
+<p>“天下艳名，名角（更夫）青衣”</p>
+<p>“死当”</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+        <tag>音阙诗汀</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在 LaTeX 中实现加圈&amp;脚注处编号与正文对齐的脚注</title>
     <url>/%E5%9C%A8-LaTeX-%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%9C%88-%E8%84%9A%E6%B3%A8%E5%A4%84%E7%BC%96%E5%8F%B7%E4%B8%8E%E6%AD%A3%E6%96%87%E5%AF%B9%E9%BD%90%E7%9A%84%E8%84%9A%E6%B3%A8/</url>
     <content><![CDATA[<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="comment">%导言区</span></span><br><span class="line"><span class="comment">%新增命令：改变脚注的编号格式</span></span><br><span class="line"><span class="comment">%第一步，让脚注编号用上带圈数字</span></span><br><span class="line"><span class="comment">%调用 xunicode-addon 宏包</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;xunicode-addon&#125;</span><br><span class="line"><span class="keyword">\xeCJKDeclareCharClass</span>&#123;Default&#125;&#123;&quot;24EA, &quot;2460-&gt;&quot;2473, &quot;3251-&gt;&quot;32BF&#125;</span><br><span class="line"><span class="keyword">\setmainfont</span>&#123;Garamond-Math.otf&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\thefootnote</span>&#125;&#123;<span class="keyword">\textcircled</span>&#123;<span class="keyword">\arabic</span>&#123;footnote&#125;&#125;&#125;</span><br><span class="line"><span class="comment">%第二步，在页面底部的脚注内容中，取消编号的上标样式</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;scrextend&#125;</span><br><span class="line"><span class="comment">%缩进等水平距离均可调，现使用 chat-GPT 生成的距离看上去很舒服</span></span><br><span class="line"><span class="keyword">\deffootnote</span>&#123;2em&#125;&#123;1.5em&#125;&#123;<span class="keyword">\thefootnotemark</span><span class="keyword">\hspace</span>&#123;0.5em&#125;&#125;</span><br></pre></td></tr></table></figure>
@@ -805,13 +2909,5 @@ href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTe
       <tags>
         <tag>LaTeX</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<center>
-Hello World!
-</center>
-]]></content>
   </entry>
 </search>
