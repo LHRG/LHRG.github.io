@@ -111,7 +111,7 @@ class="math inline">\(1\)</span> 到 <span
 class="math inline">\(6\)</span>
 级。第一级和第二级的标题后自带分割线。</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 这是 H1</span><br><span class="line">## 这是 H2</span><br><span class="line">### 这是 H3</span><br><span class="line">#### 这是 H4</span><br><span class="line">##### 这是 H5</span><br><span class="line">###### 这是 H6</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 这是 H1</span></span><br><span class="line"><span class="section">## 这是 H2</span></span><br><span class="line"><span class="section">### 这是 H3</span></span><br><span class="line"><span class="section">#### 这是 H4</span></span><br><span class="line"><span class="section">##### 这是 H5</span></span><br><span class="line"><span class="section">###### 这是 H6</span></span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <p><a href="https://imgchr.com/i/ye1QL8"><img
 src="https://s3.ax1x.com/2021/02/01/ye1QL8.png"
@@ -123,7 +123,7 @@ alt="ye1QL8.png" /></a></p>
 包起来的话，则会被转成
 <code>&lt;strong&gt;</code>（即<strong>粗体</strong>）。</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*单星号斜体*</span><br><span class="line"></span><br><span class="line">_单下划线斜体_</span><br><span class="line"></span><br><span class="line">**双引号加粗**</span><br><span class="line"></span><br><span class="line">__双下划线加粗__</span><br><span class="line"></span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*单星号斜体*</span></span><br><span class="line"></span><br><span class="line"><span class="emphasis">_单下划线斜体_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**双引号加粗**</span></span><br><span class="line"></span><br><span class="line"><span class="strong">__双下划线加粗__</span></span><br><span class="line"></span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <p><em>单星号斜体</em></p>
 <p><em>单下划线斜体</em></p>
@@ -133,7 +133,7 @@ alt="ye1QL8.png" /></a></p>
 <p><span class="math inline">\(\qquad\!\!\)</span>但是如果你的 * 和 _
 两边都有空白的话，它们就只会被当成普通的符号。如果要在文字前后直接插入普通的星号或底线，你可以用反斜线（）（参见下面的<strong>反斜杠</strong>部分）。</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用反斜线开头的\*被当做是普通的字符\*</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">使用反斜线开头的\<span class="emphasis">*被当做是普通的字符\*</span></span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <p>使用反斜线开头的*被当做是普通的字符*</p>
 <h4 id="四代码块">（四）、代码块：</h4>
@@ -147,7 +147,7 @@ class="math inline">\(\qquad\!\!\)</span>需要引用代码时，如果引用的
 前加一个反斜杠。</p>
 </blockquote>
 <p><strong>例如</strong>：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`#include&lt;iostream&gt;`</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`#include&lt;iostream&gt;`</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>效果</strong>：</p>
 <p><code>#include&lt;iostream&gt;</code></p></li>
 <li><h5 id="大块代码">大块代码：</h5>
@@ -157,7 +157,7 @@ class="math inline">\(\qquad\!\!\)</span>需要引用代码时，如果引用的
 后面可以加上语言名称，例如 cpp、java、c、pascal 等（不要写成 c++
 ）。</p>
 <p><strong>例如</strong>：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```cpp</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">int a,b;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	std::cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">	std::cout&lt;&lt;a+b&lt;&lt;&quot;\n&quot;;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```cpp</span></span><br><span class="line"><span class="code">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="code">int a,b;</span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">&#123;</span></span><br><span class="line"><span class="code">	std::cin&gt;&gt;a&gt;&gt;b;</span></span><br><span class="line"><span class="code">	std::cout&lt;&lt;a+b&lt;&lt;&quot;\n&quot;;</span></span><br><span class="line"><span class="code">	return 0;</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>效果</strong>：</p>
 <p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> a,b;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">	std::cout&lt;&lt;a+b&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
 </ol>
@@ -168,15 +168,20 @@ class="math inline">\(\qquad\!\!\)</span>需要引用代码时，如果引用的
 &gt;，区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;
 即可，引用的区块内也可以使用其他的 Markdown
 语法，包括标题、列表、代码区块等。</p>
-<p><strong>例如</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; Markdown 标记区块引用的方法是在行的最前面加&gt;</span></span><br><span class="line"><span class="quote">&gt; </span></span><br><span class="line"><span class="quote">&gt; 也可以只在整个段落的第一行最前面加上 &gt;</span></span><br><span class="line"><span class="quote">&gt; &gt; 区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可.</span></span><br><span class="line"><span class="quote">&gt; &gt; </span></span><br><span class="line"><span class="quote">&gt; &gt; <span class="emphasis">*我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span></span></span><br><span class="line"><span class="quote">&gt; &gt; </span></span><br><span class="line"><span class="quote">&gt; &gt; ```java</span></span><br><span class="line"><span class="quote">&gt; &gt;       //在引用区块内可以加入代码块</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.net.URL;</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.util.Arrays;</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.util.Date;</span></span><br><span class="line"><span class="quote">&gt; &gt;       import java.util.Set;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&gt;Markdown 标记区块引用的方法是在行的最前面加&gt;</span><br><span class="line"><span class="quote">&gt;</span></span><br><span class="line"><span class="quote">&gt;也可以只在整个段落的第一行最前面加上 &gt;</span></span><br><span class="line">&gt;&gt;区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可.</span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;<span class="emphasis">*我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span></span><br><span class="line">&gt;&gt;</span><br><span class="line">&gt;&gt;### 我是引用区块内使用标题3语法</span><br><span class="line">&gt;&gt;<span class="code">```java</span></span><br><span class="line"><span class="code">&gt;&gt;      //在引用区块内可以加入代码块</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.net.URL;</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.util.Arrays;</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.util.Date;</span></span><br><span class="line"><span class="code">&gt;&gt;      import java.util.Set;</span></span><br><span class="line"><span class="code">&gt;&gt;```</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong>：</p>
 <blockquote>
+<p>Markdown 标记区块引用的方法是在行的最前面加 &gt;</p>
+<p>也可以只在整个段落的第一行最前面加上 &gt;</p>
 <blockquote>
-<h3
-id="我是引用区块内使用的标题3语法">我是引用区块内使用的标题3语法</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">**效果**：</span><br><span class="line"></span><br><span class="line">&gt; Markdown 标记区块引用的方法是在行的最前面加&gt;</span><br><span class="line">&gt; </span><br><span class="line">&gt; 也可以只在整个段落的第一行最前面加上 &gt;</span><br><span class="line">&gt; &gt; 区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt;即可.</span><br><span class="line">&gt; &gt; </span><br><span class="line">&gt; &gt; *我是内部嵌套区块，我可以使用其他 Markdown 语法哦*</span><br><span class="line">&gt; &gt; </span><br><span class="line">&gt; &gt; ```java</span><br><span class="line">&gt; &gt;       //在引用区块内可以加入代码块</span><br><span class="line">&gt; &gt;       import java.net.URL;</span><br><span class="line">&gt; &gt;       import java.util.Arrays;</span><br><span class="line">&gt; &gt;       import java.util.Date;</span><br><span class="line">&gt; &gt;       import java.util.Set;</span><br></pre></td></tr></table></figure>
-<h3
-id="我是引用区块内使用的标题3语法-1">我是引用区块内使用的标题3语法</h3>
+<p>区块引用内部可以嵌套，只要根据层次加上不同数量的 &gt; 即可.</p>
+</blockquote>
+<blockquote>
+<p><em>我是内部嵌套区块，我可以使用其他 Markdown 语法哦</em></p>
+</blockquote>
+<blockquote>
+<h3 id="我是引用区块内使用标题3语法">我是引用区块内使用标题3语法</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;&gt;<span class="comment">//在引用区块内可以加入代码块</span></span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.net.URL;</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.util.Arrays;</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.util.Date;</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> java.util.Set;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </blockquote>
 <h4 id="六列表">（六）、列表：</h4>
@@ -192,7 +197,7 @@ Markdown 语法等功能。</p>
 <p><span
 class="math inline">\(\qquad\!\!\)</span>星号、加号或是减号三种列表方式效果等同。</p>
 <p><strong>例如</strong>：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br><span class="line"></span><br><span class="line">+   Red</span><br><span class="line">+   Green</span><br><span class="line">+   Blue</span><br><span class="line"></span><br><span class="line">-   Red</span><br><span class="line">-   Green</span><br><span class="line">-   Blue</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span>   Red</span><br><span class="line"><span class="bullet">*</span>   Green</span><br><span class="line"><span class="bullet">*</span>   Blue</span><br><span class="line"></span><br><span class="line"><span class="bullet">+</span>   Red</span><br><span class="line"><span class="bullet">+</span>   Green</span><br><span class="line"><span class="bullet">+</span>   Blue</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span>   Red</span><br><span class="line"><span class="bullet">-</span>   Green</span><br><span class="line"><span class="bullet">-</span>   Blue</span><br></pre></td></tr></table></figure></p>
 <p><strong>效果均为</strong>：</p>
 <ul>
 <li>Red</li>
@@ -204,7 +209,7 @@ id="有序列表其实现在就在一个有序列表当中">有序列表：（�
 <p><span
 class="math inline">\(\qquad\!\!\)</span>有序列表则使用数字接着一个英文句点。</p>
 <p><strong>例如</strong>：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.  Red</span><br><span class="line">2.  Green</span><br><span class="line">3.  Blue</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span>  Red</span><br><span class="line"><span class="bullet">2.</span>  Green</span><br><span class="line"><span class="bullet">3.</span>  Blue</span><br></pre></td></tr></table></figure></p>
 <p><strong>效果</strong>：</p>
 <ol type="1">
 <li>Red</li>
@@ -228,7 +233,7 @@ title 文字，只要在网址后面，用双引号把 title 文字包起来即�
 </ul></li>
 </ul>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是 [百度](http://www.baidu.com/“百度”) 内联方式。</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是 [<span class="string">百度</span>](<span class="link">http://www.baidu.com/“百度”</span>) 内联方式。</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <p>这是 <a href="http://www.baidu.com/%22百度%22">百度</a>
 内联方式。</p>
@@ -239,7 +244,7 @@ title 文字，只要在网址后面，用双引号把 title 文字包起来即�
 title 文字。</p>
 <p><strong>形如</strong>：<code>![lable](picture path "title")</code></p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![YuYl5V.jpg](https://s1.ax1x.com/2020/05/08/YuYl5V.jpg)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">YuYl5V.jpg</span>](<span class="link">https://s1.ax1x.com/2020/05/08/YuYl5V.jpg</span>)</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <figure>
 <img src="https://s1.ax1x.com/2020/05/08/YuYl5V.jpg" alt="YuYl5V.jpg" />
@@ -253,7 +258,7 @@ title 文字。</p>
 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来，
 Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样。</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://www.baidu.com&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml">&lt;https://www.baidu.com&gt;</span></span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <p><a href="https://www.baidu.com"
 class="uri">https://www.baidu.com</a></p>
@@ -261,7 +266,7 @@ class="uri">https://www.baidu.com</a></p>
 <p><span class="math inline">\(\qquad\!\!\)</span>表格是 GFM 对 Markdown
 原规范的扩展，但几乎所有的编辑器都支持这一语法。表格由两部分组成：表头和内容。</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Items          | Price      | Description               |</span><br><span class="line">| -              | :--:       | -:                        |</span><br><span class="line">| T-Shirt        | £9.15      | Suggested in the NCEE     |</span><br><span class="line">| Uniform in H3Z | about ¥100 | design beyond description |</span><br><span class="line">| left aligned   | centered   | right aligned             |</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| Items          | Price      | Description               |</span><br><span class="line">| -              | :--:       | -:                        |</span><br><span class="line">| T-Shirt        | £9.15      | Suggested in the NCEE     |</span><br><span class="line">| Uniform in H3Z | about ¥100 | design beyond description |</span><br><span class="line">| left aligned   | centered   | right aligned             |</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <table>
 <thead>
@@ -312,7 +317,7 @@ class="math inline">\(\qquad\!\!\)</span>美观起见，你可以在每一格的
 <p><span
 class="math inline">\(\qquad\!\!\)</span>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他内容。也可以在星号或是减号中间插入空格。</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * *</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> * *</span><br><span class="line"></span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">**</span><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">- - -</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">---------------------------------------</span></span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <hr />
 <hr />
@@ -324,7 +329,7 @@ class="math inline">\(\qquad\!\!\)</span>可以在一行中用三个以上的星
 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用<code>&lt;em&gt;</code>标签倾斜），你可以在星号的前面加上反斜杠。</p>
 <p><span class="math inline">\(\qquad\!\!\)</span>Markdown
 支持以下这些符号前面加上反斜杠来帮助插入普通的符号。加上反斜杠后，这些符号都会以原来的方式显示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line"><span class="bullet">*</span>   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line"><span class="section">#   井字号</span></span><br><span class="line"><span class="bullet">+</span>   加号</span><br><span class="line"><span class="bullet">-</span>   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
 <h4 id="十三嵌入-html">（十三）、嵌入 HTML：</h4>
 <p><span class="math inline">\(\qquad\!\!\)</span>根据 Markdown
 的定义或者说原理可知：Markdown 渲染就是把它翻译成 HTML。</p>
@@ -333,7 +338,7 @@ Markdown 中直接使用 HTML 呢? 答案是肯定的。有能力的同学, 可�
 Markdown 文档中加入 HTML 代码，来实现一些 Markdown
 本身无法实现的功能。</p>
 <p><strong>例如</strong>：上文图片下面的那句居中的话：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;center&gt; 我的电脑桌面啦 &lt;/center&gt; </span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span> 我的电脑桌面啦 <span class="language-xml"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span> </span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <center>
 我的电脑桌面啦
@@ -345,7 +350,7 @@ class="math inline">\(\LaTeX\)</span> 代替。</p>
 <p><span
 class="math inline">\(\qquad\!\!\)</span>比如，在表格中实现换行：</p>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//HTML 实现换行：</span><br><span class="line">| Header1 | Header2                          |</span><br><span class="line">|---------|----------------------------------|</span><br><span class="line">| item 1  | 1. one&lt;br /&gt;2. two&lt;br /&gt;3. three |</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">//HTML 实现换行：</span><br><span class="line">| Header1 | Header2                          |</span><br><span class="line">|---------|----------------------------------|</span><br><span class="line">| item 1  | 1. one<span class="language-xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span>2. two<span class="language-xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span>3. three |</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：</p>
 <table>
 <thead>
@@ -362,7 +367,7 @@ class="math inline">\(\qquad\!\!\)</span>比如，在表格中实现换行：</p
 </tbody>
 </table>
 <p><strong>例如</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//LaTeX 实现换行：</span><br><span class="line">| Header1 | Header2                          |</span><br><span class="line">|---------|----------------------------------|</span><br><span class="line">| item 1  | $ 1. one \\ 2. two \\ 3. three $ |</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">//LaTeX 实现换行：</span><br><span class="line">| Header1 | Header2                          |</span><br><span class="line">|---------|----------------------------------|</span><br><span class="line">| item 1  | $ 1. one \\ 2. two \\ 3. three $ |</span><br></pre></td></tr></table></figure>
 <p><strong>效果</strong>：（大家有没有觉得用 <span
 class="math inline">\(\LaTeX\)</span>
 不仅仅能够换行，而且渲染出来的数字和英文更美观了呢？）</p>
@@ -424,64 +429,64 @@ class="math inline">\(\LaTeX\)</span>
 Reference 中的 <span class="math inline">\({}^6\)</span> 自行学习。</p>
 <ol type="1">
 <li><p>上标下标：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$a^2 a_2 a^&#123;2+2&#125; a_&#123;i,j&#125; a^2_2 &#123;&#125;^2_1\!X^3_4$</span><br><span class="line">// \!的作用在下面空格一栏有讲述。</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$a^2 a<span class="emphasis">_2 a^&#123;2+2&#125; a_</span>&#123;i,j&#125; a^2<span class="emphasis">_2 &#123;&#125;^2_</span>1\!X^3<span class="emphasis">_4$</span></span><br><span class="line"><span class="emphasis">// \!的作用在下面空格一栏有讲述。</span></span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(a^2 \ \ a_2 \ \ a^{2+2} \ \ a_{i,j} \ \
 a^2_2 \ \ {}^2_1\!X^3_4\)</span></p></li>
 <li><p>根号：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\surd \sqrt&#123;2&#125; \sqrt[n]&#123;&#125; \sqrt[n]&#123;x&#125;$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\surd \sqrt&#123;2&#125; \sqrt[n]&#123;&#125; \sqrt[n]&#123;x&#125;$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\surd \ \ \sqrt{2} \ \ \sqrt[n]{} \ \
 \sqrt[n]{x}\)</span></p></li>
 <li><p>运算符、巨运算符：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$+ - \pm \mp \times \div$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$+ - \pm \mp \times \div$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(+ \ \ - \ \ \pm \ \ \mp \ \ \times \ \
 \div\)</span></p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\sum_&#123;i=1&#125;^na_i \sum\limits_&#123;i=1&#125;^na_i$</span><br><span class="line">// 求 a_1+……+a_n</span><br><span class="line">$\prod_&#123;i=1&#125;^na_i \prod\limits_&#123;i=1&#125;^na_i$</span><br><span class="line">// 求 a_1*……*a_n</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\sum<span class="emphasis">_&#123;i=1&#125;^na_</span>i \sum\limits<span class="emphasis">_&#123;i=1&#125;^na_</span>i$</span><br><span class="line">// 求 a<span class="emphasis">_1+……+a_</span>n</span><br><span class="line">$\prod<span class="emphasis">_&#123;i=1&#125;^na_</span>i \prod\limits<span class="emphasis">_&#123;i=1&#125;^na_</span>i$</span><br><span class="line">// 求 a<span class="emphasis">_1*……*a_</span>n</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\sum_{i=1}^na_i \ \
 \sum\limits_{i=1}^na_i \ \ \prod_{i=1}^na_i \ \
 \prod\limits_{i=1}^na_i\)</span></p></li>
 <li><p>分数、百分数：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\frac&#123;1&#125;&#123;2&#125;=0.5 \tfrac&#123;1&#125;&#123;2&#125;=0.5 \dfrac&#123;1&#125;&#123;2&#125;=0.5$</span><br><span class="line">$\dfrac&#123;1&#125;&#123;x+\dfrac&#123;3&#125;&#123;y+\dfrac&#123;1&#125;&#123;5&#125;&#125;&#125;$</span><br><span class="line">// 从美观的角度来看，我通常使用 \dfrac&#123;&#125;&#123;&#125; 作为分数</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\frac&#123;1&#125;&#123;2&#125;=0.5 \tfrac&#123;1&#125;&#123;2&#125;=0.5 \dfrac&#123;1&#125;&#123;2&#125;=0.5$</span><br><span class="line">$\dfrac&#123;1&#125;&#123;x+\dfrac&#123;3&#125;&#123;y+\dfrac&#123;1&#125;&#123;5&#125;&#125;&#125;$</span><br><span class="line">// 从美观的角度来看，我通常使用 \dfrac&#123;&#125;&#123;&#125; 作为分数</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\frac{1}{2}=0.5 \ \ \tfrac{1}{2}=0.5 \ \
 \dfrac{1}{2}=0.5 \ \
 \dfrac{1}{x+\dfrac{3}{y+\dfrac{1}{5}}}\)</span></p></li>
 <li><p>标准函数：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\sin a \cos b \tan c \left\vert a \right\vert$</span><br><span class="line">$\min(x,y) \max(x,y) \gcd(m,n) \operatorname&#123;lcm&#125;(m,n)$</span><br><span class="line"> //未预先定义的标准函数，均可用 \operatorname&#123;&#125;() 的格式定义</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\sin a \cos b \tan c \left\vert a \right\vert$</span><br><span class="line">$\min(x,y) \max(x,y) \gcd(m,n) \operatorname&#123;lcm&#125;(m,n)$</span><br><span class="line"> //未预先定义的标准函数，均可用 \operatorname&#123;&#125;() 的格式定义</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\sin a \ \ \cos b \ \ \tan c \ \
 \left\vert a \right\vert \ \ \min(x,y) \ \ \max(x,y) \ \ \gcd(m,n) \ \
 \operatorname{lcm}(m,n)\)</span></p></li>
 <li><p>集合符号：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\&#123; \&#125; \emptyset \varnothing $</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\&#123; \&#125; \emptyset \varnothing $</span><br></pre></td></tr></table></figure></p>
 <p>${ }     $</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\in \notin \not\in \ni \not\ni$</span><br><span class="line">// \not 是在下一个字符上画斜杠。</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\in \notin \not\in \ni \not\ni$</span><br><span class="line">// \not 是在下一个字符上画斜杠。</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\in \ \ \notin \ \ \not\in \ \ \ni \ \
 \not\ni\)</span></p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\cap \cup \complement_U A$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\cap \cup \complement<span class="emphasis">_U A$</span></span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\cap \ \ \cup \ \ \complement_U
 A\)</span></p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\subset \supset \subseteqq \subsetneqq \supseteqq \supsetneqq$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\subset \supset \subseteqq \subsetneqq \supseteqq \supsetneqq$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\subset \ \ \supset \ \ \subseteqq \ \
 \subsetneqq \ \ \supseteqq \ \ \supsetneqq\)</span></p></li>
 <li><p>关系符号：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$= \ne \neq \equiv \not\equiv \approx$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$= \ne \neq \equiv \not\equiv \approx$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(= \ \ \ne \ \ \neq \ \ \equiv \ \
 \not\equiv \ \ \approx\)</span></p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$&lt; &gt; \leqslant \geqslant$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$&lt; &gt; \leqslant \geqslant$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(&lt; \ \ &gt; \ \ \leqslant \ \
 \geqslant\)</span></p></li>
 <li><p>几何符号：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\parallel \perp \angle \sphericalangle \measuredangle 45^\circ$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\parallel \perp \angle \sphericalangle \measuredangle 45^\circ$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\parallel \ \ \perp \ \ \angle \ \
 \sphericalangle \ \ \measuredangle \ \ 45^\circ\)</span></p></li>
 <li><p>逻辑符号：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\forall \exists \nexists \therefore \because \And \&amp;$</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\forall \exists \nexists \therefore \because \And \&amp;$</span><br></pre></td></tr></table></figure></p>
 <p><span class="math inline">\(\forall \ \ \exists \ \ \nexists \ \
 \therefore \ \ \because \ \ \And \ \ \&amp;\)</span></p></li>
 <li><p>希腊字母：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\alpha \beta \gamma \eta \theta \mu \pi \rho \omega \phi$</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\alpha \beta \gamma \eta \theta \mu \pi \rho \omega \phi$</span><br></pre></td></tr></table></figure>
 <p><span class="math inline">\(\alpha \beta \gamma \eta \theta \mu \pi
 \rho \omega \phi\)</span></p></li>
 <li><p>空格和换行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$x\!y \\ xy \\ x\,y \\ x\;y \\ x\ y \\ x\quad y \\ x\qquad y$</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$x\!y \\ xy \\ x\,y \\ x\;y \\ x\ y \\ x\quad y \\ x\qquad y$</span><br></pre></td></tr></table></figure>
 <p><span class="math inline">\(x\!y 宽度为-\dfrac{m}{6}\\ xy 宽度为0\\
 x\,y 宽度为\dfrac{m}{6}\\ x\;y 宽度为\dfrac{2m}{7}\\ x\ y
 宽度为\dfrac{m}{3}\\ x\quad y 宽度为m\\ x\qquad y宽度为2m\)</span></p>
@@ -491,12 +496,12 @@ class="math inline">\(\dfrac{5m}{3}\)</span> 的宽度，所以在段首键入
 <code>$\qquad\!\!$</code> 即可做到。</p>
 </blockquote></li>
 <li><p>其它：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\TeX \LaTeX$</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$\TeX \LaTeX$</span><br></pre></td></tr></table></figure>
 <p><span class="math inline">\(\TeX \ \ \LaTeX\)</span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 二项式系数</span><br><span class="line">$\dbinom&#123;n&#125;&#123;m&#125;=\dbinom&#123;n&#125;&#123;n-m&#125;=C_n^m=C_n^&#123;n-m&#125;$</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">// 二项式系数</span><br><span class="line">$\dbinom&#123;n&#125;&#123;m&#125;=\dbinom&#123;n&#125;&#123;n-m&#125;=C<span class="emphasis">_n^m=C_</span>n^&#123;n-m&#125;$</span><br></pre></td></tr></table></figure>
 <p><span
 class="math inline">\(\dbinom{n}{m}=\dbinom{n}{n-m}=C_n^m=C_n^{n-m}\)</span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 方程组</span><br><span class="line">$\begin&#123;cases&#125;2x+9y-5z=10\\4x+20y+z=24\\x-\dfrac&#123;1&#125;&#123;2&#125;y+3z=8\end&#123;cases&#125;$</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">// 方程组</span><br><span class="line">$\begin&#123;cases&#125;2x+9y-5z=10\\4x+20y+z=24\\x-\dfrac&#123;1&#125;&#123;2&#125;y+3z=8\end&#123;cases&#125;$</span><br></pre></td></tr></table></figure>
 <p><span
 class="math inline">\(\begin{cases}2x+9y-5z=10\\4x+20y+z=24\\x-\dfrac{1}{2}y+3z=8\end{cases}\)</span></p></li>
 </ol>
