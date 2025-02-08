@@ -781,14 +781,6 @@ href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTe
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<center>
-Hello World!
-</center>
-]]></content>
-  </entry>
-  <entry>
     <title>Markdown标记语言入门源码</title>
     <url>/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E6%BA%90%E7%A0%81/</url>
     <content><![CDATA[<h2 id="markdown标记语言入门源码">Markdown标记语言入门源码</h2>
@@ -801,5 +793,25 @@ Hello World!
       <tags>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>在 LaTeX 中实现加圈&amp;脚注处编号与正文对齐的脚注</title>
+    <url>/%E5%9C%A8-LaTeX-%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%9C%88-%E8%84%9A%E6%B3%A8%E5%A4%84%E7%BC%96%E5%8F%B7%E4%B8%8E%E6%AD%A3%E6%96%87%E5%AF%B9%E9%BD%90%E7%9A%84%E8%84%9A%E6%B3%A8/</url>
+    <content><![CDATA[<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="comment">%导言区</span></span><br><span class="line"><span class="comment">%新增命令：改变脚注的编号格式</span></span><br><span class="line"><span class="comment">%第一步，让脚注编号用上带圈数字</span></span><br><span class="line"><span class="comment">%调用 xunicode-addon 宏包</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;xunicode-addon&#125;</span><br><span class="line"><span class="keyword">\xeCJKDeclareCharClass</span>&#123;Default&#125;&#123;&quot;24EA, &quot;2460-&gt;&quot;2473, &quot;3251-&gt;&quot;32BF&#125;</span><br><span class="line"><span class="keyword">\setmainfont</span>&#123;Garamond-Math.otf&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\thefootnote</span>&#125;&#123;<span class="keyword">\textcircled</span>&#123;<span class="keyword">\arabic</span>&#123;footnote&#125;&#125;&#125;</span><br><span class="line"><span class="comment">%第二步，在页面底部的脚注内容中，取消编号的上标样式</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;scrextend&#125;</span><br><span class="line"><span class="comment">%缩进等水平距离均可调，现使用 chat-GPT 生成的距离看上去很舒服</span></span><br><span class="line"><span class="keyword">\deffootnote</span>&#123;2em&#125;&#123;1.5em&#125;&#123;<span class="keyword">\thefootnotemark</span><span class="keyword">\hspace</span>&#123;0.5em&#125;&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LaTeX</category>
+      </categories>
+      <tags>
+        <tag>LaTeX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<center>
+Hello World!
+</center>
+]]></content>
   </entry>
 </search>
