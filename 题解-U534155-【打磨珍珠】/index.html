@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="题目链接：打磨珍珠。 关于题目：作为 \(T2\)，很简单的算法题。 应用算法：离散化，差分，离线。  \(\ \ \ \ \ \ \)这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。  一、分析题面：  1、命令：就相当于对于一段区间的区间加 \(1\) 2、条件：对于连续的 \(k\) 个点，每个点的值相同且区间和 \(\in(l,r)\)。 3、输">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="题解 U534155 【打磨珍珠】">
+<meta property="og:url" content="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/">
+<meta property="og:site_name" content="LHRG 李的博客">
+<meta property="og:description" content="题目链接：打磨珍珠。 关于题目：作为 \(T2\)，很简单的算法题。 应用算法：离散化，差分，离线。  \(\ \ \ \ \ \ \)这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。  一、分析题面：  1、命令：就相当于对于一段区间的区间加 \(1\) 2、条件：对于连续的 \(k\) 个点，每个点的值相同且区间和 \(\in(l,r)\)。 3、输">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4j2jJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4j79O.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4jXDA.png">
+<meta property="article:published_time" content="2020-05-08T04:04:00.000Z">
+<meta property="article:modified_time" content="2025-02-10T13:56:54.913Z">
+<meta property="article:author" content="LHRG 李">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="模拟">
+<meta property="article:tag" content="离散化">
+<meta property="article:tag" content="枚举">
+<meta property="article:tag" content="差分">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/20/U4j2jJ.png">
+
+
+<link rel="canonical" href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/","path":"题解-U534155-【打磨珍珠】/","title":"题解 U534155 【打磨珍珠】"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>题解 U534155 【打磨珍珠】 | LHRG 李的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">LHRG 李的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">LHRG's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日志</a></li><li class="menu-item menu-item-events"><a href="/events/" rel="section"><i class="fa fa-calendar-alt fa-fw"></i>待办</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LHRG 李"
+      src="/avatar.jpg">
+  <p class="site-author-name" itemprop="name">LHRG 李</p>
+  <div class="site-description" itemprop="description">未经他人痛，莫劝他人善</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/LHRG" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;LHRG" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lhr@stu.pku.edu.cn" title="E-Mail → mailto:lhr@stu.pku.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.jpg">
+      <meta itemprop="name" content="LHRG 李">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LHRG 李的博客">
+      <meta itemprop="description" content="未经他人痛，莫劝他人善">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="题解 U534155 【打磨珍珠】 | LHRG 李的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          题解 U534155 【打磨珍珠】
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-08 12:04:00" itemprop="dateCreated datePublished" datetime="2020-05-08T12:04:00+08:00">2020-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-10 21:56:54" itemprop="dateModified" datetime="2025-02-10T21:56:54+08:00">2025-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>题目链接：<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U534155">打磨珍珠</a>。</p>
+<p>关于题目：作为 <span
+class="math inline">\(T2\)</span>，很简单的算法题。</p>
+<p>应用算法：离散化，差分，离线。</p>
+<hr />
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。</p>
+<ul>
+<li>一、分析题面：
+<ul>
+<li><p>1、命令：就相当于对于一段区间的区间加 <span
+class="math inline">\(1\)</span></p></li>
+<li><p>2、条件：对于连续的 <span class="math inline">\(k\)</span>
+个点，每个点的值相同且区间和 <span
+class="math inline">\(\in(l,r)\)</span>。</p></li>
+<li><p>3、输出：这样连续的 <span class="math inline">\(k\)</span>
+个点的个数。</p></li>
+<li><p>4、数据范围（这里就仅讲解 <span class="math inline">\(AC\)</span>
+的做法，敬请谅解）：对于 <span class="math inline">\(100\%\)</span>
+的数据，<span class="math inline">\(1\leqslant n \leqslant
+10^6\)</span>，<span class="math inline">\(1\leqslant k \leqslant
+1000\)</span>，<span class="math inline">\(0\leqslant l &lt; r \leqslant
+10^6\)</span>，<strong>最远能移动到离原点 <span
+class="math inline">\(1000000000\)</span> 的珍珠面前。</strong></p></li>
+</ul></li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由数据范围和空间限制可知，我们开不下 <span
+class="math inline">\(1000000000\)</span>
+的数组，对于这类空间上的“超限”，我们可以很自然地想到<a
+target="_blank" rel="noopener" href="https://oi-wiki.org/misc/discrete/">离散化</a>这种非常常用的算法，相信大佬们都会，具体思想就不在这里赘述了，不会的同学可以自行查找资料学习。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由数据范围和时间限制可知，我们不可能运用 <span
+class="math inline">\(O(n\times l)\)</span>
+的算法，那么既然是区间加，且全部加完再进行统计，很自然地就能想到运用<a
+target="_blank" rel="noopener" href="https://oi-wiki.org/basic/prefix-sum/">差分</a>维护 <span
+class="math inline">\(+\)</span>
+离线统计的做法，相信大佬们都会，具体思想也不在这里赘述了，不会的同学可以自行查找资料学习。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>然后就没了，剩下的就是应用算法模拟题意。</p>
+<ul>
+<li><p>二、处理过程：既然已经很清晰地知道了需要用的算法和进行的操作，接下来就可以开始具体的处理了。</p>
+<ul>
+<li><p>1、读入……这个就不用我来说了吧。</p></li>
+<li><p>2、一个小小的预处理：既然运用了差分，求区间和过于麻烦，根据 <span
+class="math inline">\(k\)</span>
+个点的值相同，我们直接判断每个点的值不就得了。<span
+class="math inline">\(\\ \ \ \ \ \ \ \because sum \in(l,r)\\ \ \ \ \ \ \
+\therefore a_i \in\left[
+\left\lfloor\dfrac{l}{k}\right\rfloor+1,\left\lceil\dfrac{r}{k}\right\rceil-1
+\right]\\\)</span> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  l=l/k<span class="number">+1</span>;</span><br><span class="line"><span class="keyword">if</span>(r%k)</span><br><span class="line">&#123;</span><br><span class="line">		r=r/k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">		r=r/k<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>3、处理命令：</p>
+<ul>
+<li>（1）、我们设 <span class="math inline">\(o\)</span>
+代表<strong>现在的坐标</strong>，<span class="math inline">\(v\)</span>
+表示<strong>命令中的移动次数</strong>。<span
+class="math inline">\(a_{i,1}\)</span> <strong>表示第 <span
+class="math inline">\(i\)</span> 次命令的差分数组需要减 <span
+class="math inline">\(1\)</span> 的坐标</strong>，<span
+class="math inline">\(a_{i,2}\)</span> <strong>表示第 <span
+class="math inline">\(i\)</span> 次命令的差分数组需要加 <span
+class="math inline">\(1\)</span> 的坐标</strong>。<span
+class="math inline">\(\\ \ \ \ \ \ \ \)</span>对于向右侧移动的命令：
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   a[i][<span class="number">1</span>]=o<span class="number">+1</span>;</span><br><span class="line">a[i][<span class="number">2</span>]=o+v;</span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \ \ \ \ \
+\)</span>同理，对于向左侧移动的命令： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   a[i][<span class="number">2</span>]=o<span class="number">-1</span>;</span><br><span class="line">a[i][<span class="number">1</span>]=o-v;</span><br></pre></td></tr></table></figure></li>
+<li>（2）、我们设 <span class="math inline">\(b\)</span>
+数组为<strong>离散化所排序去重统计的数组</strong>，所以需要把每个 <span
+class="math inline">\(a_{i,1}\)</span> 和 <span
+class="math inline">\(a_{i,2}\)</span> 放入 <span
+class="math inline">\(b\)</span> 数组。 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>4、离散化：先排序，再去重，设 <span
+class="math inline">\(p1\)</span> 表示 <strong><span
+class="math inline">\(a_{i,1}\)</span> 离散化后的编号</strong>，<span
+class="math inline">\(p2\)</span> 表示 <strong><span
+class="math inline">\(a_{i,2}\)</span> 离散化后的编号</strong>，设 <span
+class="math inline">\(c\)</span> 数组表示 <strong><span
+class="math inline">\(p1-&gt;a_{i,1}\)</span> 或 <span
+class="math inline">\(p2-&gt;a_{i,2}\)</span>的反向映射</strong>，并把
+<span class="math inline">\(a_{i,1}\)</span> <strong>用 <span
+class="math inline">\(p1\)</span> 赋值</strong>，<span
+class="math inline">\(a_{i,2}\)</span> <strong>用 <span
+class="math inline">\(p2\)</span> 赋值</strong>。 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="built_in">sort</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>));</span><br><span class="line">cnt=<span class="built_in">unique</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>))-b<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">		<span class="type">int</span> p1=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">1</span>])-b;</span><br><span class="line">		<span class="type">int</span> p2=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">2</span>])-b;</span><br><span class="line">		c[p1]=a[i][<span class="number">1</span>];</span><br><span class="line">		c[p2]=a[i][<span class="number">2</span>];</span><br><span class="line">		a[i][<span class="number">1</span>]=p1;</span><br><span class="line">		a[i][<span class="number">2</span>]=p2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>5、差分：设 <span class="math inline">\(d\)</span>
+数组为<strong>差分数组</strong>，利用一下Manacher算法在每两个字符中间插入一个
+#
+的思想，我们也把任意两个差分的点之间的区间留出来，这样，把差分的编号扩大二倍就好了。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">		d[(a[i][<span class="number">1</span>]&lt;&lt;<span class="number">1</span>)]+=<span class="number">1</span>;</span><br><span class="line">		d[(a[i][<span class="number">2</span>]&lt;&lt;<span class="number">1</span>)<span class="number">+1</span>]-=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>6、还原：设 <span class="math inline">\(e\)</span>
+数组为<strong>差分还原后的数组</strong>，直接加回来就好。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=(cnt&lt;&lt;<span class="number">1</span>);i++)</span><br><span class="line">&#123;</span><br><span class="line">		e[i]=e[i<span class="number">-1</span>]+d[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>7、现在，<span class="math inline">\(e\)</span> 数组里有 <span
+class="math inline">\(2n-1\)</span> 个数，分别表示 <span
+class="math inline">\(n\)</span> 个点的打磨次数和 <span
+class="math inline">\(n-1\)</span>
+个点之间的区间的打磨次数，但是由于开始或结束打磨的点可能相邻，就导致了
+<span class="math inline">\(e\)</span> 数组里存在某些区间的实际长度为
+<span class="math inline">\(0\)</span>
+的区间，这些区间没有意义，不能参与统计答案。所以，我们就需要去除这些区间并将点和区间分别统计，用以统计答案。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>我们设 <span
+class="math inline">\(f_{0,i}\)</span> 表示<strong>第 <span
+class="math inline">\(i\)</span>
+个能参与统计答案的元素为点，这个点的打磨次数</strong>，<span
+class="math inline">\(f_{1,i}\)</span> 表示<strong>第 <span
+class="math inline">\(i\)</span>
+个能参与统计答案的元素为区间，这个点的打磨次数</strong>。设 <span
+class="math inline">\(g_i\)</span>表示<strong>第 <span
+class="math inline">\(i\)</span>
+个能参与统计答案的元素为点，这个点对于原始的的坐标的映射</strong>。设
+<span class="math inline">\(o\)</span>
+表示<strong>现在加入的是第几个能参与统计答案的元素</strong>。设 <span
+class="math inline">\(i\)</span> 是<strong>对 <span
+class="math inline">\(e\)</span> 数组偶数项的遍历</strong>。</p>
+<ul>
+<li>如果相邻，去掉中间区间： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">     f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br></pre></td></tr></table></figure></li>
+<li>如果不相邻，保留中间区间： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">     f[<span class="number">1</span>][++o]=e[i<span class="number">+1</span>];</span><br><span class="line">f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>8、统计答案：设 <span class="math inline">\(s\)</span>
+为<strong>当前符合条件的珍珠串的长度</strong>。先判断第 <span
+class="math inline">\(i\)</span>
+个参与统计答案的元素的打磨次数符合条件,由于 <span
+class="math inline">\(f_{0,i}\)</span> 和 <span
+class="math inline">\(f_{1,i}\)</span>
+中有一个为零，把二者加到一起判断就好：</p>
+<ul>
+<li>如果为点：
+<ul>
+<li>（1）和前一个元素不同且和后一个元素相同：<strong>重新开启一个新的序列，存在
+<span class="math inline">\(1\)</span> 个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（2）和前一个元素相同且和后一个元素相同：<strong>继续当前的序列，加入
+<span class="math inline">\(1\)</span> 个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s+=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（3）和前一个元素相同且和后一个元素不同：<strong>继续当前的序列，加入
+<span class="math inline">\(1\)</span>
+个符合标准的珍珠并统计答案</strong>。 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s+=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">	ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>（4）和前一个元素不同且和后一个元素不同：<strong>重新开启一个新的序列，存在
+<span class="math inline">\(1\)</span>
+个符合标准的珍珠并统计答案</strong>。 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     s=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">		ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li>如果为区间：
+<ul>
+<li>（1）和前一个点不同且和后一个点相同：<strong>重新开启一个新的序列，存在区间长度个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（2）和前一个点相同且和后一个点相同：<strong>继续当前的序列，加入区间长度个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（3）和前一个点相同且和后一个点不同：<strong>继续当前的序列，加入区间长度个符合标准的珍珠并统计答案</strong>。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">	ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>（4）和前一个点不同且和后一个点不同：<strong>重新开启一个新的序列，存在区间长度个符合标准的珍珠并统计答案</strong>。
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul></li>
+<li><p>9、输出……这个也就不用我来说了吧。</p></li>
+</ul></li>
+<li><p>三、代码：在处理过程中已经给出了最核心的部分代码，但是还是有一些小的细节没有给出，详见注释吧（码风不喜勿喷）：
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 2000010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,l,r,o,a[N][<span class="number">3</span>],b[M],cnt,c[M],d[(M&lt;&lt;<span class="number">1</span>)],e[(M&lt;&lt;<span class="number">1</span>)],ans,f[<span class="number">2</span>][(M&lt;&lt;<span class="number">1</span>)],g[(M&lt;&lt;<span class="number">1</span>)],s;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">    	<span class="type">int</span> c=<span class="built_in">getchar</span>();</span><br><span class="line">    	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    	    <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">-1</span>;</span><br><span class="line">    	    c=<span class="built_in">getchar</span>();</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    	    x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">    	    c=<span class="built_in">getchar</span>();</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">			x=-x;</span><br><span class="line">			<span class="built_in">qwrite</span>(x);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		n=<span class="built_in">qread</span>();</span><br><span class="line">		k=<span class="built_in">qread</span>();</span><br><span class="line">		l=<span class="built_in">qread</span>();</span><br><span class="line">		r=<span class="built_in">qread</span>();</span><br><span class="line">		<span class="comment">//读入</span></span><br><span class="line">		l=l/k<span class="number">+1</span>;</span><br><span class="line">		<span class="keyword">if</span>(r%k)</span><br><span class="line">		&#123;</span><br><span class="line">			r=r/k;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			r=r/k<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//一个小小的预处理</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">char</span> c;</span><br><span class="line">			cin&gt;&gt;c; </span><br><span class="line">			<span class="type">int</span> v=<span class="built_in">qread</span>();</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">&#x27;R&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				a[i][<span class="number">1</span>]=o<span class="number">+1</span>;</span><br><span class="line">				a[i][<span class="number">2</span>]=o+v;</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br><span class="line">				o=o+v;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				a[i][<span class="number">2</span>]=o<span class="number">-1</span>;</span><br><span class="line">				a[i][<span class="number">1</span>]=o-v;</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br><span class="line">				o=o-v;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//处理命令</span></span><br><span class="line">		o=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//一个小细节，由于后面还要用到o，所以在这里需要先赋一个值以确保后续使用的正确性</span></span><br><span class="line">		<span class="built_in">sort</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>));</span><br><span class="line">		cnt=<span class="built_in">unique</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>))-b<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> p1=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">1</span>])-b;</span><br><span class="line">			<span class="type">int</span> p2=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">2</span>])-b;</span><br><span class="line">			c[p1]=a[i][<span class="number">1</span>];</span><br><span class="line">			c[p2]=a[i][<span class="number">2</span>];</span><br><span class="line">			a[i][<span class="number">1</span>]=p1;</span><br><span class="line">			a[i][<span class="number">2</span>]=p2;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//离散化</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			d[(a[i][<span class="number">1</span>]&lt;&lt;<span class="number">1</span>)]+=<span class="number">1</span>;</span><br><span class="line">			d[(a[i][<span class="number">2</span>]&lt;&lt;<span class="number">1</span>)<span class="number">+1</span>]-=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//差分</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=(cnt&lt;&lt;<span class="number">1</span>);i++)</span><br><span class="line">		&#123;</span><br><span class="line">			e[i]=e[i<span class="number">-1</span>]+d[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//还原</span></span><br><span class="line">		f[<span class="number">0</span>][<span class="number">1</span>]=e[<span class="number">2</span>];</span><br><span class="line">		g[<span class="number">1</span>]=c[<span class="number">1</span>];</span><br><span class="line">		<span class="comment">//一个小细节，对于f[0][1]和g[1]的初始化。e[2]肯定是第一个点，所以e[2]赋给f[0][1]，c[1]赋给g[1]</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;(cnt&lt;&lt;<span class="number">1</span>);i+=<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(c[(i&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>]-c[i&gt;&gt;<span class="number">1</span>]==<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">				g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				f[<span class="number">1</span>][++o]=e[i<span class="number">+1</span>];</span><br><span class="line">				f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">				g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//处理一下区间</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=o;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(l&lt;=(f[<span class="number">0</span>][i]|f[<span class="number">1</span>][i])&amp;&amp;(f[<span class="number">0</span>][i]|f[<span class="number">1</span>][i])&lt;=r)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(f[<span class="number">0</span>][i])</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s+=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s+=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//统计答案</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ans);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <img src="https://s1.ax1x.com/2020/07/20/U4j2jJ.png"
+alt="U4j2jJ.png" /></p></li>
+</ul>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4j79O.png" alt="U4j79O.png" />
+<figcaption aria-hidden="true">U4j79O.png</figcaption>
+</figure>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4jXDA.png" alt="U4jXDA.png" />
+<figcaption aria-hidden="true">U4jXDA.png</figcaption>
+</figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>如果这篇文章对您有所帮助，欢迎打赏提高博主效率。</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/wechatpay.png" alt="LHRG 李 微信支付">
+        <span>微信支付</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>LHRG 李
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/" title="题解 U534155 【打磨珍珠】">http://lhrg.github.io/题解-U534155-【打磨珍珠】/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E6%A8%A1%E6%8B%9F/" rel="tag"># 模拟</a>
+              <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag"># 离散化</a>
+              <a href="/tags/%E6%9E%9A%E4%B8%BE/" rel="tag"># 枚举</a>
+              <a href="/tags/%E5%B7%AE%E5%88%86/" rel="tag"># 差分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E9%A2%98%E8%A7%A3-U534154-%E3%80%90%E6%AD%A3%E4%B8%89%E8%A7%92%E5%BD%A2%E3%80%91/" rel="prev" title="题解 U534154 【正三角形】">
+                  <i class="fa fa-angle-left"></i> 题解 U534154 【正三角形】
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/" rel="next" title="题解 U534160 【进入 k 进制星球】">
+                  题解 U534160 【进入 k 进制星球】 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LHRG 李</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">45k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:43</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0599c232841d76371cff4396cde7470a"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

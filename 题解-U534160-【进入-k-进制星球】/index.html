@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="题目链接：进入 k 进制星球。 关于题目：作为 T3，一道数学题。 应用算法：数论？  \(\ \ \ \ \ \ \)这道题的题意非常明确，就是求在 \(k\) 进制下 \(n!!\) 的位数。 \(\ \ \ \ \ \ \)前置知识：  双阶乘：双阶乘是一个数学概念，用n!!表示。正整数的双阶乘表示不超过这个正整数且与它有相同奇偶性的所有正整数乘积。——百度百科   对数：在数学中，对数是对">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="题解 U534160 【进入 k 进制星球】">
+<meta property="og:url" content="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/">
+<meta property="og:site_name" content="LHRG 李的博客">
+<meta property="og:description" content="题目链接：进入 k 进制星球。 关于题目：作为 T3，一道数学题。 应用算法：数论？  \(\ \ \ \ \ \ \)这道题的题意非常明确，就是求在 \(k\) 进制下 \(n!!\) 的位数。 \(\ \ \ \ \ \ \)前置知识：  双阶乘：双阶乘是一个数学概念，用n!!表示。正整数的双阶乘表示不超过这个正整数且与它有相同奇偶性的所有正整数乘积。——百度百科   对数：在数学中，对数是对">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4qTyR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4qol9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4X7Os.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4j9X9.png">
+<meta property="article:published_time" content="2020-05-16T08:58:00.000Z">
+<meta property="article:modified_time" content="2025-02-10T15:03:50.727Z">
+<meta property="article:author" content="LHRG 李">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/20/U4qTyR.png">
+
+
+<link rel="canonical" href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/","path":"题解-U534160-【进入-k-进制星球】/","title":"题解 U534160 【进入 k 进制星球】"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>题解 U534160 【进入 k 进制星球】 | LHRG 李的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">LHRG 李的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">LHRG's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日志</a></li><li class="menu-item menu-item-events"><a href="/events/" rel="section"><i class="fa fa-calendar-alt fa-fw"></i>待办</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E5%8D%81%E5%88%86%E5%81%9A%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">五十分做法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%99%BE%E5%88%86%E5%81%9A%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">一百分做法：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LHRG 李"
+      src="/avatar.jpg">
+  <p class="site-author-name" itemprop="name">LHRG 李</p>
+  <div class="site-description" itemprop="description">未经他人痛，莫劝他人善</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/LHRG" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;LHRG" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lhr@stu.pku.edu.cn" title="E-Mail → mailto:lhr@stu.pku.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.jpg">
+      <meta itemprop="name" content="LHRG 李">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LHRG 李的博客">
+      <meta itemprop="description" content="未经他人痛，莫劝他人善">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="题解 U534160 【进入 k 进制星球】 | LHRG 李的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          题解 U534160 【进入 k 进制星球】
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-16 16:58:00" itemprop="dateCreated datePublished" datetime="2020-05-16T16:58:00+08:00">2020-05-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-10 23:03:50" itemprop="dateModified" datetime="2025-02-10T23:03:50+08:00">2025-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>题目链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U534160">进入 k
+进制星球</a>。</p>
+<p>关于题目：作为 T3，一道数学题。</p>
+<p>应用算法：数论？</p>
+<hr />
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>这道题的题意非常明确，就是求在 <span
+class="math inline">\(k\)</span> 进制下 <span
+class="math inline">\(n!!\)</span> 的位数。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>前置知识：</p>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8F%8C%E9%98%B6%E4%B9%98">双阶乘</a>：双阶乘是一个数学概念，用n!!表示。正整数的双阶乘表示不超过这个正整数且与它有相同奇偶性的所有正整数乘积。——百度百科</p>
+</blockquote>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0">对数</a>：在数学中，对数是对求幂的逆运算。——百度百科</p>
+</blockquote>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>会了对数，自然就可以知道这道题要求的答案就是 <span
+class="math inline">\(log_k n!!+1\)</span>。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>看一眼数据范围：</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于 <span
+class="math inline">\(50\%\)</span> 的数据，<span
+class="math inline">\(1\leqslant n \leqslant 2\times 10^6\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于 <span
+class="math inline">\(100\%\)</span> 的数据，<span
+class="math inline">\(1\leqslant n \leqslant 2\times
+10^9\)</span>，<span class="math inline">\(10 \leqslant k \leqslant
+100\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>部分分还是给的挺足的，那么我们就先解决前 <span
+class="math inline">\(50\%\)</span> 的暴力：</p>
+<h2 id="五十分做法">五十分做法：</h2>
+<p><span class="math inline">\(\ \ \ \ \ \ \log_k n!!+1=\sum\log_k
+i(i=2;i\leqslant n;i=i+2)+1\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>没错，这就没了。<del>是不是很简单？</del></p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>具体处理主要有以下三点：</p>
+<ul>
+<li><p>1、C++ 自带的求<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0">对数</a>的函数有两个：<code>double log(double x)</code>
+函数返回 <span class="math inline">\(\ln
+x\)</span>，<code>double log10(double x)</code> 函数返回 <span
+class="math inline">\(\lg x\)</span>。</p></li>
+<li><p>2、想求 <span
+class="math inline">\(\log_kn\)</span>，自然就需要<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8D%A2%E5%BA%95%E5%85%AC%E5%BC%8F">换底公式</a>，在这里，我采用以
+<span class="math inline">\(e\)</span>
+为底的对数进行中介：<code>ansd+=log(i)/log(k);</code>。</p></li>
+<li><p>3、在统计答案时，由于前面用的都是浮点数，但是最后需要一个整数，一定要注意精度的问题：<code>ansi=ansd+eps+1;</code>。<code>eps</code>
+是很重要的，一定要有，实例如下：</p></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/07/20/U4qTyR.png"
+alt="U4qTyR.png" /> <img src="https://s1.ax1x.com/2020/07/20/U4qol9.png"
+alt="U4qol9.png" /></p>
+<p>代码（码风不喜勿喷）： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,ansi;</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> ln_k,ansd;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">		c=<span class="built_in">getchar</span>(); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(re <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		x=-x;</span><br><span class="line">		<span class="built_in">qwrite</span>(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	k=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="comment">//读入</span></span><br><span class="line">	ln_k=<span class="built_in">log</span>(k);</span><br><span class="line">	<span class="comment">//ln_k表示以e为底k的对数</span></span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i+=<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		ansd+=<span class="built_in">log</span>(i)/ln_k;</span><br><span class="line">		<span class="comment">//ansd+=以k为底i的对数</span></span><br><span class="line">	&#125;</span><br><span class="line">	ansi=ansd+eps<span class="number">+1</span>;</span><br><span class="line">	<span class="comment">//统计答案，这个eps真的非常重要</span></span><br><span class="line">	<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">	<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">	<span class="comment">//输出答案</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \
+\ \ \ \ \)</span>完美的五十分;</p>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4X7Os.png" alt="U4X7Os.png" />
+<figcaption aria-hidden="true">U4X7Os.png</figcaption>
+</figure>
+<hr />
+<h2 id="一百分做法">一百分做法：</h2>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>由于 <span
+class="math inline">\(1\leqslant n \leqslant 2\times
+10^9\)</span>，我们继续使用 <span class="math inline">\(O(n)\)</span>
+的算法一定会如上 <span
+class="math inline">\(TLE\)</span>，那么，我们就需要一个时间复杂度更小的算法。<span
+class="math inline">\((O(\sqrt n)?\ \ O(\log n)?)\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>怎么在低于 <span
+class="math inline">\(O(n)\)</span> 的时间复杂度内求得 <span
+class="math inline">\(log_kn!!+1\)</span>
+呢？对于双阶乘的计算我们不是很熟悉，但是由于题目中规定 <span
+class="math inline">\(n\)</span>
+为偶数，根据定义，我们可以将双阶乘转化成我们比较熟悉的阶乘和乘方相乘的形式：<span
+class="math inline">\(n!!=\dfrac{n}{2}!\times
+2^{\dfrac{n}{2}}\)</span>，那么要求的答案：<span
+class="math inline">\(log_kn!!=log_kn!+\dfrac{n}{2}\times
+log_k2\)</span>。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>现在问题的关键就在于，怎么在低于 <span
+class="math inline">\(O(n)\)</span> 的时间复杂度内求得 <span
+class="math inline">\(log_kn!\)</span>
+呢？阶乘我们就熟悉了，利用一个神奇的公式：<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%96%AF%E7%89%B9%E6%9E%97%E5%85%AC%E5%BC%8F">斯特林公式</a>：<span
+class="math inline">\(n!\approx \sqrt{2\pi n} \left( \dfrac{n} {e}
+\right)^n\)</span> 即可。 &gt;<span class="math inline">\(\ \ \ \ \ \
+\)</span>斯特林公式（Stirling's
+approximation）是一条用来取n的阶乘的近似值的数学公式。一般来说，当n很大的时候，n阶乘的计算量十分大，所以斯特林公式十分好用，而且，即使在n很小的时候，斯特林公式的取值已经十分准确。——百度百科</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由于斯特林公式只是一个近似公式，<span
+class="math inline">\(n\)</span>
+越大时误差越小，那么我们就只用它去处理暴力会时间超限的后 <span
+class="math inline">\(50\%\)</span> 的数据点： <span
+class="math inline">\(\log_k n!!+1 \approx \log_k \sqrt{\pi n} \left(
+\dfrac{n} {2e} \right)^n +1+\dfrac{n}{2}\times log_k2=\dfrac{1}
+{2}\log_k \pi n+n\times \log_k \dfrac{n} {2e}+1+\dfrac{n}{2}\times
+log_k2\)</span></p>
+<p>代码（码风不喜勿喷）： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 1000010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,ansi;</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> nn,ln_k,n_e,ansd,pi=<span class="number">3.141592653589793</span>,e=<span class="number">2.718281828459</span>;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">		c=<span class="built_in">getchar</span>(); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(re <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		x=-x;</span><br><span class="line">		<span class="built_in">qwrite</span>(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	k=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="comment">//读入</span></span><br><span class="line">	ln_k=<span class="built_in">log</span>(k);</span><br><span class="line">	<span class="comment">//ln_k表示以e为底k的对数</span></span><br><span class="line">	<span class="keyword">if</span>(n&lt;=M)</span><br><span class="line">	<span class="comment">//前50%的数据点：</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i+=<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			ansd+=<span class="built_in">log</span>(i)/ln_k;</span><br><span class="line">			<span class="comment">//ansd+=以k为底i的对数</span></span><br><span class="line">		&#125;</span><br><span class="line">		ansi=ansd+eps<span class="number">+1</span>;</span><br><span class="line">		<span class="comment">//统计答案，这个eps真的非常重要</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="comment">//后50%的测试点：</span></span><br><span class="line">	&#123;</span><br><span class="line">		nn=(n&gt;&gt;<span class="number">1</span>);</span><br><span class="line">		n_e=nn/e;</span><br><span class="line">		<span class="comment">//n_e表示n/e的值</span></span><br><span class="line">		ansd=(<span class="built_in">log</span>(<span class="number">2</span>*pi*nn)*<span class="number">0.5</span>+<span class="built_in">log</span>(n_e)*nn)/ln_k;</span><br><span class="line">		<span class="comment">//根据斯特林公式计算nn!并利用换底公式求以k为底nn!的对数</span></span><br><span class="line">		ansi=ansd+eps<span class="number">+1</span>+<span class="built_in">log</span>(<span class="number">2</span>)/ln_k*nn;</span><br><span class="line">		<span class="comment">//统计答案</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>完美的一百分：</p>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4j9X9.png" alt="U4j9X9.png" />
+<figcaption aria-hidden="true">U4j9X9.png</figcaption>
+</figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>如果这篇文章对您有所帮助，欢迎打赏提高博主效率。</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/wechatpay.png" alt="LHRG 李 微信支付">
+        <span>微信支付</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>LHRG 李
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/" title="题解 U534160 【进入 k 进制星球】">http://lhrg.github.io/题解-U534160-【进入-k-进制星球】/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/" rel="prev" title="题解 U534155 【打磨珍珠】">
+                  <i class="fa fa-angle-left"></i> 题解 U534155 【打磨珍珠】
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E9%A2%98%E8%A7%A3-U534158-%E3%80%90%E5%8D%95%E8%BA%AB%E6%8E%92%E6%9F%A5%E3%80%91/" rel="next" title="题解 U534158 【单身排查】">
+                  题解 U534158 【单身排查】 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LHRG 李</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">45k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:43</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"7b0b2267522214f2b32cf3fcd942d0e7"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
