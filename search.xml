@@ -2874,6 +2874,32 @@ href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTe
       </tags>
   </entry>
   <entry>
+    <title>Atomic Physics Chapter 5: The LS coupling scheme</title>
+    <url>/Atomic-Physics-Chapter-5-The-LS-coupling-scheme/</url>
+    <content><![CDATA[<p>如果此项目未自动打开，您可以 <a
+href="/files/Atomic_Physics_Chapter_5__The_LS_coupling_scheme.pdf">在此处打开
+Atomic Physics Chapter 5: The LS-coupling scheme</a></p>
+<div class="pdf-container" data-target="/files/Atomic_Physics_Chapter_5__The_LS_coupling_scheme.pdf" data-height="500px"></div>
+]]></content>
+      <categories>
+        <category>学习&amp;科研</category>
+      </categories>
+      <tags>
+        <tag>physics</tag>
+        <tag>物理学</tag>
+        <tag>atomic physics</tag>
+        <tag>原子物理学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<center>
+Hello World!
+</center>
+]]></content>
+  </entry>
+  <entry>
     <title>开学酒局subtask计分脚本</title>
     <url>/%E5%BC%80%E5%AD%A6%E9%85%92%E5%B1%80subtask%E8%AE%A1%E5%88%86%E8%84%9A%E6%9C%AC/</url>
     <content><![CDATA[<p>题目链接：<a
@@ -2900,36 +2926,6 @@ href="https://www.luogu.com.cn/problem/U534161">开学酒局</a></p>
       </tags>
   </entry>
   <entry>
-    <title>Atomic Physics Chapter 5: The LS coupling scheme</title>
-    <url>/Atomic-Physics-Chapter-5-The-LS-coupling-scheme/</url>
-    <content><![CDATA[<p>如果此项目未自动打开，您可以 <a
-href="/files/Atomic_Physics_Chapter_5__The_LS_coupling_scheme.pdf">在此处打开
-Atomic Physics Chapter 5: The LS-coupling scheme</a></p>
-<div class="pdf-container" data-target="/files/Atomic_Physics_Chapter_5__The_LS_coupling_scheme.pdf" data-height="500px"></div>
-]]></content>
-      <categories>
-        <category>学习&amp;科研</category>
-      </categories>
-      <tags>
-        <tag>physics</tag>
-        <tag>物理学</tag>
-        <tag>atomic physics</tag>
-        <tag>原子物理学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 LaTeX 中实现加圈&amp;脚注处编号与正文对齐的脚注</title>
-    <url>/%E5%9C%A8-LaTeX-%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%9C%88-%E8%84%9A%E6%B3%A8%E5%A4%84%E7%BC%96%E5%8F%B7%E4%B8%8E%E6%AD%A3%E6%96%87%E5%AF%B9%E9%BD%90%E7%9A%84%E8%84%9A%E6%B3%A8/</url>
-    <content><![CDATA[<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="comment">%导言区</span></span><br><span class="line"><span class="comment">%新增命令：改变脚注的编号格式</span></span><br><span class="line"><span class="comment">%第一步，让脚注编号用上带圈数字</span></span><br><span class="line"><span class="comment">%调用 xunicode-addon 宏包</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;xunicode-addon&#125;</span><br><span class="line"><span class="keyword">\xeCJKDeclareCharClass</span>&#123;Default&#125;&#123;&quot;24EA, &quot;2460-&gt;&quot;2473, &quot;3251-&gt;&quot;32BF&#125;</span><br><span class="line"><span class="keyword">\setmainfont</span>&#123;Garamond-Math.otf&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\thefootnote</span>&#125;&#123;<span class="keyword">\textcircled</span>&#123;<span class="keyword">\arabic</span>&#123;footnote&#125;&#125;&#125;</span><br><span class="line"><span class="comment">%第二步，在页面底部的脚注内容中，取消编号的上标样式</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;scrextend&#125;</span><br><span class="line"><span class="comment">%缩进等水平距离均可调，现使用 chat-GPT 生成的距离看上去很舒服</span></span><br><span class="line"><span class="keyword">\deffootnote</span>&#123;2em&#125;&#123;1.5em&#125;&#123;<span class="keyword">\thefootnotemark</span><span class="keyword">\hspace</span>&#123;0.5em&#125;&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LaTeX</category>
-      </categories>
-      <tags>
-        <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>打磨珍珠subtask计分脚本</title>
     <url>/%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0subtask%E8%AE%A1%E5%88%86%E8%84%9A%E6%9C%AC/</url>
     <content><![CDATA[<p>题目链接：<a
@@ -2952,12 +2948,35 @@ href="https://www.luogu.com.cn/problem/U534155">打磨珍珠</a></p>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<center>
-Hello World!
-</center>
+    <title>普通物理实验(1)</title>
+    <url>/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C-1/</url>
+    <content><![CDATA[<p><span
+class="math inline">\(\qquad\!\!\)</span>作为倒数第二批大二才上普物实验的物院本科生，我于2023-2024学年秋季学期选修
+普通物理实验(1)
+课程，因为普物实验对教学模式进行了一定的改革，不像往年所有实验的实验报告均需要课后整理完成（即部分实验课上即交实验报告），所以只有五个实验需要课后整理完成实验报告，按照实验名称顺序排列如下：</p>
+<ul>
+<li><a href="/files/测定金属的杨氏模量%20实验报告.pdf">实验八
+测定金属的杨氏模量</a></li>
+<li><a href="/files/测定介质中的声速%20实验报告.pdf">实验十二
+测定介质中的声速</a></li>
+<li><a href="/files/霍尔效应测量磁场%20实验报告.pdf">实验十六
+霍尔效应测量磁场</a></li>
+<li><a href="files/弗兰克-赫兹实验%20实验报告.pdf">实验十八
+弗兰克-赫兹实验</a></li>
+<li><a href="files/光衍射的定量研究%20实验报告.pdf">实验二十
+光衍射的定量研究</a></li>
+</ul>
+<p><span class="math inline">\(\qquad\!\!\)</span>以上实验报告均由 LaTeX
+排版，使用 TeX Live 2024 发行版，XeLaTeX 编译器（格式+引擎）于 PKUTEX
+平台生成。仅供参考，如因此产生的任何问题，本人概不负责😈。</p>
 ]]></content>
+      <categories>
+        <category>学习&amp;科研</category>
+      </categories>
+      <tags>
+        <tag>physics</tag>
+        <tag>物理学</tag>
+      </tags>
   </entry>
   <entry>
     <title>题解 U534154 【正三角形】</title>
@@ -3044,6 +3063,189 @@ class="math inline">\(10^9+9\)</span> 作为模数的话只能得
       </tags>
   </entry>
   <entry>
+    <title>题解 U534155 【打磨珍珠】</title>
+    <url>/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/</url>
+    <content><![CDATA[<p>题目链接：<a
+href="https://www.luogu.com.cn/problem/U534155">打磨珍珠</a>。</p>
+<p>关于题目：作为 T2，很简单的算法题。</p>
+<p>应用算法：离散化，差分，离线。</p>
+<span id="more"></span>
+<hr />
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。</p>
+<ul>
+<li>一、分析题面：
+<ul>
+<li><p>1、命令：就相当于对于一段区间的区间加 <span
+class="math inline">\(1\)</span></p></li>
+<li><p>2、条件：对于连续的 <span class="math inline">\(k\)</span>
+个点，每个点的值相同且区间和 <span
+class="math inline">\(\in(l,r)\)</span>。</p></li>
+<li><p>3、输出：这样连续的 <span class="math inline">\(k\)</span>
+个点的个数。</p></li>
+<li><p>4、数据范围（这里就仅讲解 <span class="math inline">\(AC\)</span>
+的做法，敬请谅解）：对于 <span class="math inline">\(100\%\)</span>
+的数据，<span class="math inline">\(1\leqslant n \leqslant
+10^6\)</span>，<span class="math inline">\(1\leqslant k \leqslant
+1000\)</span>，<span class="math inline">\(0\leqslant l &lt; r \leqslant
+10^6\)</span>，<strong>最远能移动到离原点 <span
+class="math inline">\(1000000000\)</span> 的珍珠面前。</strong></p></li>
+</ul></li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由数据范围和空间限制可知，我们开不下 <span
+class="math inline">\(1000000000\)</span>
+的数组，对于这类空间上的“超限”，我们可以很自然地想到<a
+href="https://oi-wiki.org/misc/discrete/">离散化</a>这种非常常用的算法，相信大佬们都会，具体思想就不在这里赘述了，不会的同学可以自行查找资料学习。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由数据范围和时间限制可知，我们不可能运用 <span
+class="math inline">\(O(n\times l)\)</span>
+的算法，那么既然是区间加，且全部加完再进行统计，很自然地就能想到运用<a
+href="https://oi-wiki.org/basic/prefix-sum/">差分</a>维护 <span
+class="math inline">\(+\)</span>
+离线统计的做法，相信大佬们都会，具体思想也不在这里赘述了，不会的同学可以自行查找资料学习。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>然后就没了，剩下的就是应用算法模拟题意。</p>
+<ul>
+<li><p>二、处理过程：既然已经很清晰地知道了需要用的算法和进行的操作，接下来就可以开始具体的处理了。</p>
+<ul>
+<li><p>1、读入……这个就不用我来说了吧。</p></li>
+<li><p>2、一个小小的预处理：既然运用了差分，求区间和过于麻烦，根据 <span
+class="math inline">\(k\)</span>
+个点的值相同，我们直接判断每个点的值不就得了。<span
+class="math inline">\(\\ \ \ \ \ \ \ \because sum \in(l,r)\\ \ \ \ \ \ \
+\therefore a_i \in\left[
+\left\lfloor\dfrac{l}{k}\right\rfloor+1,\left\lceil\dfrac{r}{k}\right\rceil-1
+\right]\\\)</span> <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  l=l/k<span class="number">+1</span>;</span><br><span class="line"><span class="keyword">if</span>(r%k)</span><br><span class="line">&#123;</span><br><span class="line">		r=r/k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">		r=r/k<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>3、处理命令：</p>
+<ul>
+<li>（1）、我们设 <span class="math inline">\(o\)</span>
+代表<strong>现在的坐标</strong>，<span class="math inline">\(v\)</span>
+表示<strong>命令中的移动次数</strong>。<span
+class="math inline">\(a_{i,1}\)</span> <strong>表示第 <span
+class="math inline">\(i\)</span> 次命令的差分数组需要减 <span
+class="math inline">\(1\)</span> 的坐标</strong>，<span
+class="math inline">\(a_{i,2}\)</span> <strong>表示第 <span
+class="math inline">\(i\)</span> 次命令的差分数组需要加 <span
+class="math inline">\(1\)</span> 的坐标</strong>。<span
+class="math inline">\(\\ \ \ \ \ \ \ \)</span>对于向右侧移动的命令：
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   a[i][<span class="number">1</span>]=o<span class="number">+1</span>;</span><br><span class="line">a[i][<span class="number">2</span>]=o+v;</span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \ \ \ \ \
+\)</span>同理，对于向左侧移动的命令： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   a[i][<span class="number">2</span>]=o<span class="number">-1</span>;</span><br><span class="line">a[i][<span class="number">1</span>]=o-v;</span><br></pre></td></tr></table></figure></li>
+<li>（2）、我们设 <span class="math inline">\(b\)</span>
+数组为<strong>离散化所排序去重统计的数组</strong>，所以需要把每个 <span
+class="math inline">\(a_{i,1}\)</span> 和 <span
+class="math inline">\(a_{i,2}\)</span> 放入 <span
+class="math inline">\(b\)</span> 数组。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>4、离散化：先排序，再去重，设 <span
+class="math inline">\(p1\)</span> 表示 <strong><span
+class="math inline">\(a_{i,1}\)</span> 离散化后的编号</strong>，<span
+class="math inline">\(p2\)</span> 表示 <strong><span
+class="math inline">\(a_{i,2}\)</span> 离散化后的编号</strong>，设 <span
+class="math inline">\(c\)</span> 数组表示 <strong><span
+class="math inline">\(p1-&gt;a_{i,1}\)</span> 或 <span
+class="math inline">\(p2-&gt;a_{i,2}\)</span>的反向映射</strong>，并把
+<span class="math inline">\(a_{i,1}\)</span> <strong>用 <span
+class="math inline">\(p1\)</span> 赋值</strong>，<span
+class="math inline">\(a_{i,2}\)</span> <strong>用 <span
+class="math inline">\(p2\)</span> 赋值</strong>。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="built_in">sort</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>));</span><br><span class="line">cnt=<span class="built_in">unique</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>))-b<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">		<span class="type">int</span> p1=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">1</span>])-b;</span><br><span class="line">		<span class="type">int</span> p2=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">2</span>])-b;</span><br><span class="line">		c[p1]=a[i][<span class="number">1</span>];</span><br><span class="line">		c[p2]=a[i][<span class="number">2</span>];</span><br><span class="line">		a[i][<span class="number">1</span>]=p1;</span><br><span class="line">		a[i][<span class="number">2</span>]=p2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>5、差分：设 <span class="math inline">\(d\)</span>
+数组为<strong>差分数组</strong>，利用一下Manacher算法在每两个字符中间插入一个
+#
+的思想，我们也把任意两个差分的点之间的区间留出来，这样，把差分的编号扩大二倍就好了。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">		d[(a[i][<span class="number">1</span>]&lt;&lt;<span class="number">1</span>)]+=<span class="number">1</span>;</span><br><span class="line">		d[(a[i][<span class="number">2</span>]&lt;&lt;<span class="number">1</span>)<span class="number">+1</span>]-=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>6、还原：设 <span class="math inline">\(e\)</span>
+数组为<strong>差分还原后的数组</strong>，直接加回来就好。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=(cnt&lt;&lt;<span class="number">1</span>);i++)</span><br><span class="line">&#123;</span><br><span class="line">		e[i]=e[i<span class="number">-1</span>]+d[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>7、现在，<span class="math inline">\(e\)</span> 数组里有 <span
+class="math inline">\(2n-1\)</span> 个数，分别表示 <span
+class="math inline">\(n\)</span> 个点的打磨次数和 <span
+class="math inline">\(n-1\)</span>
+个点之间的区间的打磨次数，但是由于开始或结束打磨的点可能相邻，就导致了
+<span class="math inline">\(e\)</span> 数组里存在某些区间的实际长度为
+<span class="math inline">\(0\)</span>
+的区间，这些区间没有意义，不能参与统计答案。所以，我们就需要去除这些区间并将点和区间分别统计，用以统计答案。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>我们设 <span
+class="math inline">\(f_{0,i}\)</span> 表示<strong>第 <span
+class="math inline">\(i\)</span>
+个能参与统计答案的元素为点，这个点的打磨次数</strong>，<span
+class="math inline">\(f_{1,i}\)</span> 表示<strong>第 <span
+class="math inline">\(i\)</span>
+个能参与统计答案的元素为区间，这个点的打磨次数</strong>。设 <span
+class="math inline">\(g_i\)</span>表示<strong>第 <span
+class="math inline">\(i\)</span>
+个能参与统计答案的元素为点，这个点对于原始的的坐标的映射</strong>。设
+<span class="math inline">\(o\)</span>
+表示<strong>现在加入的是第几个能参与统计答案的元素</strong>。设 <span
+class="math inline">\(i\)</span> 是<strong>对 <span
+class="math inline">\(e\)</span> 数组偶数项的遍历</strong>。</p>
+<ul>
+<li>如果相邻，去掉中间区间： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br></pre></td></tr></table></figure></li>
+<li>如果不相邻，保留中间区间： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     f[<span class="number">1</span>][++o]=e[i<span class="number">+1</span>];</span><br><span class="line">f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>8、统计答案：设 <span class="math inline">\(s\)</span>
+为<strong>当前符合条件的珍珠串的长度</strong>。先判断第 <span
+class="math inline">\(i\)</span>
+个参与统计答案的元素的打磨次数符合条件,由于 <span
+class="math inline">\(f_{0,i}\)</span> 和 <span
+class="math inline">\(f_{1,i}\)</span>
+中有一个为零，把二者加到一起判断就好：</p>
+<ul>
+<li>如果为点：
+<ul>
+<li>（1）和前一个元素不同且和后一个元素相同：<strong>重新开启一个新的序列，存在
+<span class="math inline">\(1\)</span> 个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（2）和前一个元素相同且和后一个元素相同：<strong>继续当前的序列，加入
+<span class="math inline">\(1\)</span> 个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（3）和前一个元素相同且和后一个元素不同：<strong>继续当前的序列，加入
+<span class="math inline">\(1\)</span>
+个符合标准的珍珠并统计答案</strong>。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">	ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>（4）和前一个元素不同且和后一个元素不同：<strong>重新开启一个新的序列，存在
+<span class="math inline">\(1\)</span>
+个符合标准的珍珠并统计答案</strong>。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     s=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">		ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li>如果为区间：
+<ul>
+<li>（1）和前一个点不同且和后一个点相同：<strong>重新开启一个新的序列，存在区间长度个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（2）和前一个点相同且和后一个点相同：<strong>继续当前的序列，加入区间长度个符合标准的珍珠</strong>。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br></pre></td></tr></table></figure></li>
+<li>（3）和前一个点相同且和后一个点不同：<strong>继续当前的序列，加入区间长度个符合标准的珍珠并统计答案</strong>。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">	ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>（4）和前一个点不同且和后一个点不同：<strong>重新开启一个新的序列，存在区间长度个符合标准的珍珠并统计答案</strong>。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul></li>
+<li><p>9、输出……这个也就不用我来说了吧。</p></li>
+</ul></li>
+<li><p>三、代码：在处理过程中已经给出了最核心的部分代码，但是还是有一些小的细节没有给出，详见注释吧（码风不喜勿喷）：
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 2000010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,l,r,o,a[N][<span class="number">3</span>],b[M],cnt,c[M],d[(M&lt;&lt;<span class="number">1</span>)],e[(M&lt;&lt;<span class="number">1</span>)],ans,f[<span class="number">2</span>][(M&lt;&lt;<span class="number">1</span>)],g[(M&lt;&lt;<span class="number">1</span>)],s;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">    	<span class="type">int</span> c=<span class="built_in">getchar</span>();</span><br><span class="line">    	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    	    <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">-1</span>;</span><br><span class="line">    	    c=<span class="built_in">getchar</span>();</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    	    x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">    	    c=<span class="built_in">getchar</span>();</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">			x=-x;</span><br><span class="line">			<span class="built_in">qwrite</span>(x);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		n=<span class="built_in">qread</span>();</span><br><span class="line">		k=<span class="built_in">qread</span>();</span><br><span class="line">		l=<span class="built_in">qread</span>();</span><br><span class="line">		r=<span class="built_in">qread</span>();</span><br><span class="line">		<span class="comment">//读入</span></span><br><span class="line">		l=l/k<span class="number">+1</span>;</span><br><span class="line">		<span class="keyword">if</span>(r%k)</span><br><span class="line">		&#123;</span><br><span class="line">			r=r/k;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			r=r/k<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//一个小小的预处理</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">char</span> c;</span><br><span class="line">			cin&gt;&gt;c; </span><br><span class="line">			<span class="type">int</span> v=<span class="built_in">qread</span>();</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">&#x27;R&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				a[i][<span class="number">1</span>]=o<span class="number">+1</span>;</span><br><span class="line">				a[i][<span class="number">2</span>]=o+v;</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br><span class="line">				o=o+v;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				a[i][<span class="number">2</span>]=o<span class="number">-1</span>;</span><br><span class="line">				a[i][<span class="number">1</span>]=o-v;</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br><span class="line">				o=o-v;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//处理命令</span></span><br><span class="line">		o=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//一个小细节，由于后面还要用到o，所以在这里需要先赋一个值以确保后续使用的正确性</span></span><br><span class="line">		<span class="built_in">sort</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>));</span><br><span class="line">		cnt=<span class="built_in">unique</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>))-b<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> p1=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">1</span>])-b;</span><br><span class="line">			<span class="type">int</span> p2=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">2</span>])-b;</span><br><span class="line">			c[p1]=a[i][<span class="number">1</span>];</span><br><span class="line">			c[p2]=a[i][<span class="number">2</span>];</span><br><span class="line">			a[i][<span class="number">1</span>]=p1;</span><br><span class="line">			a[i][<span class="number">2</span>]=p2;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//离散化</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			d[(a[i][<span class="number">1</span>]&lt;&lt;<span class="number">1</span>)]+=<span class="number">1</span>;</span><br><span class="line">			d[(a[i][<span class="number">2</span>]&lt;&lt;<span class="number">1</span>)<span class="number">+1</span>]-=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//差分</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=(cnt&lt;&lt;<span class="number">1</span>);i++)</span><br><span class="line">		&#123;</span><br><span class="line">			e[i]=e[i<span class="number">-1</span>]+d[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//还原</span></span><br><span class="line">		f[<span class="number">0</span>][<span class="number">1</span>]=e[<span class="number">2</span>];</span><br><span class="line">		g[<span class="number">1</span>]=c[<span class="number">1</span>];</span><br><span class="line">		<span class="comment">//一个小细节，对于f[0][1]和g[1]的初始化。e[2]肯定是第一个点，所以e[2]赋给f[0][1]，c[1]赋给g[1]</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;(cnt&lt;&lt;<span class="number">1</span>);i+=<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(c[(i&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>]-c[i&gt;&gt;<span class="number">1</span>]==<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">				g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				f[<span class="number">1</span>][++o]=e[i<span class="number">+1</span>];</span><br><span class="line">				f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">				g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//处理一下区间</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=o;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(l&lt;=(f[<span class="number">0</span>][i]|f[<span class="number">1</span>][i])&amp;&amp;(f[<span class="number">0</span>][i]|f[<span class="number">1</span>][i])&lt;=r)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(f[<span class="number">0</span>][i])</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s+=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s+=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//统计答案</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ans);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <img src="https://s1.ax1x.com/2020/07/20/U4j2jJ.png"
+alt="U4j2jJ.png" /></p></li>
+</ul>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4j79O.png" alt="U4j79O.png" />
+<figcaption aria-hidden="true">U4j79O.png</figcaption>
+</figure>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4jXDA.png" alt="U4jXDA.png" />
+<figcaption aria-hidden="true">U4jXDA.png</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>模拟</tag>
+        <tag>离散化</tag>
+        <tag>枚举</tag>
+        <tag>差分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>题解 U534156 【赛艇表演】</title>
     <url>/%E9%A2%98%E8%A7%A3-U534156-%E3%80%90%E8%B5%9B%E8%89%87%E8%A1%A8%E6%BC%94%E3%80%91/</url>
     <content><![CDATA[<p>题目链接：<a
@@ -3114,6 +3316,42 @@ class="math inline">\(\qquad\!\!\)</span><strong>最后</strong>，上代码。�
         <tag>最短路</tag>
         <tag>Tarjan</tag>
         <tag>双连通分量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>普通物理实验(2)</title>
+    <url>/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C-2/</url>
+    <content><![CDATA[<p><span
+class="math inline">\(\qquad\!\!\)</span>作为倒数第二批大二才上普物实验的物院本科生，我于2023-2024学年春季学期选修
+普通物理实验(2)
+课程，因为普物实验对教学模式进行了一定的改革，不像往年所有实验的实验报告均需要课后整理完成（即部分实验课上即交实验报告），所以只有六个实验需要课后整理完成实验报告（但是，普物2
+有不少是双周实验，按照一周的课程的时间做满基本上就能做完，所以总体来说并不比
+普物1 负担更重），按照实验名称顺序排列如下：</p>
+<ul>
+<li><a href="/files/弦上驻波实验%20实验报告.pdf">实验十三
+弦上驻波实验</a></li>
+<li><a
+href="/files/高温超导材料特性测试和低温温度计%20实验报告.pdf">实验二十三
+高温超导材料特性测试和低温温度计</a></li>
+<li><a
+href="/files/基于虚拟仪器技术的电路综合实验%20实验报告.pdf">实验二十九
+基于虚拟仪器技术的电路综合实验</a></li>
+<li><a href="files/用示波器观测动态磁滞回线%20实验报告.pdf">实验三十
+用示波器观测动态磁滞回线</a></li>
+<li><a href="files/光源的时间相干性%20实验报告.pdf">实验三十六
+光源的时间相干性</a></li>
+<li><a href="files/光信息处理%20实验报告.pdf">光信息处理</a></li>
+</ul>
+<p><span class="math inline">\(\qquad\!\!\)</span>以上实验报告均由 LaTeX
+排版，使用 TeX Live 2024 发行版，XeLaTeX 编译器（格式+引擎）于 PKUTEX
+平台生成。仅供参考，如因此产生的任何问题，本人概不负责😈。</p>
+]]></content>
+      <categories>
+        <category>学习&amp;科研</category>
+      </categories>
+      <tags>
+        <tag>physics</tag>
+        <tag>物理学</tag>
       </tags>
   </entry>
   <entry>
@@ -3325,189 +3563,6 @@ class="math inline">\(ans=\dfrac{f_n}{s_n} \bmod p\)</span></p>
       </tags>
   </entry>
   <entry>
-    <title>题解 U534155 【打磨珍珠】</title>
-    <url>/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/</url>
-    <content><![CDATA[<p>题目链接：<a
-href="https://www.luogu.com.cn/problem/U534155">打磨珍珠</a>。</p>
-<p>关于题目：作为 T2，很简单的算法题。</p>
-<p>应用算法：离散化，差分，离线。</p>
-<span id="more"></span>
-<hr />
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。</p>
-<ul>
-<li>一、分析题面：
-<ul>
-<li><p>1、命令：就相当于对于一段区间的区间加 <span
-class="math inline">\(1\)</span></p></li>
-<li><p>2、条件：对于连续的 <span class="math inline">\(k\)</span>
-个点，每个点的值相同且区间和 <span
-class="math inline">\(\in(l,r)\)</span>。</p></li>
-<li><p>3、输出：这样连续的 <span class="math inline">\(k\)</span>
-个点的个数。</p></li>
-<li><p>4、数据范围（这里就仅讲解 <span class="math inline">\(AC\)</span>
-的做法，敬请谅解）：对于 <span class="math inline">\(100\%\)</span>
-的数据，<span class="math inline">\(1\leqslant n \leqslant
-10^6\)</span>，<span class="math inline">\(1\leqslant k \leqslant
-1000\)</span>，<span class="math inline">\(0\leqslant l &lt; r \leqslant
-10^6\)</span>，<strong>最远能移动到离原点 <span
-class="math inline">\(1000000000\)</span> 的珍珠面前。</strong></p></li>
-</ul></li>
-</ul>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>由数据范围和空间限制可知，我们开不下 <span
-class="math inline">\(1000000000\)</span>
-的数组，对于这类空间上的“超限”，我们可以很自然地想到<a
-href="https://oi-wiki.org/misc/discrete/">离散化</a>这种非常常用的算法，相信大佬们都会，具体思想就不在这里赘述了，不会的同学可以自行查找资料学习。</p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>由数据范围和时间限制可知，我们不可能运用 <span
-class="math inline">\(O(n\times l)\)</span>
-的算法，那么既然是区间加，且全部加完再进行统计，很自然地就能想到运用<a
-href="https://oi-wiki.org/basic/prefix-sum/">差分</a>维护 <span
-class="math inline">\(+\)</span>
-离线统计的做法，相信大佬们都会，具体思想也不在这里赘述了，不会的同学可以自行查找资料学习。</p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>然后就没了，剩下的就是应用算法模拟题意。</p>
-<ul>
-<li><p>二、处理过程：既然已经很清晰地知道了需要用的算法和进行的操作，接下来就可以开始具体的处理了。</p>
-<ul>
-<li><p>1、读入……这个就不用我来说了吧。</p></li>
-<li><p>2、一个小小的预处理：既然运用了差分，求区间和过于麻烦，根据 <span
-class="math inline">\(k\)</span>
-个点的值相同，我们直接判断每个点的值不就得了。<span
-class="math inline">\(\\ \ \ \ \ \ \ \because sum \in(l,r)\\ \ \ \ \ \ \
-\therefore a_i \in\left[
-\left\lfloor\dfrac{l}{k}\right\rfloor+1,\left\lceil\dfrac{r}{k}\right\rceil-1
-\right]\\\)</span> <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  l=l/k<span class="number">+1</span>;</span><br><span class="line"><span class="keyword">if</span>(r%k)</span><br><span class="line">&#123;</span><br><span class="line">		r=r/k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">		r=r/k<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p>3、处理命令：</p>
-<ul>
-<li>（1）、我们设 <span class="math inline">\(o\)</span>
-代表<strong>现在的坐标</strong>，<span class="math inline">\(v\)</span>
-表示<strong>命令中的移动次数</strong>。<span
-class="math inline">\(a_{i,1}\)</span> <strong>表示第 <span
-class="math inline">\(i\)</span> 次命令的差分数组需要减 <span
-class="math inline">\(1\)</span> 的坐标</strong>，<span
-class="math inline">\(a_{i,2}\)</span> <strong>表示第 <span
-class="math inline">\(i\)</span> 次命令的差分数组需要加 <span
-class="math inline">\(1\)</span> 的坐标</strong>。<span
-class="math inline">\(\\ \ \ \ \ \ \ \)</span>对于向右侧移动的命令：
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   a[i][<span class="number">1</span>]=o<span class="number">+1</span>;</span><br><span class="line">a[i][<span class="number">2</span>]=o+v;</span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \ \ \ \ \
-\)</span>同理，对于向左侧移动的命令： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   a[i][<span class="number">2</span>]=o<span class="number">-1</span>;</span><br><span class="line">a[i][<span class="number">1</span>]=o-v;</span><br></pre></td></tr></table></figure></li>
-<li>（2）、我们设 <span class="math inline">\(b\)</span>
-数组为<strong>离散化所排序去重统计的数组</strong>，所以需要把每个 <span
-class="math inline">\(a_{i,1}\)</span> 和 <span
-class="math inline">\(a_{i,2}\)</span> 放入 <span
-class="math inline">\(b\)</span> 数组。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>4、离散化：先排序，再去重，设 <span
-class="math inline">\(p1\)</span> 表示 <strong><span
-class="math inline">\(a_{i,1}\)</span> 离散化后的编号</strong>，<span
-class="math inline">\(p2\)</span> 表示 <strong><span
-class="math inline">\(a_{i,2}\)</span> 离散化后的编号</strong>，设 <span
-class="math inline">\(c\)</span> 数组表示 <strong><span
-class="math inline">\(p1-&gt;a_{i,1}\)</span> 或 <span
-class="math inline">\(p2-&gt;a_{i,2}\)</span>的反向映射</strong>，并把
-<span class="math inline">\(a_{i,1}\)</span> <strong>用 <span
-class="math inline">\(p1\)</span> 赋值</strong>，<span
-class="math inline">\(a_{i,2}\)</span> <strong>用 <span
-class="math inline">\(p2\)</span> 赋值</strong>。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="built_in">sort</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>));</span><br><span class="line">cnt=<span class="built_in">unique</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>))-b<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">		<span class="type">int</span> p1=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">1</span>])-b;</span><br><span class="line">		<span class="type">int</span> p2=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">2</span>])-b;</span><br><span class="line">		c[p1]=a[i][<span class="number">1</span>];</span><br><span class="line">		c[p2]=a[i][<span class="number">2</span>];</span><br><span class="line">		a[i][<span class="number">1</span>]=p1;</span><br><span class="line">		a[i][<span class="number">2</span>]=p2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p>5、差分：设 <span class="math inline">\(d\)</span>
-数组为<strong>差分数组</strong>，利用一下Manacher算法在每两个字符中间插入一个
-#
-的思想，我们也把任意两个差分的点之间的区间留出来，这样，把差分的编号扩大二倍就好了。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">		d[(a[i][<span class="number">1</span>]&lt;&lt;<span class="number">1</span>)]+=<span class="number">1</span>;</span><br><span class="line">		d[(a[i][<span class="number">2</span>]&lt;&lt;<span class="number">1</span>)<span class="number">+1</span>]-=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p>6、还原：设 <span class="math inline">\(e\)</span>
-数组为<strong>差分还原后的数组</strong>，直接加回来就好。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=(cnt&lt;&lt;<span class="number">1</span>);i++)</span><br><span class="line">&#123;</span><br><span class="line">		e[i]=e[i<span class="number">-1</span>]+d[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p>7、现在，<span class="math inline">\(e\)</span> 数组里有 <span
-class="math inline">\(2n-1\)</span> 个数，分别表示 <span
-class="math inline">\(n\)</span> 个点的打磨次数和 <span
-class="math inline">\(n-1\)</span>
-个点之间的区间的打磨次数，但是由于开始或结束打磨的点可能相邻，就导致了
-<span class="math inline">\(e\)</span> 数组里存在某些区间的实际长度为
-<span class="math inline">\(0\)</span>
-的区间，这些区间没有意义，不能参与统计答案。所以，我们就需要去除这些区间并将点和区间分别统计，用以统计答案。</p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>我们设 <span
-class="math inline">\(f_{0,i}\)</span> 表示<strong>第 <span
-class="math inline">\(i\)</span>
-个能参与统计答案的元素为点，这个点的打磨次数</strong>，<span
-class="math inline">\(f_{1,i}\)</span> 表示<strong>第 <span
-class="math inline">\(i\)</span>
-个能参与统计答案的元素为区间，这个点的打磨次数</strong>。设 <span
-class="math inline">\(g_i\)</span>表示<strong>第 <span
-class="math inline">\(i\)</span>
-个能参与统计答案的元素为点，这个点对于原始的的坐标的映射</strong>。设
-<span class="math inline">\(o\)</span>
-表示<strong>现在加入的是第几个能参与统计答案的元素</strong>。设 <span
-class="math inline">\(i\)</span> 是<strong>对 <span
-class="math inline">\(e\)</span> 数组偶数项的遍历</strong>。</p>
-<ul>
-<li>如果相邻，去掉中间区间： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br></pre></td></tr></table></figure></li>
-<li>如果不相邻，保留中间区间： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     f[<span class="number">1</span>][++o]=e[i<span class="number">+1</span>];</span><br><span class="line">f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br></pre></td></tr></table></figure></li>
-</ul></li>
-<li><p>8、统计答案：设 <span class="math inline">\(s\)</span>
-为<strong>当前符合条件的珍珠串的长度</strong>。先判断第 <span
-class="math inline">\(i\)</span>
-个参与统计答案的元素的打磨次数符合条件,由于 <span
-class="math inline">\(f_{0,i}\)</span> 和 <span
-class="math inline">\(f_{1,i}\)</span>
-中有一个为零，把二者加到一起判断就好：</p>
-<ul>
-<li>如果为点：
-<ul>
-<li>（1）和前一个元素不同且和后一个元素相同：<strong>重新开启一个新的序列，存在
-<span class="math inline">\(1\)</span> 个符合标准的珍珠</strong>。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
-<li>（2）和前一个元素相同且和后一个元素相同：<strong>继续当前的序列，加入
-<span class="math inline">\(1\)</span> 个符合标准的珍珠</strong>。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
-<li>（3）和前一个元素相同且和后一个元素不同：<strong>继续当前的序列，加入
-<span class="math inline">\(1\)</span>
-个符合标准的珍珠并统计答案</strong>。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">	ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>（4）和前一个元素不同且和后一个元素不同：<strong>重新开启一个新的序列，存在
-<span class="math inline">\(1\)</span>
-个符合标准的珍珠并统计答案</strong>。 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     s=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">		ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul></li>
-<li>如果为区间：
-<ul>
-<li>（1）和前一个点不同且和后一个点相同：<strong>重新开启一个新的序列，存在区间长度个符合标准的珍珠</strong>。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br></pre></td></tr></table></figure></li>
-<li>（2）和前一个点相同且和后一个点相同：<strong>继续当前的序列，加入区间长度个符合标准的珍珠</strong>。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br></pre></td></tr></table></figure></li>
-<li>（3）和前一个点相同且和后一个点不同：<strong>继续当前的序列，加入区间长度个符合标准的珍珠并统计答案</strong>。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">	ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>（4）和前一个点不同且和后一个点不同：<strong>重新开启一个新的序列，存在区间长度个符合标准的珍珠并统计答案</strong>。
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">     s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">&#123;</span><br><span class="line">ans+=s-k<span class="number">+1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul></li>
-</ul></li>
-<li><p>9、输出……这个也就不用我来说了吧。</p></li>
-</ul></li>
-<li><p>三、代码：在处理过程中已经给出了最核心的部分代码，但是还是有一些小的细节没有给出，详见注释吧（码风不喜勿喷）：
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 2000010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,l,r,o,a[N][<span class="number">3</span>],b[M],cnt,c[M],d[(M&lt;&lt;<span class="number">1</span>)],e[(M&lt;&lt;<span class="number">1</span>)],ans,f[<span class="number">2</span>][(M&lt;&lt;<span class="number">1</span>)],g[(M&lt;&lt;<span class="number">1</span>)],s;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">    	<span class="type">int</span> c=<span class="built_in">getchar</span>();</span><br><span class="line">    	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    	    <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">-1</span>;</span><br><span class="line">    	    c=<span class="built_in">getchar</span>();</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">    	    x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">    	    c=<span class="built_in">getchar</span>();</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">			x=-x;</span><br><span class="line">			<span class="built_in">qwrite</span>(x);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		n=<span class="built_in">qread</span>();</span><br><span class="line">		k=<span class="built_in">qread</span>();</span><br><span class="line">		l=<span class="built_in">qread</span>();</span><br><span class="line">		r=<span class="built_in">qread</span>();</span><br><span class="line">		<span class="comment">//读入</span></span><br><span class="line">		l=l/k<span class="number">+1</span>;</span><br><span class="line">		<span class="keyword">if</span>(r%k)</span><br><span class="line">		&#123;</span><br><span class="line">			r=r/k;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			r=r/k<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//一个小小的预处理</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">char</span> c;</span><br><span class="line">			cin&gt;&gt;c; </span><br><span class="line">			<span class="type">int</span> v=<span class="built_in">qread</span>();</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">&#x27;R&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				a[i][<span class="number">1</span>]=o<span class="number">+1</span>;</span><br><span class="line">				a[i][<span class="number">2</span>]=o+v;</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br><span class="line">				o=o+v;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				a[i][<span class="number">2</span>]=o<span class="number">-1</span>;</span><br><span class="line">				a[i][<span class="number">1</span>]=o-v;</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)<span class="number">-1</span>]=a[i][<span class="number">1</span>];</span><br><span class="line">				b[(i&lt;&lt;<span class="number">1</span>)]=a[i][<span class="number">2</span>];</span><br><span class="line">				o=o-v;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//处理命令</span></span><br><span class="line">		o=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//一个小细节，由于后面还要用到o，所以在这里需要先赋一个值以确保后续使用的正确性</span></span><br><span class="line">		<span class="built_in">sort</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>));</span><br><span class="line">		cnt=<span class="built_in">unique</span>(b<span class="number">+1</span>,b+((n&lt;&lt;<span class="number">1</span>)|<span class="number">1</span>))-b<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> p1=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">1</span>])-b;</span><br><span class="line">			<span class="type">int</span> p2=<span class="built_in">lower_bound</span>(b<span class="number">+1</span>,b+cnt<span class="number">+1</span>,a[i][<span class="number">2</span>])-b;</span><br><span class="line">			c[p1]=a[i][<span class="number">1</span>];</span><br><span class="line">			c[p2]=a[i][<span class="number">2</span>];</span><br><span class="line">			a[i][<span class="number">1</span>]=p1;</span><br><span class="line">			a[i][<span class="number">2</span>]=p2;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//离散化</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			d[(a[i][<span class="number">1</span>]&lt;&lt;<span class="number">1</span>)]+=<span class="number">1</span>;</span><br><span class="line">			d[(a[i][<span class="number">2</span>]&lt;&lt;<span class="number">1</span>)<span class="number">+1</span>]-=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//差分</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=(cnt&lt;&lt;<span class="number">1</span>);i++)</span><br><span class="line">		&#123;</span><br><span class="line">			e[i]=e[i<span class="number">-1</span>]+d[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//还原</span></span><br><span class="line">		f[<span class="number">0</span>][<span class="number">1</span>]=e[<span class="number">2</span>];</span><br><span class="line">		g[<span class="number">1</span>]=c[<span class="number">1</span>];</span><br><span class="line">		<span class="comment">//一个小细节，对于f[0][1]和g[1]的初始化。e[2]肯定是第一个点，所以e[2]赋给f[0][1]，c[1]赋给g[1]</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;(cnt&lt;&lt;<span class="number">1</span>);i+=<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(c[(i&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>]-c[i&gt;&gt;<span class="number">1</span>]==<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">				g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				f[<span class="number">1</span>][++o]=e[i<span class="number">+1</span>];</span><br><span class="line">				f[<span class="number">0</span>][++o]=e[i<span class="number">+2</span>];</span><br><span class="line">				g[o]=c[((i<span class="number">+1</span>)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//处理一下区间</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=o;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(l&lt;=(f[<span class="number">0</span>][i]|f[<span class="number">1</span>][i])&amp;&amp;(f[<span class="number">0</span>][i]|f[<span class="number">1</span>][i])&lt;=r)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(f[<span class="number">0</span>][i])</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s+=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]==(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s+=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">-1</span>]|f[<span class="number">1</span>][i<span class="number">-1</span>])&amp;&amp;f[<span class="number">0</span>][i]^(f[<span class="number">0</span>][i<span class="number">+1</span>]|f[<span class="number">1</span>][i<span class="number">+1</span>]))</span><br><span class="line">					&#123;</span><br><span class="line">						s=<span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]==f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s+=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span>(f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">-1</span>]&amp;&amp;f[<span class="number">1</span>][i]^f[<span class="number">0</span>][i<span class="number">+1</span>])</span><br><span class="line">					&#123;</span><br><span class="line">						s=g[i<span class="number">+1</span>]-g[i<span class="number">-1</span>]<span class="number">-1</span>;</span><br><span class="line">						<span class="keyword">if</span>(s&gt;=k)</span><br><span class="line">						&#123;</span><br><span class="line">							ans+=s-k<span class="number">+1</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">continue</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//统计答案</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ans);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <img src="https://s1.ax1x.com/2020/07/20/U4j2jJ.png"
-alt="U4j2jJ.png" /></p></li>
-</ul>
-<figure>
-<img src="https://s1.ax1x.com/2020/07/20/U4j79O.png" alt="U4j79O.png" />
-<figcaption aria-hidden="true">U4j79O.png</figcaption>
-</figure>
-<figure>
-<img src="https://s1.ax1x.com/2020/07/20/U4jXDA.png" alt="U4jXDA.png" />
-<figcaption aria-hidden="true">U4jXDA.png</figcaption>
-</figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>模拟</tag>
-        <tag>离散化</tag>
-        <tag>枚举</tag>
-        <tag>差分</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>题解 U534158 【单身排查】</title>
     <url>/%E9%A2%98%E8%A7%A3-U534158-%E3%80%90%E5%8D%95%E8%BA%AB%E6%8E%92%E6%9F%A5%E3%80%91/</url>
     <content><![CDATA[<p>题目链接：<a
@@ -3604,6 +3659,126 @@ class="math inline">\(\qquad\!\!\)</span>代码（码风不喜勿喷）：</p>
         <tag>OI</tag>
         <tag>数学</tag>
         <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>题解 U534160 【进入 k 进制星球】</title>
+    <url>/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/</url>
+    <content><![CDATA[<p>题目链接：<a href="https://www.luogu.com.cn/problem/U534160">进入 k
+进制星球</a>。</p>
+<p>关于题目：作为 T3，一道数学题。</p>
+<p>应用算法：数论？</p>
+<span id="more"></span>
+<hr />
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>这道题的题意非常明确，就是求在 <span
+class="math inline">\(k\)</span> 进制下 <span
+class="math inline">\(n!!\)</span> 的位数。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>前置知识：</p>
+<blockquote>
+<p><a
+href="https://baike.baidu.com/item/%E5%8F%8C%E9%98%B6%E4%B9%98">双阶乘</a>：双阶乘是一个数学概念，用n!!表示。正整数的双阶乘表示不超过这个正整数且与它有相同奇偶性的所有正整数乘积。——百度百科</p>
+</blockquote>
+<blockquote>
+<p><a
+href="https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0">对数</a>：在数学中，对数是对求幂的逆运算。——百度百科</p>
+</blockquote>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>会了对数，自然就可以知道这道题要求的答案就是 <span
+class="math inline">\(log_k n!!+1\)</span>。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>看一眼数据范围：</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于 <span
+class="math inline">\(50\%\)</span> 的数据，<span
+class="math inline">\(1\leqslant n \leqslant 2\times 10^6\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于 <span
+class="math inline">\(100\%\)</span> 的数据，<span
+class="math inline">\(1\leqslant n \leqslant 2\times
+10^9\)</span>，<span class="math inline">\(10 \leqslant k \leqslant
+100\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>部分分还是给的挺足的，那么我们就先解决前 <span
+class="math inline">\(50\%\)</span> 的暴力：</p>
+<h2 id="五十分做法">五十分做法：</h2>
+<p><span class="math inline">\(\ \ \ \ \ \ \log_k n!!+1=\sum\log_k
+i(i=2;i\leqslant n;i=i+2)+1\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>没错，这就没了。<del>是不是很简单？</del></p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>具体处理主要有以下三点：</p>
+<ul>
+<li><p>1、C++ 自带的求<a
+href="https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0">对数</a>的函数有两个：<code>double log(double x)</code>
+函数返回 <span class="math inline">\(\ln
+x\)</span>，<code>double log10(double x)</code> 函数返回 <span
+class="math inline">\(\lg x\)</span>。</p></li>
+<li><p>2、想求 <span
+class="math inline">\(\log_kn\)</span>，自然就需要<a
+href="https://baike.baidu.com/item/%E6%8D%A2%E5%BA%95%E5%85%AC%E5%BC%8F">换底公式</a>，在这里，我采用以
+<span class="math inline">\(e\)</span>
+为底的对数进行中介：<code>ansd+=log(i)/log(k);</code>。</p></li>
+<li><p>3、在统计答案时，由于前面用的都是浮点数，但是最后需要一个整数，一定要注意精度的问题：<code>ansi=ansd+eps+1;</code>。<code>eps</code>
+是很重要的，一定要有，实例如下：</p></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/07/20/U4qTyR.png"
+alt="U4qTyR.png" /> <img src="https://s1.ax1x.com/2020/07/20/U4qol9.png"
+alt="U4qol9.png" /></p>
+<p>代码（码风不喜勿喷）： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,ansi;</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> ln_k,ansd;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">		c=<span class="built_in">getchar</span>(); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(re <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		x=-x;</span><br><span class="line">		<span class="built_in">qwrite</span>(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	k=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="comment">//读入</span></span><br><span class="line">	ln_k=<span class="built_in">log</span>(k);</span><br><span class="line">	<span class="comment">//ln_k表示以e为底k的对数</span></span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i+=<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		ansd+=<span class="built_in">log</span>(i)/ln_k;</span><br><span class="line">		<span class="comment">//ansd+=以k为底i的对数</span></span><br><span class="line">	&#125;</span><br><span class="line">	ansi=ansd+eps<span class="number">+1</span>;</span><br><span class="line">	<span class="comment">//统计答案，这个eps真的非常重要</span></span><br><span class="line">	<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">	<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">	<span class="comment">//输出答案</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \
+\ \ \ \ \)</span>完美的五十分;</p>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4X7Os.png" alt="U4X7Os.png" />
+<figcaption aria-hidden="true">U4X7Os.png</figcaption>
+</figure>
+<hr />
+<h2 id="一百分做法">一百分做法：</h2>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>由于 <span
+class="math inline">\(1\leqslant n \leqslant 2\times
+10^9\)</span>，我们继续使用 <span class="math inline">\(O(n)\)</span>
+的算法一定会如上 <span
+class="math inline">\(TLE\)</span>，那么，我们就需要一个时间复杂度更小的算法。<span
+class="math inline">\((O(\sqrt n)?\ \ O(\log n)?)\)</span></p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>怎么在低于 <span
+class="math inline">\(O(n)\)</span> 的时间复杂度内求得 <span
+class="math inline">\(log_kn!!+1\)</span>
+呢？对于双阶乘的计算我们不是很熟悉，但是由于题目中规定 <span
+class="math inline">\(n\)</span>
+为偶数，根据定义，我们可以将双阶乘转化成我们比较熟悉的阶乘和乘方相乘的形式：<span
+class="math inline">\(n!!=\dfrac{n}{2}!\times
+2^{\dfrac{n}{2}}\)</span>，那么要求的答案：<span
+class="math inline">\(log_kn!!=log_kn!+\dfrac{n}{2}\times
+log_k2\)</span>。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>现在问题的关键就在于，怎么在低于 <span
+class="math inline">\(O(n)\)</span> 的时间复杂度内求得 <span
+class="math inline">\(log_kn!\)</span>
+呢？阶乘我们就熟悉了，利用一个神奇的公式：<a
+href="https://baike.baidu.com/item/%E6%96%AF%E7%89%B9%E6%9E%97%E5%85%AC%E5%BC%8F">斯特林公式</a>：<span
+class="math inline">\(n!\approx \sqrt{2\pi n} \left( \dfrac{n} {e}
+\right)^n\)</span> 即可。 &gt;<span class="math inline">\(\ \ \ \ \ \
+\)</span>斯特林公式（Stirling's
+approximation）是一条用来取n的阶乘的近似值的数学公式。一般来说，当n很大的时候，n阶乘的计算量十分大，所以斯特林公式十分好用，而且，即使在n很小的时候，斯特林公式的取值已经十分准确。——百度百科</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由于斯特林公式只是一个近似公式，<span
+class="math inline">\(n\)</span>
+越大时误差越小，那么我们就只用它去处理暴力会时间超限的后 <span
+class="math inline">\(50\%\)</span> 的数据点： <span
+class="math inline">\(\log_k n!!+1 \approx \log_k \sqrt{\pi n} \left(
+\dfrac{n} {2e} \right)^n +1+\dfrac{n}{2}\times log_k2=\dfrac{1}
+{2}\log_k \pi n+n\times \log_k \dfrac{n} {2e}+1+\dfrac{n}{2}\times
+log_k2\)</span></p>
+<p>代码（码风不喜勿喷）： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 1000010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,ansi;</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> nn,ln_k,n_e,ansd,pi=<span class="number">3.141592653589793</span>,e=<span class="number">2.718281828459</span>;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">		c=<span class="built_in">getchar</span>(); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(re <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		x=-x;</span><br><span class="line">		<span class="built_in">qwrite</span>(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	k=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="comment">//读入</span></span><br><span class="line">	ln_k=<span class="built_in">log</span>(k);</span><br><span class="line">	<span class="comment">//ln_k表示以e为底k的对数</span></span><br><span class="line">	<span class="keyword">if</span>(n&lt;=M)</span><br><span class="line">	<span class="comment">//前50%的数据点：</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i+=<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			ansd+=<span class="built_in">log</span>(i)/ln_k;</span><br><span class="line">			<span class="comment">//ansd+=以k为底i的对数</span></span><br><span class="line">		&#125;</span><br><span class="line">		ansi=ansd+eps<span class="number">+1</span>;</span><br><span class="line">		<span class="comment">//统计答案，这个eps真的非常重要</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="comment">//后50%的测试点：</span></span><br><span class="line">	&#123;</span><br><span class="line">		nn=(n&gt;&gt;<span class="number">1</span>);</span><br><span class="line">		n_e=nn/e;</span><br><span class="line">		<span class="comment">//n_e表示n/e的值</span></span><br><span class="line">		ansd=(<span class="built_in">log</span>(<span class="number">2</span>*pi*nn)*<span class="number">0.5</span>+<span class="built_in">log</span>(n_e)*nn)/ln_k;</span><br><span class="line">		<span class="comment">//根据斯特林公式计算nn!并利用换底公式求以k为底nn!的对数</span></span><br><span class="line">		ansi=ansd+eps<span class="number">+1</span>+<span class="built_in">log</span>(<span class="number">2</span>)/ln_k*nn;</span><br><span class="line">		<span class="comment">//统计答案</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>完美的一百分：</p>
+<figure>
+<img src="https://s1.ax1x.com/2020/07/20/U4j9X9.png" alt="U4j9X9.png" />
+<figcaption aria-hidden="true">U4j9X9.png</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>题解</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -3755,70 +3930,15 @@ class="math inline">\(\qquad\!\!\)</span>（尊重验题人的代码习惯，这
       </tags>
   </entry>
   <entry>
-    <title>普通物理实验(2)</title>
-    <url>/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C-2/</url>
-    <content><![CDATA[<p><span
-class="math inline">\(\qquad\!\!\)</span>作为倒数第二批大二才上普物实验的物院本科生，我于2023-2024学年春季学期选修
-普通物理实验(2)
-课程，因为普物实验对教学模式进行了一定的改革，不像往年所有实验的实验报告均需要课后整理完成（即部分实验课上即交实验报告），所以只有六个实验需要课后整理完成实验报告（但是，普物2
-有不少是双周实验，按照一周的课程的时间做满基本上就能做完，所以总体来说并不比
-普物1 负担更重），按照实验名称顺序排列如下：</p>
-<ul>
-<li><a href="/files/弦上驻波实验%20实验报告.pdf">实验十三
-弦上驻波实验</a></li>
-<li><a
-href="/files/高温超导材料特性测试和低温温度计%20实验报告.pdf">实验二十三
-高温超导材料特性测试和低温温度计</a></li>
-<li><a
-href="/files/基于虚拟仪器技术的电路综合实验%20实验报告.pdf">实验二十九
-基于虚拟仪器技术的电路综合实验</a></li>
-<li><a href="files/用示波器观测动态磁滞回线%20实验报告.pdf">实验三十
-用示波器观测动态磁滞回线</a></li>
-<li><a href="files/光源的时间相干性%20实验报告.pdf">实验三十六
-光源的时间相干性</a></li>
-<li><a href="files/光信息处理%20实验报告.pdf">光信息处理</a></li>
-</ul>
-<p><span class="math inline">\(\qquad\!\!\)</span>以上实验报告均由 LaTeX
-排版，使用 TeX Live 2024 发行版，XeLaTeX 编译器（格式+引擎）于 PKUTEX
-平台生成。仅供参考，如因此产生的任何问题，本人概不负责😈。</p>
+    <title>在 LaTeX 中实现加圈&amp;脚注处编号与正文对齐的脚注</title>
+    <url>/%E5%9C%A8-LaTeX-%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%9C%88-%E8%84%9A%E6%B3%A8%E5%A4%84%E7%BC%96%E5%8F%B7%E4%B8%8E%E6%AD%A3%E6%96%87%E5%AF%B9%E9%BD%90%E7%9A%84%E8%84%9A%E6%B3%A8/</url>
+    <content><![CDATA[<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="comment">%导言区</span></span><br><span class="line"><span class="comment">%新增命令：改变脚注的编号格式</span></span><br><span class="line"><span class="comment">%第一步，让脚注编号用上带圈数字</span></span><br><span class="line"><span class="comment">%调用 xunicode-addon 宏包</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;xunicode-addon&#125;</span><br><span class="line"><span class="keyword">\xeCJKDeclareCharClass</span>&#123;Default&#125;&#123;&quot;24EA, &quot;2460-&gt;&quot;2473, &quot;3251-&gt;&quot;32BF&#125;</span><br><span class="line"><span class="keyword">\setmainfont</span>&#123;Garamond-Math.otf&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\thefootnote</span>&#125;&#123;<span class="keyword">\textcircled</span>&#123;<span class="keyword">\arabic</span>&#123;footnote&#125;&#125;&#125;</span><br><span class="line"><span class="comment">%第二步，在页面底部的脚注内容中，取消编号的上标样式</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;scrextend&#125;</span><br><span class="line"><span class="comment">%缩进等水平距离均可调，现使用 chat-GPT 生成的距离看上去很舒服</span></span><br><span class="line"><span class="keyword">\deffootnote</span>&#123;2em&#125;&#123;1.5em&#125;&#123;<span class="keyword">\thefootnotemark</span><span class="keyword">\hspace</span>&#123;0.5em&#125;&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>学习&amp;科研</category>
+        <category>LaTeX</category>
       </categories>
       <tags>
-        <tag>physics</tag>
-        <tag>物理学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>普通物理实验(1)</title>
-    <url>/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C-1/</url>
-    <content><![CDATA[<p><span
-class="math inline">\(\qquad\!\!\)</span>作为倒数第二批大二才上普物实验的物院本科生，我于2023-2024学年秋季学期选修
-普通物理实验(1)
-课程，因为普物实验对教学模式进行了一定的改革，不像往年所有实验的实验报告均需要课后整理完成（即部分实验课上即交实验报告），所以只有五个实验需要课后整理完成实验报告，按照实验名称顺序排列如下：</p>
-<ul>
-<li><a href="/files/测定金属的杨氏模量%20实验报告.pdf">实验八
-测定金属的杨氏模量</a></li>
-<li><a href="/files/测定介质中的声速%20实验报告.pdf">实验十二
-测定介质中的声速</a></li>
-<li><a href="/files/霍尔效应测量磁场%20实验报告.pdf">实验十六
-霍尔效应测量磁场</a></li>
-<li><a href="files/弗兰克-赫兹实验%20实验报告.pdf">实验十八
-弗兰克-赫兹实验</a></li>
-<li><a href="files/光衍射的定量研究%20实验报告.pdf">实验二十
-光衍射的定量研究</a></li>
-</ul>
-<p><span class="math inline">\(\qquad\!\!\)</span>以上实验报告均由 LaTeX
-排版，使用 TeX Live 2024 发行版，XeLaTeX 编译器（格式+引擎）于 PKUTEX
-平台生成。仅供参考，如因此产生的任何问题，本人概不负责😈。</p>
-]]></content>
-      <categories>
-        <category>学习&amp;科研</category>
-      </categories>
-      <tags>
-        <tag>physics</tag>
-        <tag>物理学</tag>
+        <tag>LaTeX</tag>
       </tags>
   </entry>
   <entry>
@@ -3855,126 +3975,6 @@ href="files/用单电源双运放实现的呼吸灯%20实验报告.pdf">12.用�
       <tags>
         <tag>physics</tag>
         <tag>物理学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>题解 U534160 【进入 k 进制星球】</title>
-    <url>/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/</url>
-    <content><![CDATA[<p>题目链接：<a href="https://www.luogu.com.cn/problem/U534160">进入 k
-进制星球</a>。</p>
-<p>关于题目：作为 T3，一道数学题。</p>
-<p>应用算法：数论？</p>
-<span id="more"></span>
-<hr />
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>这道题的题意非常明确，就是求在 <span
-class="math inline">\(k\)</span> 进制下 <span
-class="math inline">\(n!!\)</span> 的位数。</p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>前置知识：</p>
-<blockquote>
-<p><a
-href="https://baike.baidu.com/item/%E5%8F%8C%E9%98%B6%E4%B9%98">双阶乘</a>：双阶乘是一个数学概念，用n!!表示。正整数的双阶乘表示不超过这个正整数且与它有相同奇偶性的所有正整数乘积。——百度百科</p>
-</blockquote>
-<blockquote>
-<p><a
-href="https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0">对数</a>：在数学中，对数是对求幂的逆运算。——百度百科</p>
-</blockquote>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>会了对数，自然就可以知道这道题要求的答案就是 <span
-class="math inline">\(log_k n!!+1\)</span>。</p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>看一眼数据范围：</p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于 <span
-class="math inline">\(50\%\)</span> 的数据，<span
-class="math inline">\(1\leqslant n \leqslant 2\times 10^6\)</span></p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于 <span
-class="math inline">\(100\%\)</span> 的数据，<span
-class="math inline">\(1\leqslant n \leqslant 2\times
-10^9\)</span>，<span class="math inline">\(10 \leqslant k \leqslant
-100\)</span></p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>部分分还是给的挺足的，那么我们就先解决前 <span
-class="math inline">\(50\%\)</span> 的暴力：</p>
-<h2 id="五十分做法">五十分做法：</h2>
-<p><span class="math inline">\(\ \ \ \ \ \ \log_k n!!+1=\sum\log_k
-i(i=2;i\leqslant n;i=i+2)+1\)</span></p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>没错，这就没了。<del>是不是很简单？</del></p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>具体处理主要有以下三点：</p>
-<ul>
-<li><p>1、C++ 自带的求<a
-href="https://baike.baidu.com/item/%E5%AF%B9%E6%95%B0">对数</a>的函数有两个：<code>double log(double x)</code>
-函数返回 <span class="math inline">\(\ln
-x\)</span>，<code>double log10(double x)</code> 函数返回 <span
-class="math inline">\(\lg x\)</span>。</p></li>
-<li><p>2、想求 <span
-class="math inline">\(\log_kn\)</span>，自然就需要<a
-href="https://baike.baidu.com/item/%E6%8D%A2%E5%BA%95%E5%85%AC%E5%BC%8F">换底公式</a>，在这里，我采用以
-<span class="math inline">\(e\)</span>
-为底的对数进行中介：<code>ansd+=log(i)/log(k);</code>。</p></li>
-<li><p>3、在统计答案时，由于前面用的都是浮点数，但是最后需要一个整数，一定要注意精度的问题：<code>ansi=ansd+eps+1;</code>。<code>eps</code>
-是很重要的，一定要有，实例如下：</p></li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/07/20/U4qTyR.png"
-alt="U4qTyR.png" /> <img src="https://s1.ax1x.com/2020/07/20/U4qol9.png"
-alt="U4qol9.png" /></p>
-<p>代码（码风不喜勿喷）： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,ansi;</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> ln_k,ansd;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">		c=<span class="built_in">getchar</span>(); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(re <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		x=-x;</span><br><span class="line">		<span class="built_in">qwrite</span>(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	k=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="comment">//读入</span></span><br><span class="line">	ln_k=<span class="built_in">log</span>(k);</span><br><span class="line">	<span class="comment">//ln_k表示以e为底k的对数</span></span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i+=<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		ansd+=<span class="built_in">log</span>(i)/ln_k;</span><br><span class="line">		<span class="comment">//ansd+=以k为底i的对数</span></span><br><span class="line">	&#125;</span><br><span class="line">	ansi=ansd+eps<span class="number">+1</span>;</span><br><span class="line">	<span class="comment">//统计答案，这个eps真的非常重要</span></span><br><span class="line">	<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">	<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">	<span class="comment">//输出答案</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \
-\ \ \ \ \)</span>完美的五十分;</p>
-<figure>
-<img src="https://s1.ax1x.com/2020/07/20/U4X7Os.png" alt="U4X7Os.png" />
-<figcaption aria-hidden="true">U4X7Os.png</figcaption>
-</figure>
-<hr />
-<h2 id="一百分做法">一百分做法：</h2>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>由于 <span
-class="math inline">\(1\leqslant n \leqslant 2\times
-10^9\)</span>，我们继续使用 <span class="math inline">\(O(n)\)</span>
-的算法一定会如上 <span
-class="math inline">\(TLE\)</span>，那么，我们就需要一个时间复杂度更小的算法。<span
-class="math inline">\((O(\sqrt n)?\ \ O(\log n)?)\)</span></p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>怎么在低于 <span
-class="math inline">\(O(n)\)</span> 的时间复杂度内求得 <span
-class="math inline">\(log_kn!!+1\)</span>
-呢？对于双阶乘的计算我们不是很熟悉，但是由于题目中规定 <span
-class="math inline">\(n\)</span>
-为偶数，根据定义，我们可以将双阶乘转化成我们比较熟悉的阶乘和乘方相乘的形式：<span
-class="math inline">\(n!!=\dfrac{n}{2}!\times
-2^{\dfrac{n}{2}}\)</span>，那么要求的答案：<span
-class="math inline">\(log_kn!!=log_kn!+\dfrac{n}{2}\times
-log_k2\)</span>。</p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>现在问题的关键就在于，怎么在低于 <span
-class="math inline">\(O(n)\)</span> 的时间复杂度内求得 <span
-class="math inline">\(log_kn!\)</span>
-呢？阶乘我们就熟悉了，利用一个神奇的公式：<a
-href="https://baike.baidu.com/item/%E6%96%AF%E7%89%B9%E6%9E%97%E5%85%AC%E5%BC%8F">斯特林公式</a>：<span
-class="math inline">\(n!\approx \sqrt{2\pi n} \left( \dfrac{n} {e}
-\right)^n\)</span> 即可。 &gt;<span class="math inline">\(\ \ \ \ \ \
-\)</span>斯特林公式（Stirling's
-approximation）是一条用来取n的阶乘的近似值的数学公式。一般来说，当n很大的时候，n阶乘的计算量十分大，所以斯特林公式十分好用，而且，即使在n很小的时候，斯特林公式的取值已经十分准确。——百度百科</p>
-<p><span class="math inline">\(\ \ \ \ \ \
-\)</span>由于斯特林公式只是一个近似公式，<span
-class="math inline">\(n\)</span>
-越大时误差越小，那么我们就只用它去处理暴力会时间超限的后 <span
-class="math inline">\(50\%\)</span> 的数据点： <span
-class="math inline">\(\log_k n!!+1 \approx \log_k \sqrt{\pi n} \left(
-\dfrac{n} {2e} \right)^n +1+\dfrac{n}{2}\times log_k2=\dfrac{1}
-{2}\log_k \pi n+n\times \log_k \dfrac{n} {2e}+1+\dfrac{n}{2}\times
-log_k2\)</span></p>
-<p>代码（码风不喜勿喷）： <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 1000010</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k,ansi;</span><br><span class="line"><span class="type">long</span> <span class="type">double</span> nn,ln_k,n_e,ansd,pi=<span class="number">3.141592653589793</span>,e=<span class="number">2.718281828459</span>;</span><br><span class="line"><span class="comment">//每个数组或变量的含义详见处理过程。</span></span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	c=<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">&#x27;0&#x27;</span>||c&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			f=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		c=<span class="built_in">getchar</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;c&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>);</span><br><span class="line">		c=<span class="built_in">getchar</span>(); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">qwrite</span><span class="params">(re <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"><span class="comment">//快写</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		x=-x;</span><br><span class="line">		<span class="built_in">qwrite</span>(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">9</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">qwrite</span>(x/<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	k=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="comment">//读入</span></span><br><span class="line">	ln_k=<span class="built_in">log</span>(k);</span><br><span class="line">	<span class="comment">//ln_k表示以e为底k的对数</span></span><br><span class="line">	<span class="keyword">if</span>(n&lt;=M)</span><br><span class="line">	<span class="comment">//前50%的数据点：</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i+=<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			ansd+=<span class="built_in">log</span>(i)/ln_k;</span><br><span class="line">			<span class="comment">//ansd+=以k为底i的对数</span></span><br><span class="line">		&#125;</span><br><span class="line">		ansi=ansd+eps<span class="number">+1</span>;</span><br><span class="line">		<span class="comment">//统计答案，这个eps真的非常重要</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="comment">//后50%的测试点：</span></span><br><span class="line">	&#123;</span><br><span class="line">		nn=(n&gt;&gt;<span class="number">1</span>);</span><br><span class="line">		n_e=nn/e;</span><br><span class="line">		<span class="comment">//n_e表示n/e的值</span></span><br><span class="line">		ansd=(<span class="built_in">log</span>(<span class="number">2</span>*pi*nn)*<span class="number">0.5</span>+<span class="built_in">log</span>(n_e)*nn)/ln_k;</span><br><span class="line">		<span class="comment">//根据斯特林公式计算nn!并利用换底公式求以k为底nn!的对数</span></span><br><span class="line">		ansi=ansd+eps<span class="number">+1</span>+<span class="built_in">log</span>(<span class="number">2</span>)/ln_k*nn;</span><br><span class="line">		<span class="comment">//统计答案</span></span><br><span class="line">		<span class="built_in">qwrite</span>(ansi);</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><span class="math inline">\(\ \ \ \ \ \ \)</span>完美的一百分：</p>
-<figure>
-<img src="https://s1.ax1x.com/2020/07/20/U4j9X9.png" alt="U4j9X9.png" />
-<figcaption aria-hidden="true">U4j9X9.png</figcaption>
-</figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>题解</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>数学</tag>
       </tags>
   </entry>
 </search>
