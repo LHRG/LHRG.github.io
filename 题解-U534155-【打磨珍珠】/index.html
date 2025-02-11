@@ -19,18 +19,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="题目链接：打磨珍珠。 关于题目：作为 \(T2\)，很简单的算法题。 应用算法：离散化，差分，离线。  \(\ \ \ \ \ \ \)这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。  一、分析题面：  1、命令：就相当于对于一段区间的区间加 \(1\) 2、条件：对于连续的 \(k\) 个点，每个点的值相同且区间和 \(\in(l,r)\)。 3、输">
+    <meta name="description" content="题目链接：打磨珍珠。 关于题目：作为 \(T2\)，很简单的算法题。 应用算法：离散化，差分，离线。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="题解 U534155 【打磨珍珠】">
 <meta property="og:url" content="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534155-%E3%80%90%E6%89%93%E7%A3%A8%E7%8F%8D%E7%8F%A0%E3%80%91/">
 <meta property="og:site_name" content="LHRG 李的博客">
-<meta property="og:description" content="题目链接：打磨珍珠。 关于题目：作为 \(T2\)，很简单的算法题。 应用算法：离散化，差分，离线。  \(\ \ \ \ \ \ \)这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。  一、分析题面：  1、命令：就相当于对于一段区间的区间加 \(1\) 2、条件：对于连续的 \(k\) 个点，每个点的值相同且区间和 \(\in(l,r)\)。 3、输">
+<meta property="og:description" content="题目链接：打磨珍珠。 关于题目：作为 \(T2\)，很简单的算法题。 应用算法：离散化，差分，离线。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4j2jJ.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4j79O.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/07/20/U4jXDA.png">
 <meta property="article:published_time" content="2020-05-08T04:04:00.000Z">
-<meta property="article:modified_time" content="2025-02-10T13:56:54.913Z">
+<meta property="article:modified_time" content="2025-02-11T08:43:59.906Z">
 <meta property="article:author" content="LHRG 李">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="模拟">
@@ -246,7 +246,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-10 21:56:54" itemprop="dateModified" datetime="2025-02-10T21:56:54+08:00">2025-02-10</time>
+      <time title="修改时间：2025-02-11 16:43:59" itemprop="dateModified" datetime="2025-02-11T16:43:59+08:00">2025-02-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -298,6 +298,7 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U534155">�
 <p>关于题目：作为 <span
 class="math inline">\(T2\)</span>，很简单的算法题。</p>
 <p>应用算法：离散化，差分，离线。</p>
+<span id="more"></span>
 <hr />
 <p><span class="math inline">\(\ \ \ \ \ \
 \)</span>这道题虽然思维难度和算法难度都不大，但是细节却比较多，我们就从分析题面入手，循序渐进地来说。</p>
@@ -558,7 +559,7 @@ alt="U4j2jJ.png" /></p></li>
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:43</span>
+    <span title="站点阅读时长">2:44</span>
   </span>
 </div>
 <div class="busuanzi-count">
