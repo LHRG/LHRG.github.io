@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="题目链接：城市环路。 关于题目：一道比较显然的 基环树 上的 dp 题。 应用算法：树形 dp \(+\) 环形 dp。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="题解 P1453 【城市环路】">
+<meta property="og:url" content="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-P1453-%E3%80%90%E5%9F%8E%E5%B8%82%E7%8E%AF%E8%B7%AF%E3%80%91/">
+<meta property="og:site_name" content="LHRG 李的博客">
+<meta property="og:description" content="题目链接：城市环路。 关于题目：一道比较显然的 基环树 上的 dp 题。 应用算法：树形 dp \(+\) 环形 dp。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-11T23:14:00.000Z">
+<meta property="article:modified_time" content="2025-02-18T02:54:36.343Z">
+<meta property="article:author" content="LHRG 李">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="DP">
+<meta property="article:tag" content="树形 DP">
+<meta property="article:tag" content="基环树">
+<meta property="article:tag" content="图论">
+<meta property="article:tag" content="环形 DP">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-P1453-%E3%80%90%E5%9F%8E%E5%B8%82%E7%8E%AF%E8%B7%AF%E3%80%91/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhrg.github.io/%E9%A2%98%E8%A7%A3-P1453-%E3%80%90%E5%9F%8E%E5%B8%82%E7%8E%AF%E8%B7%AF%E3%80%91/","path":"题解-P1453-【城市环路】/","title":"题解 P1453 【城市环路】"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>题解 P1453 【城市环路】 | LHRG 李的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">LHRG 李的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">LHRG's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日志</a></li><li class="menu-item menu-item-events"><a href="/events/" rel="section"><i class="fa fa-calendar-alt fa-fw"></i>待办</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E9%9D%A2%E8%BF%9B%E5%85%A5%E6%AD%A3%E6%96%87"><span class="nav-number">2.</span> <span class="nav-text">下面进入正文：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LHRG 李"
+      src="/avatar.jpg">
+  <p class="site-author-name" itemprop="name">LHRG 李</p>
+  <div class="site-description" itemprop="description">未经他人痛，莫劝他人善</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">博文</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/LHRG" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;LHRG" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lhr@stu.pku.edu.cn" title="E-Mail → mailto:lhr@stu.pku.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-P1453-%E3%80%90%E5%9F%8E%E5%B8%82%E7%8E%AF%E8%B7%AF%E3%80%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.jpg">
+      <meta itemprop="name" content="LHRG 李">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LHRG 李的博客">
+      <meta itemprop="description" content="未经他人痛，莫劝他人善">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="题解 P1453 【城市环路】 | LHRG 李的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          题解 P1453 【城市环路】
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-12 07:14:00" itemprop="dateCreated datePublished" datetime="2020-08-12T07:14:00+08:00">2020-08-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-18 10:54:36" itemprop="dateModified" datetime="2025-02-18T10:54:36+08:00">2025-02-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>题目链接：<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1453">城市环路</a>。</p>
+<p>关于题目：一道比较显然的 <strong>基环树</strong> 上的 dp 题。</p>
+<p>应用算法：树形 dp <span class="math inline">\(+\)</span> 环形
+dp。</p>
+<span id="more"></span>
+<hr />
+<h4 id="写在前面">写在前面：</h4>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>本来题解区有一篇和我的思路一样的题解，不过那篇题解写得并不对，并不能通过我为这道题添加的
+hack
+数据。由于我个人认为这个思路对于基环树的初学者思维难度较小，比较友好，所以就有了这篇题解。</p>
+<p><span class="math inline">\(\qquad\!\!updata\ \
+2020.10.6\)</span>：修改了之前挂错的链接；增加时空复杂度分析。</p>
+<p><span class="math inline">\(\qquad\!\!updata\ \
+2020.10.25\)</span>：修改了之前对于 环形 dp 的初始化的一个错误。感谢 @<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/141179">pigstd</a> 指出。</p>
+<h4 id="下面进入正文">下面进入正文：</h4>
+<ul>
+<li>一、分析题意：</li>
+</ul>
+<p><span class="math inline">\(\qquad\!\!n\)</span> 个点 <span
+class="math inline">\(n\)</span>
+条边、全部联通且只有一个环，满足这些条件的图很显然是一棵<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/user52918/qian-tan-ji-huan-shu">基环树</a>。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>每个点有点权且任意相邻的两个点不能同时选取，很显然我们需要进行类似于<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1352">没有上司的舞会</a>的
+dp。</p>
+<ul>
+<li><p>二、dp 过程：</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>和其它题解不一样的，我的 dp
+过程主要是利用基环树的一个性质将该问题分解为两个子问题逐一解决。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>由于一棵基环树可以看作一棵树加了一条非重边在图上形成了唯一一个环，那么我们可以将该环上的每个点看作一个<strong>根节点</strong>，在不考虑环上的点与之联通的情况下，每个根节点都联通出<strong>一棵树</strong>。也就是说，一棵基环树等价于<strong>很多棵树的根节点被连在了一个环上的一张图</strong>。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>由此，我们便可以将这个问题分解为<strong>以环上的点为根节点的很棵多树的
+树形 dp <span class="math inline">\(+\)</span> 这些环上的点的 环形
+dp</strong>。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>具体过程如下：</p>
+<ul>
+<li>1、找环：</li>
+</ul>
+<p><span class="math inline">\(\qquad\!\!\)</span>我利用的是拓扑排序
+<span class="math inline">\(+\)</span> dfs 的方式进行找环。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>首先，对于所有节点拓扑排序一遍，而后入度为
+<span class="math inline">\(2\)</span> 的点就是环上的点。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>其次，任意选择一个环上的点（我选择的就是编号最小的节点）进行
+dfs。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>最后，每次 dfs 到一个
+<strong>未被记录入环并且入度为 <span class="math inline">\(2\)</span>
+的节点</strong>，将其记录入环并进行递归。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>可能有同学要问：为什么不能直接拓扑排序后每个点一次循环一遍入度为
+<span class="math inline">\(2\)</span> 就记录入环而要区 dfs 呢？</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>那是因为我们之后需要进行 环形
+dp，需要保证<strong>环上依次连续的点在图上也是依次连续的</strong>，所以不能只进行一个简简单单的循环而需要
+dfs。</p>
+<ul>
+<li>2、树形 dp：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>即对于每棵树都进行一次<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1352">没有上司的舞会</a>的 dp
+过程：</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>设 <span
+class="math inline">\(f_{i,0}\)</span> 表示 <span
+class="math inline">\(i\)</span> 点不选择，<span
+class="math inline">\(i\)</span> 点子树的最大贡献；<span
+class="math inline">\(f_{i,1}\)</span> 表示 <span
+class="math inline">\(i\)</span> 点选择，<span
+class="math inline">\(i\)</span> 点子树的最大贡献。对于每个点 <span
+class="math inline">\(i\)</span>，<span
+class="math inline">\(f_{i,0}\)</span> 的初始值为 <span
+class="math inline">\(0\)</span>，<span
+class="math inline">\(f_{i,1}\)</span>
+的初始值即为题目中的每个点的人流量 <span
+class="math inline">\(p_i\)</span>。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>转移方程（<span
+class="math inline">\(v\)</span> 点为 <span
+class="math inline">\(u\)</span> 点的子节点）：</p>
+<p><span class="math inline">\(\qquad\!\!f_{u,0}\gets
+f_{u,0}+\max(f_{v,0},f_{v,1})\)</span></p>
+<p><span class="math inline">\(\qquad\!\!f_{u,1}\gets
+f_{u,1}+f_{v,0}\)</span></p>
+<ul>
+<li>3、环形 dp：</li>
+</ul>
+<p><span class="math inline">\(\qquad\!\!\)</span><em>没有接触过 环形 dp
+的同学可以左转先看一下这两道题：<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6064">P6064 [USACO05JAN]Naptime
+G</a> 和 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/SP283">SP283 NAPTIME
+- Naptime</a>。</em></p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>由于此时每棵树内部节点的关系均已满足题目的限定，剩下的就是环上的各个节点之间的关系，那么我们只需要对每棵树的根节点进行一次
+环形 dp 即可得出答案。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>设 <span
+class="math inline">\(c_i\)</span> 为环上第 <span
+class="math inline">\(i\)</span> 个点的编号，<span
+class="math inline">\(tot\)</span> 为环上的节点总数。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>那么此时 <span
+class="math inline">\(f_{c_i,0}\)</span> 代表以 <span
+class="math inline">\(c_i\)</span> 为根的树不选 <span
+class="math inline">\(c_i\)</span> 最大贡献； <span
+class="math inline">\(f_{c_i,1}\)</span> 代表以 <span
+class="math inline">\(c_i\)</span> 为根的树选 <span
+class="math inline">\(c_i\)</span> 最大贡献。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>设 <span
+class="math inline">\(g_{i,0}\)</span> 表示点 <span
+class="math inline">\(c_i\)</span> 不选，前 <span
+class="math inline">\(i\)</span> 个节点的最大贡献，设 <span
+class="math inline">\(g_{i,1}\)</span> 表示点 <span
+class="math inline">\(c_i\)</span> 选，前 <span
+class="math inline">\(i\)</span> 个节点的最大贡献。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>转移方程：</p>
+<p><span class="math inline">\(\qquad\!\!g_{i,0}\gets
+\max(g_{i-1,0},g_{i-1,1})+f_{c_i,0}\)</span></p>
+<p><span class="math inline">\(\qquad\!\!g_{i,1}\gets
+g_{i-1,0}+f_{c_i,1}\)</span></p>
+<p><span class="math inline">\(\qquad\!\!\)</span>由于是进行 环形
+dp，为了枚举全面所有的情况，我们需要进行两次 dp 过程：</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>①、规定 <span
+class="math inline">\(c_1\)</span> 节点一定不选：</p>
+<p><span class="math inline">\(\qquad\!\!\qquad\!\!\)</span>初始化 <span
+class="math inline">\(g\)</span> 中的每一个元素为 <span
+class="math inline">\(-inf\)</span>；<span
+class="math inline">\(g_{1,0}=f_{c_1,0}\)</span>。</p>
+<p><span class="math inline">\(\qquad\!\!\qquad\!\!\)</span>进行
+dp，统计答案 <span
+class="math inline">\(ans=\max(g_{tot,0},g_{tot,1})\)</span>。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>②、规定 <span
+class="math inline">\(c_1\)</span> 节点一定选：</p>
+<p><span class="math inline">\(\qquad\!\!\qquad\!\!\)</span>初始化 <span
+class="math inline">\(g\)</span> 中的每一个元素为 <span
+class="math inline">\(-inf\)</span>；<span
+class="math inline">\(g_{1,1}=f_{c_1,1}\)</span>。</p>
+<p><span class="math inline">\(\qquad\!\!\qquad\!\!\)</span>进行
+dp，统计答案 <span
+class="math inline">\(ans=\max(ans,g_{tot,0})\)</span>。</p></li>
+<li><p>三、复杂度分析：</p>
+<ul>
+<li><p>时间复杂度：无论是在找环还是在两次 dp
+的过程中，每个点最多被经过一次，所以时间复杂度为 <span
+class="math inline">\(O(n)\)</span>。</p></li>
+<li><p>空间复杂度：由几个数组的定义可知，每个数组所用的空间均为 <span
+class="math inline">\(O(n)\)</span> 的数量级，所以总空间复杂度为 <span
+class="math inline">\(O(n)\)</span>。</p></li>
+</ul></li>
+<li><p>四、最后，上代码（码风不喜勿喷）：</p></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//P1453 城市环路</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> in inline</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> re register</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 100010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> cnt,head[N];</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">edge</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> to,nxt;</span><br><span class="line">&#125;;</span><br><span class="line">edge e[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line"><span class="type">bool</span> b[N];</span><br><span class="line"><span class="type">int</span> tot;</span><br><span class="line"><span class="type">int</span> rd[N],c[N];</span><br><span class="line"><span class="type">int</span> f[N][<span class="number">2</span>],g[N][<span class="number">2</span>];</span><br><span class="line"><span class="type">int</span> ans;</span><br><span class="line"><span class="type">double</span> k;</span><br><span class="line"><span class="function">in <span class="type">int</span> <span class="title">qread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//快读</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">0</span>,y=<span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			y=<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">        ch=<span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>);</span><br><span class="line">        ch=<span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x*y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">mr</span><span class="params">(re <span class="type">int</span> u,re <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"><span class="comment">//建边</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	e[++cnt].to=v;</span><br><span class="line">	e[cnt].nxt=head[u];</span><br><span class="line">	head[u]=cnt;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">dfs0</span><span class="params">(re <span class="type">int</span> u,re <span class="type">int</span> fa)</span></span></span><br><span class="line"><span class="function"><span class="comment">//找环</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=head[u];i;i=e[i].nxt)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> v=e[i].to;</span><br><span class="line">        <span class="comment">//父节点或已在环上就不算</span></span><br><span class="line">		<span class="keyword">if</span>(v==fa||b[v])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="comment">//找到一个点就加入环</span></span><br><span class="line">		<span class="keyword">if</span>(rd[v]==<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			b[v]=<span class="number">1</span>;</span><br><span class="line">			c[++tot]=v;</span><br><span class="line">            <span class="comment">//递归</span></span><br><span class="line">            <span class="built_in">dfs0</span>(v,u);</span><br><span class="line">            <span class="comment">//加入一个点后就跳出循环</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">tppx</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">//拓扑排序</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(rd[i]==<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			q.<span class="built_in">push</span>(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> u=q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span>(re <span class="type">int</span> i=head[u];i;i=e[i].nxt)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> v=e[i].to;</span><br><span class="line">			rd[v]--;</span><br><span class="line">			<span class="keyword">if</span>(rd[v]==<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				q.<span class="built_in">push</span>(v);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="comment">//找到第一个在环上的点加入环并进行 dfs</span></span><br><span class="line">		<span class="keyword">if</span>(rd[i]==<span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			b[i]=<span class="number">1</span>;</span><br><span class="line">			c[++tot]=i;</span><br><span class="line">			<span class="built_in">dfs0</span>(i,<span class="number">0</span>);</span><br><span class="line">            <span class="comment">//加入一个点后就跳出循环</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">in <span class="type">void</span> <span class="title">dfs</span><span class="params">(re <span class="type">int</span> u,re <span class="type">int</span> fa)</span></span></span><br><span class="line"><span class="function"><span class="comment">//树形 dp</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=head[u];i;i=e[i].nxt)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> v=e[i].to;</span><br><span class="line">		<span class="keyword">if</span>(v==fa||b[v])</span><br><span class="line">        <span class="comment">//父节点或已在环上就不算</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">dfs</span>(v,u);</span><br><span class="line">        <span class="comment">//转移</span></span><br><span class="line">		f[u][<span class="number">0</span>]+=<span class="built_in">max</span>(f[v][<span class="number">1</span>],f[v][<span class="number">0</span>]);</span><br><span class="line">		f[u][<span class="number">1</span>]+=f[v][<span class="number">0</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//读入</span></span><br><span class="line">	n=<span class="built_in">qread</span>();</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i][<span class="number">1</span>]=<span class="built_in">qread</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> u=<span class="built_in">qread</span>()<span class="number">+1</span>;</span><br><span class="line">		<span class="type">int</span> v=<span class="built_in">qread</span>()<span class="number">+1</span>;</span><br><span class="line">        <span class="comment">//统计入度</span></span><br><span class="line">		rd[u]++;</span><br><span class="line">		rd[v]++;</span><br><span class="line">        <span class="comment">//建边</span></span><br><span class="line">		<span class="built_in">mr</span>(u,v);</span><br><span class="line">		<span class="built_in">mr</span>(v,u);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//拓扑排序</span></span><br><span class="line">	<span class="built_in">tppx</span>();</span><br><span class="line">    <span class="comment">//对于每棵树 树形 dp</span></span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">1</span>;i&lt;=tot;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">dfs</span>(c[i],<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//环形 dp</span></span><br><span class="line">	<span class="built_in">memset</span>(g,<span class="number">-0x3f</span>,<span class="built_in">sizeof</span>(g));</span><br><span class="line">	g[<span class="number">1</span>][<span class="number">0</span>]=f[c[<span class="number">1</span>]][<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=tot;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		g[i][<span class="number">1</span>]=g[i<span class="number">-1</span>][<span class="number">0</span>]+f[c[i]][<span class="number">1</span>];</span><br><span class="line">		g[i][<span class="number">0</span>]=<span class="built_in">max</span>(g[i<span class="number">-1</span>][<span class="number">0</span>],g[i<span class="number">-1</span>][<span class="number">1</span>])+f[c[i]][<span class="number">0</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	ans=<span class="built_in">max</span>(g[tot][<span class="number">0</span>],g[tot][<span class="number">1</span>]);</span><br><span class="line">	<span class="built_in">memset</span>(g,<span class="number">-0x3f</span>,<span class="built_in">sizeof</span>(g));</span><br><span class="line">	g[<span class="number">1</span>][<span class="number">1</span>]=f[c[<span class="number">1</span>]][<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(re <span class="type">int</span> i=<span class="number">2</span>;i&lt;=tot;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		g[i][<span class="number">1</span>]=g[i<span class="number">-1</span>][<span class="number">0</span>]+f[c[i]][<span class="number">1</span>];</span><br><span class="line">		g[i][<span class="number">0</span>]=<span class="built_in">max</span>(g[i<span class="number">-1</span>][<span class="number">0</span>],g[i<span class="number">-1</span>][<span class="number">1</span>])+f[c[i]][<span class="number">0</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	ans=<span class="built_in">max</span>(ans,g[tot][<span class="number">0</span>]);</span><br><span class="line">    <span class="comment">//读入 k</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>,&amp;k);</span><br><span class="line">    <span class="comment">//输出答案</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%.1lf\n&quot;</span>,ans*k);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>如果这篇文章对您有所帮助，欢迎打赏提高博主效率。</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/wechatpay.png" alt="LHRG 李 微信支付">
+        <span>微信支付</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>LHRG 李
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-P1453-%E3%80%90%E5%9F%8E%E5%B8%82%E7%8E%AF%E8%B7%AF%E3%80%91/" title="题解 P1453 【城市环路】">https://lhrg.github.io/题解-P1453-【城市环路】/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"># 动态规划</a>
+              <a href="/tags/DP/" rel="tag"># DP</a>
+              <a href="/tags/%E6%A0%91%E5%BD%A2-DP/" rel="tag"># 树形 DP</a>
+              <a href="/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91/" rel="tag"># 基环树</a>
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag"># 图论</a>
+              <a href="/tags/%E7%8E%AF%E5%BD%A2-DP/" rel="tag"># 环形 DP</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E6%A0%91%E5%BD%A2dp/" rel="prev" title="树形dp">
+                  <i class="fa fa-angle-left"></i> 树形dp
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="next" title="字符串">
+                  字符串 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LHRG 李</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">71k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:18</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1d84be581d5a83b939d2322494bc106f"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

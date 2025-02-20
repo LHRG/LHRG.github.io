@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="\(\qquad\!\!\)在解决 dp 问题时，主要要从两点思考：  1、状态：  \(\qquad\!\!\)通常来讲，状态的设立因题而异，大多数与答案的意义相同（dp数组 中的某个值即为答案）或者与答案具有直接联系（比如再经过某种统计即可得到答案）。 \(\qquad\!\!\)对于很难一眼看出状态（比如答案无法转移）的题，我们就要利用 dp的本质：“把多阶段过程转化为一系列单阶段问题，利用">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="动态规划">
+<meta property="og:url" content="https://lhrg.github.io/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+<meta property="og:site_name" content="LHRG 李的博客">
+<meta property="og:description" content="\(\qquad\!\!\)在解决 dp 问题时，主要要从两点思考：  1、状态：  \(\qquad\!\!\)通常来讲，状态的设立因题而异，大多数与答案的意义相同（dp数组 中的某个值即为答案）或者与答案具有直接联系（比如再经过某种统计即可得到答案）。 \(\qquad\!\!\)对于很难一眼看出状态（比如答案无法转移）的题，我们就要利用 dp的本质：“把多阶段过程转化为一系列单阶段问题，利用">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-06T06:49:58.000Z">
+<meta property="article:modified_time" content="2025-02-20T08:26:16.674Z">
+<meta property="article:author" content="LHRG 李">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="DP">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lhrg.github.io/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhrg.github.io/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/","path":"动态规划/","title":"动态规划"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>动态规划 | LHRG 李的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">LHRG 李的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">LHRG's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日志</a></li><li class="menu-item menu-item-events"><a href="/events/" rel="section"><i class="fa fa-calendar-alt fa-fw"></i>待办</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">目录：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LHRG 李"
+      src="/avatar.jpg">
+  <p class="site-author-name" itemprop="name">LHRG 李</p>
+  <div class="site-description" itemprop="description">未经他人痛，莫劝他人善</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">博文</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/LHRG" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;LHRG" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lhr@stu.pku.edu.cn" title="E-Mail → mailto:lhr@stu.pku.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.jpg">
+      <meta itemprop="name" content="LHRG 李">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LHRG 李的博客">
+      <meta itemprop="description" content="未经他人痛，莫劝他人善">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="动态规划 | LHRG 李的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          动态规划
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-06 14:49:58" itemprop="dateCreated datePublished" datetime="2020-08-06T14:49:58+08:00">2020-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-20 16:26:16" itemprop="dateModified" datetime="2025-02-20T16:26:16+08:00">2025-02-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">模板</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>745</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><span class="math inline">\(\qquad\!\!\)</span>在解决 dp
+问题时，主要要从两点思考：</p>
+<ul>
+<li>1、<strong>状态</strong>：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>通常来讲，状态的设立因题而异，大多数与答案的意义相同（dp数组
+中的某个值即为答案）或者与答案具有直接联系（比如再经过某种统计即可得到答案）。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>对于很难一眼看出状态（比如答案无法转移）的题，我们就要利用
+dp的本质：“把多阶段过程转化为一系列单阶段问题，利用各阶段之间的关系，逐个求解。”和
+dp 最重要的一个性质：“无后效性”去推理。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>根据无后效性，我们可以假设在这个阶段之前的阶段（注意，这个“之前”表示的是
+dp转移
+上的之前，可能是空间上的之前、数位上的之前、拓扑序上的之前……）都已经进行了最优化的决策。根据
+dp的本质，如果之前的阶段的最优决策映射出的一种“结果”能以
+<strong>某种方式</strong>
+转移到此阶段的这种“结果”，且此时的这种“结果”也恰好为此时的最优化决策的这种映射，那么这种“结果”即为
+dp的状态。</p>
+<ul>
+<li>2、<strong>转移方程</strong>：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>通常来讲，转移方程的确立也是因题而异的，不过在得出了正确的状态之后，转移方程的确立方式一般比较显然。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>前文中加粗的的“<strong>某种方式</strong>”，即可理解为一种状态到状态的转移方式。我们在将其具体化以后，即可得到对于相邻状态的转移方程。同时，对于很多题目的转移方程可以利用数学的计算或者数据结构的辅助得以在复杂度上得以化简，即为
+dp的优化。</p>
+<ul>
+<li>3、<strong>实现方法</strong>：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>一般来说，动态规划可以通过递推和记忆化搜索两种方式实现。</p>
+<span id="more"></span>
+<hr />
+<h2 id="目录">目录：</h2>
+<ul>
+<li>1、<a href="https://lhrg.github.io/基础动态规划/">基础动态规划</a>：
+<ul>
+<li>①、线性dp</li>
+<li>②、多维dp</li>
+<li>③、背包dp：
+<ul>
+<li>(1)、01背包</li>
+<li>(2)、完全背包</li>
+<li>(3)、01背包前 <span class="math inline">\(k\)</span> 优解</li>
+<li>(4)、分组背包</li>
+<li>(5)、多重背包
+<ul>
+<li>1)、二进制分组</li>
+<li>2)、单调队列优化</li>
+</ul></li>
+<li>(6)、混合背包</li>
+<li>(7)、二维费用</li>
+</ul></li>
+</ul></li>
+<li>2、<a href="https://lhrg.github.io/进阶动态规划/">进阶动态规划</a>：
+<ul>
+<li>①、<a href="https://lhrg.github.io/树形dp/">树形dp</a>：
+<ul>
+<li>(1)、基础树形dp</li>
+<li>(2)、递归前转移树形dp</li>
+<li>(3)、递归后转移树形dp</li>
+<li>(4)、树上01背包</li>
+<li>(5)、树上分组背包</li>
+<li>(6)、基础换根dp</li>
+<li>(7)、<a
+href="https://lhrg.github.io/进阶换根dp/">进阶换根dp</a></li>
+<li>(8)、基环树之树形dp+环形dp</li>
+<li>(9)、基环树之开环直接树形dp</li>
+</ul></li>
+<li>②、DAG上的dp（拓扑排序）</li>
+<li>③、环形dp</li>
+<li>④、区间dp</li>
+<li>⑤、状压dp</li>
+<li>⑥、数位dp</li>
+<li>⑦、期望dp</li>
+<li>⑧、<a
+href="https://lhrg.github.io/题解-U534157-【矩阵革命】/">dp计数</a></li>
+<li>⑨、dp优化：
+<ul>
+<li>(1).斜率优化</li>
+<li>(2).四边形不等式优化</li>
+<li>(3).数据结构优化：
+<ul>
+<li>①.单调栈/单调队列优化</li>
+<li>②.树状数组优化</li>
+<li>③.线段树优化</li>
+<li>④.矩阵快速幂优化</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>如果这篇文章对您有所帮助，欢迎打赏提高博主效率。</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/wechatpay.png" alt="LHRG 李 微信支付">
+        <span>微信支付</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>LHRG 李
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lhrg.github.io/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">https://lhrg.github.io/动态规划/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"># 动态规划</a>
+              <a href="/tags/DP/" rel="tag"># DP</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" rel="prev" title="基础算法">
+                  <i class="fa fa-angle-left"></i> 基础算法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="next" title="基础动态规划">
+                  基础动态规划 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LHRG 李</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">71k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:18</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e96919e16df30ecb66f35bca818e77d7"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

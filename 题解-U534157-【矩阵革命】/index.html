@@ -22,7 +22,7 @@
     <meta name="description" content="题目链接：矩阵革命。 关于题目：作为 T4，稍难的计数题。 应用算法：图论，容斥，组合数学，逆元，dp计数。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="题解 U534157 【矩阵革命】">
-<meta property="og:url" content="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/">
+<meta property="og:url" content="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/">
 <meta property="og:site_name" content="LHRG 李的博客">
 <meta property="og:description" content="题目链接：矩阵革命。 关于题目：作为 T4，稍难的计数题。 应用算法：图论，容斥，组合数学，逆元，dp计数。">
 <meta property="og:locale" content="zh_CN">
@@ -32,22 +32,22 @@
 <meta property="article:modified_time" content="2025-02-11T08:47:14.939Z">
 <meta property="article:author" content="LHRG 李">
 <meta property="article:tag" content="OI">
-<meta property="article:tag" content="图论">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="DP">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="组合数学">
-<meta property="article:tag" content="容斥原理">
 <meta property="article:tag" content="逆元">
+<meta property="article:tag" content="图论">
+<meta property="article:tag" content="容斥原理">
 <meta property="article:tag" content="简单概率">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/07/30/aMkWY8.png">
 
 
-<link rel="canonical" href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/">
+<link rel="canonical" href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/","path":"题解-U534157-【矩阵革命】/","title":"题解 U534157 【矩阵革命】"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/","path":"题解-U534157-【矩阵革命】/","title":"题解 U534157 【矩阵革命】"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>题解 U534157 【矩阵革命】 | LHRG 李的博客</title>
@@ -164,18 +164,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">博文</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">65</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -213,7 +213,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/">
+    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -515,7 +515,7 @@ class="math inline">\(ans=\dfrac{f_n}{s_n} \bmod p\)</span></p>
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/" title="题解 U534157 【矩阵革命】">http://lhrg.github.io/题解-U534157-【矩阵革命】/</a>
+      <a href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534157-%E3%80%90%E7%9F%A9%E9%98%B5%E9%9D%A9%E5%91%BD%E3%80%91/" title="题解 U534157 【矩阵革命】">https://lhrg.github.io/题解-U534157-【矩阵革命】/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -525,13 +525,13 @@ class="math inline">\(ans=\dfrac{f_n}{s_n} \bmod p\)</span></p>
 
           <div class="post-tags">
               <a href="/tags/OI/" rel="tag"># OI</a>
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag"># 图论</a>
               <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"># 动态规划</a>
               <a href="/tags/DP/" rel="tag"># DP</a>
               <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
               <a href="/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" rel="tag"># 组合数学</a>
-              <a href="/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/" rel="tag"># 容斥原理</a>
               <a href="/tags/%E9%80%86%E5%85%83/" rel="tag"># 逆元</a>
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag"># 图论</a>
+              <a href="/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/" rel="tag"># 容斥原理</a>
               <a href="/tags/%E7%AE%80%E5%8D%95%E6%A6%82%E7%8E%87/" rel="tag"># 简单概率</a>
           </div>
 
@@ -544,8 +544,8 @@ class="math inline">\(ans=\dfrac{f_n}{s_n} \bmod p\)</span></p>
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E9%A2%98%E8%A7%A3-U534159-%E3%80%90%E9%99%8D%E4%BB%B7%E5%A4%84%E7%90%86%E3%80%91/" rel="next" title="题解 U534159 【降价处理】">
-                  题解 U534159 【降价处理】 <i class="fa fa-angle-right"></i>
+                <a href="/LHRG%E6%9D%8E-%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%95%B4%E7%90%86%E7%9B%AE%E5%BD%95/" rel="next" title="LHRG李 的模板整理目录">
+                  LHRG李 的模板整理目录 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -579,14 +579,14 @@ class="math inline">\(ans=\dfrac{f_n}{s_n} \bmod p\)</span></p>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">71k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:44</span>
+    <span title="站点阅读时长">4:18</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="浅谈 C++ 万能头文件内部头文件">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="浅谈 C++ 万能头文件内部头文件">
+<meta property="og:url" content="https://lhrg.github.io/%E6%B5%85%E8%B0%88-C-%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6%E5%86%85%E9%83%A8%E5%A4%B4%E6%96%87%E4%BB%B6/">
+<meta property="og:site_name" content="LHRG 李的博客">
+<meta property="og:description" content="浅谈 C++ 万能头文件内部头文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-26T02:28:00.000Z">
+<meta property="article:modified_time" content="2025-02-18T03:01:58.061Z">
+<meta property="article:author" content="LHRG 李">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="头文件">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lhrg.github.io/%E6%B5%85%E8%B0%88-C-%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6%E5%86%85%E9%83%A8%E5%A4%B4%E6%96%87%E4%BB%B6/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhrg.github.io/%E6%B5%85%E8%B0%88-C-%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6%E5%86%85%E9%83%A8%E5%A4%B4%E6%96%87%E4%BB%B6/","path":"浅谈-C-万能头文件内部头文件/","title":"浅谈 C++ 万能头文件内部头文件"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>浅谈 C++ 万能头文件内部头文件 | LHRG 李的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">LHRG 李的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">LHRG's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日志</a></li><li class="menu-item menu-item-events"><a href="/events/" rel="section"><i class="fa fa-calendar-alt fa-fw"></i>待办</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E8%B0%88-c-%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6%E5%86%85%E9%83%A8%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">浅谈 C++ 万能头文件内部头文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%86%85%E5%AE%B9"><span class="nav-number">1.2.</span> <span class="nav-text">具体内容：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">引言：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">1.2.2.</span> <span class="nav-text">正文：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.2.3.</span> <span class="nav-text">结语：</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LHRG 李"
+      src="/avatar.jpg">
+  <p class="site-author-name" itemprop="name">LHRG 李</p>
+  <div class="site-description" itemprop="description">未经他人痛，莫劝他人善</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">博文</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/LHRG" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;LHRG" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lhr@stu.pku.edu.cn" title="E-Mail → mailto:lhr@stu.pku.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E6%B5%85%E8%B0%88-C-%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6%E5%86%85%E9%83%A8%E5%A4%B4%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.jpg">
+      <meta itemprop="name" content="LHRG 李">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LHRG 李的博客">
+      <meta itemprop="description" content="未经他人痛，莫劝他人善">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="浅谈 C++ 万能头文件内部头文件 | LHRG 李的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          浅谈 C++ 万能头文件内部头文件
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-26 10:28:00" itemprop="dateCreated datePublished" datetime="2020-05-26T10:28:00+08:00">2020-05-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-18 11:01:58" itemprop="dateModified" datetime="2025-02-18T11:01:58+08:00">2025-02-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">编程语言</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="浅谈-c-万能头文件内部头文件">浅谈 C++ 万能头文件内部头文件</h1>
+<span id="more"></span>
+<h2 id="目录">目录</h2>
+<ul>
+<li>引言</li>
+<li>正文
+<ul>
+<li>一
+<ul>
+<li>1 C++ 万能头文件简介</li>
+<li>2 C++ 万能头文件优点</li>
+<li>3 C++ 万能头文件缺点</li>
+</ul></li>
+<li>二</li>
+<li>三</li>
+<li>四</li>
+<li>五</li>
+<li>六</li>
+<li>七</li>
+<li>八</li>
+</ul></li>
+<li>结语</li>
+</ul>
+<hr />
+<h2 id="具体内容">具体内容：</h2>
+<hr />
+<h3 id="引言">引言：</h3>
+<hr />
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>本人 OI
+萌新，想在洛谷日报上找一些有关 C++
+头文件的资料学习，<del>恐惧</del>惊奇地发现竟然找不到。</p>
+<figure>
+<img
+src="https://cdn.luogu.com.cn/upload/image_hosting/t2wlmwpn.png?x-oss-process=image/resize,m_lfit,h_170,w_225"
+alt="1" />
+<figcaption aria-hidden="true">1</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.luogu.com.cn/upload/image_hosting/l6w5b8gy.png?x-oss-process=image/resize,m_lfit,h_170,w_225"
+alt="2" />
+<figcaption aria-hidden="true">2</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.luogu.com.cn/upload/image_hosting/cqmj17wg.png?x-oss-process=image/resize,m_lfit,h_170,w_225"
+alt="3" />
+<figcaption aria-hidden="true">3</figcaption>
+</figure>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>于是打开了 C++
+的万能头文件，决定自己写一篇博客。</p>
+<hr />
+<h3 id="正文">正文：</h3>
+<ul>
+<li>一</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>打开 C++
+的万能头文件，首先映入眼帘的是一堆英文。所以，就请允许我先就此简单介绍一下
+C++ 的万能头文件。</p>
+<hr />
+<ul>
+<li>1 C++ 万能头文件简介</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>C++ 万能头文件是 GNU
+ISO C++ 库中的免费头文件，版权由自由软件基金会（Free Software
+Foundation, Inc）所有，其中几乎包含了 C++ 的所有头文件。</p>
+<ul>
+<li>2 C++ 万能头文件优点</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>由于这个头文件中几乎包含了 C++
+的所有头文件，所以在竞赛中使用这个头文件不仅减少了编写每个需使用的头文件的任务，更节约了比赛的时间。很方便OIer和ACMer的使用。</p>
+<ul>
+<li>3 C++ 万能头文件缺点</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>首先，因为这个头文件不是 GNU C++
+库的标准头文件，所以如果你在一些编译器（除了
+GCC）上编译你的代码，可能会导致编译失败，比如 MSVC
+上就没有这个头文件。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>其次，由于它包含了很多你的程序并不需要的头文件，会导致编译时间的增加。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>再者，在很多竞赛中，这个头文件是无法使用的，所以，我们不可以一昧地依赖万能头文件，还是要记住一些常用的头文件的。</p>
+<ul>
+<li>二</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>再向下翻，是一个这样的注释： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C</span></span><br></pre></td></tr></table></figure> <span
+class="math inline">\(\ \ \ \ \ \
+\)</span>代表下面的一些头文件属于C语言库。</p>
+<ul>
+<li>三</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>紧接着，是这样的三行： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> _GLIBCXX_NO_ASSERT</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cassert&gt;</span> <span class="comment">//断言</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure> <span
+class="math inline">\(\ \ \ \ \ \
+\)</span>其中，<code>#ifndef</code>与<code>#endif</code>属于C语言三种预处理中的<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91">条件编译</a>中的一种，这里的意思是：</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>如果<code>_GLIBCXX_NO_ASSERT</code>已被定义，则直接编译<code>#endif</code>后的语句；如果<code>_GLIBCXX_NO_ASSERT</code>未被定义，则编译<code>#endif</code>前的<code>&lt;cassert&gt;</code>头文件。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>为什么要特意写这三行呢？</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>这就涉及到了一种叫“断言”（<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/assert/10931289#ref_%5B1%5D_20093242">assert</a>）的东西，“断言”是一种宏，它的原型定义在了这个头文件里。由于断言有时会起到副作用，所以并不是什么时候都要打开的。因此在预先定义了<code>_GLIBCXX_NO_ASSERT</code>之后，即使使用万能头，断言也不会被打开。</p>
+<ul>
+<li>四</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>接下来，就是基本的 C
+中的头文件： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span> <span class="comment">//字符分类函数库</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cerrno&gt;</span> <span class="comment">//定义错误码</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cfloat&gt;</span> <span class="comment">//浮点数处理</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ciso646&gt;</span> <span class="comment">//定义常见运算符的可选拼写</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;climits&gt;</span> <span class="comment">//定义各种数据类型最值常量</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;clocale&gt;</span> <span class="comment">//定义本地化函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span> <span class="comment">//定义数学函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;csetjmp&gt;</span> <span class="comment">//分别承担非局部标号和 goto 作用</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;csignal&gt;</span> <span class="comment">// 定义了程序执行时如何处理不同的信号</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdarg&gt;</span> <span class="comment">//让函数能够接收可变参数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstddef&gt;</span> <span class="comment">//定义标准宏以及类型</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span> <span class="comment">//定义输入/输出函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span> <span class="comment">//定义杂项函数及内存分配函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span> <span class="comment">//字符串处理</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span> <span class="comment">//定义关于时间的函数</span></span></span><br></pre></td></tr></table></figure> - 五</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>在一行的间隔之后，出现了这样的十一行： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span> __cplusplus &gt;= 201103L</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ccomplex&gt;</span> <span class="comment">//定义复数处理</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cfenv&gt;</span> <span class="comment">//定义浮点数环境</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cinttypes&gt;</span> <span class="comment">//提供各种进制的转换宏</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdalign&gt;</span> <span class="comment">//兼容头文件</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdbool&gt;</span> <span class="comment">//定义布尔环境</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdint&gt;</span> <span class="comment">//定义整形环境</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctgmath&gt;</span> <span class="comment">//定义常用类型数学宏</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cwchar&gt;</span> <span class="comment">//定义宽字符串处理函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cwctype&gt;</span> <span class="comment">//定义宽字符串分类、转换函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure> <span
+class="math inline">\(\ \ \ \ \ \
+\)</span>其中，<code>#if</code>与<code>#endif</code>也属于C语言三种预处理中的<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91">条件编译</a>中的一种，这里的意思是：</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>如果<code>#if</code>后的表达式为真，则编译<code>#if</code>与<code>#endif</code>之间的这些头文件；如果表达式为假，则直接编译<code>#endif</code>后的语句。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>可能又有人要问了，那<code>#if</code>后的语句是什么意思呢？</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>为了回答这个问题，我们要先知道<code>__cplusplus</code>是个什么东西。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span><code>__cplusplus</code>是 C++
+中的一个宏，被定义为一个整型值，它的值随着 C++
+版本的升高而增大，因此可用于判断 C++ 代码的版本:</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于
+C++98和C++03，<code>__cplusplus</code>的值为 199711L。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于
+C++11，<code>__cplusplus</code>的值为 201103L。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于
+C++14，<code>__cplusplus</code>的值为 201402L。</p>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>对于
+C++17，<code>__cplusplus</code>的值为 201703L。</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>所以，我们就可以很清楚地知道了这个表达式就是在判断你的 C++
+版本，只有版本不低于
+C++11，才能编译<code>#if</code>与<code>#endif</code>之间的这些头文件。</p>
+<ul>
+<li>六</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>继续向下：
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C++</span></span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \ \ \ \ \
+\)</span>代表下面的一些头文件属于C++语言库。</p>
+<ul>
+<li>七</li>
+</ul>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>接下来，就是基本的
+C++ 中的头文件： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span> <span class="comment">//STL常用算法</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span> <span class="comment">//STL位集容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;complex&gt;</span> <span class="comment">//定义负数类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;deque&gt;</span> <span class="comment">//STL双端队列容器 </span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;exception&gt;</span> <span class="comment">//定义异常处理类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span> <span class="comment">//文件输入输出流</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span> <span class="comment">//STL定义运算函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span> <span class="comment">//操纵运算子</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ios&gt;</span> <span class="comment">//基本输入/输出支持</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iosfwd&gt;</span> <span class="comment">//输入/输出系统使用的前置声明</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span> <span class="comment">//基本输入输出流</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;istream&gt;</span> <span class="comment">//基本输入流</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iterator&gt;</span> <span class="comment">//定义迭代器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span> <span class="comment">//定义最值</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;list&gt;</span> <span class="comment">//STL线性列表容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale&gt;</span> <span class="comment">//定义本地语言环境</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span> <span class="comment">//STL映射表容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;memory&gt;</span> <span class="comment">//定义了用于管理动态内存的常规程序</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;new&gt;</span> <span class="comment">//定义了用于管理动态存储的函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;numeric&gt;</span> <span class="comment">//定义了基础性的数值运算</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ostream&gt;</span> <span class="comment">//基本输出流</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span> <span class="comment">//STL队列容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span> <span class="comment">//STL集合容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span> <span class="comment">//基于字符串的流</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span> <span class="comment">//STL堆栈容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdexcept&gt;</span> <span class="comment">//定义了一些标准的异常类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;streambuf&gt;</span> <span class="comment">//底层输入/输出支持</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span> <span class="comment">//定义字符串类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;typeinfo&gt;</span> <span class="comment">//定义了一些类型和函数</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;utility&gt;</span> <span class="comment">//STL通用模板类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;valarray&gt;</span> <span class="comment">//支持面向数值计算的数组</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> <span class="comment">//STL动态数组容器</span></span></span><br></pre></td></tr></table></figure> - 八</p>
+<p><span class="math inline">\(\ \ \ \ \ \
+\)</span>在一行的间隔之后，出现了这样的二十一行具有版本限制的头文件：
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span> __cplusplus &gt;= 201103L</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;array&gt;</span> <span class="comment">//定义数组</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span> <span class="comment">//定义了原子类型</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span> <span class="comment">//日期和时间库</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span> <span class="comment">//定义条件变量</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;forward_list&gt;</span> <span class="comment">//STL单向列表容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;future&gt;</span> <span class="comment">//定义 future 类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;initializer_list&gt;</span> <span class="comment">//定义初始化列表</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span> <span class="comment">//定义互斥锁</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span> <span class="comment">//随机数库</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ratio&gt;</span> <span class="comment">//有理数支持</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span> <span class="comment">//定义正则表达</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;scoped_allocator&gt;</span> <span class="comment">//定义分配器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;system_error&gt;</span> <span class="comment">//报告源于操作系统或低层程序接口的错误</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span> <span class="comment">//定义 thread 类</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;tuple&gt;</span> <span class="comment">//定义元组</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;typeindex&gt;</span> <span class="comment">//支持 type_index 类及其散列支持</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;type_traits&gt;</span> <span class="comment">//提供模板元基础库</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span> <span class="comment">//STL unordered_map 容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_set&gt;</span> <span class="comment">//STL unordered_set 容器</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure> <span class="math inline">\(\ \ \ \ \ \
+\)</span>其中<code>#if __cplusplus &gt;= 201103L</code>和<code>#endif</code>的作用详见五。</p>
+<h3 id="结语">结语：</h3>
+<p><span class="math inline">\(\ \ \ \ \ \ \)</span>本人 OI
+萌新，实力有限，本篇博客仅代表个人观点，如有缺漏错误之处，敬请各位大佬斧正。^_^</p>
+<p>(结尾附上万能头文件里的所有头文件) <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> _GLIBCXX_NO_ASSERT</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cerrno&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cfloat&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ciso646&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;clocale&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;csetjmp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;csignal&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdarg&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstddef&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> __cplusplus &gt;= 201103L</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ccomplex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cfenv&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cinttypes&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdalign&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdbool&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdint&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctgmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cwchar&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cwctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// C++</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;complex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;exception&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ios&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iosfwd&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;istream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iterator&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;limits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;new&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;numeric&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdexcept&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;streambuf&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;typeinfo&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;utility&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;valarray&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> __cplusplus &gt;= 201103L</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;array&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;forward_list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;future&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;initializer_list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ratio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;scoped_allocator&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;system_error&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;tuple&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;typeindex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;type_traits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure> 注： 1、特别鸣谢 @<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/70299">Andysun06</a>
+对此文章的重大贡献。</p>
+<p>2、有关C++宏的知识详见往期洛谷日报 <a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/Atalod/tou-lan-li-qi-hong">C++中偷懒利器——宏</a>。</p>
+<p>3、参考资料：<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91">条件编译_百度百科</a>、<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/assert/10931289#ref_%5B1%5D_20093242">assert_百度百科</a>、<a
+target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%B4%E6%96%87%E4%BB%B6">头文件_百度百科</a>。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>如果这篇文章对您有所帮助，欢迎打赏提高博主效率。</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/wechatpay.png" alt="LHRG 李 微信支付">
+        <span>微信支付</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>LHRG 李
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lhrg.github.io/%E6%B5%85%E8%B0%88-C-%E4%B8%87%E8%83%BD%E5%A4%B4%E6%96%87%E4%BB%B6%E5%86%85%E9%83%A8%E5%A4%B4%E6%96%87%E4%BB%B6/" title="浅谈 C++ 万能头文件内部头文件">https://lhrg.github.io/浅谈-C-万能头文件内部头文件/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/%E5%A4%B4%E6%96%87%E4%BB%B6/" rel="tag"># 头文件</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E9%A2%98%E8%A7%A3-U534158-%E3%80%90%E5%8D%95%E8%BA%AB%E6%8E%92%E6%9F%A5%E3%80%91/" rel="prev" title="题解 U534158 【单身排查】">
+                  <i class="fa fa-angle-left"></i> 题解 U534158 【单身排查】
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E9%A2%98%E8%A7%A3-U534161-%E3%80%90%E5%BC%80%E5%AD%A6%E9%85%92%E5%B1%80%E3%80%91/" rel="next" title="题解 U534161 【开学酒局】">
+                  题解 U534161 【开学酒局】 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LHRG 李</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">71k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:18</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"9f746fc29aad75570ba2976e02cc99e6"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
