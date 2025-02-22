@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://lhrg.github.io/images/2025-02-16%2020.46.30.png">
 <meta property="og:image" content="https://lhrg.github.io/images/2025-02-16%2021.10.30.png">
 <meta property="article:published_time" content="2025-02-16T11:54:51.000Z">
-<meta property="article:modified_time" content="2025-02-16T13:22:19.079Z">
+<meta property="article:modified_time" content="2025-02-22T02:50:29.303Z">
 <meta property="article:author" content="LHRG 李">
 <meta property="article:tag" content="LaTeX">
 <meta property="article:tag" content="align">
@@ -239,9 +239,15 @@ aligned or alignat</span></a></li></ol></div>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-02-16 19:54:51 / 修改时间：21:22:19" itemprop="dateCreated datePublished" datetime="2025-02-16T19:54:51+08:00">2025-02-16</time>
+      <time title="创建时间：2025-02-16 19:54:51" itemprop="dateCreated datePublished" datetime="2025-02-16T19:54:51+08:00">2025-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-22 10:50:29" itemprop="dateModified" datetime="2025-02-22T10:50:29+08:00">2025-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -267,14 +273,14 @@ aligned or alignat</span></a></li></ol></div>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>677</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -332,6 +338,136 @@ class="math inline">\(\qquad\!\!\)</span>另外，<code>align</code>
 <code>alignat</code> 及其组合或加*的环境，这些环境有哪些差异？使用 &amp;
 进行分隔和对齐又有哪些便利的应用，也会在最后一部分进行简单的介绍。</p>
 <h3 id="基本原理">基本原理</h3>
+<p><span class="math inline">\(\qquad\!\!\)</span>在 <span
+class="math inline">\(\mathrm{\LaTeX}\)</span> 数学模式中，<strong>math
+atoms</strong>
+是构成数学公式的最小排版单元，每个字符或符号都会被分类为不同的
+atom（原子），这些分类决定了公式中元素的间距和排版规则。在 <span
+class="math inline">\(\mathrm{\TeX}\)</span> 中共有 <span
+class="math inline">\(13\)</span> 种 atom：</p>
+<blockquote>
+<p><strong>Ord Op Bin Rel Open Close Punct Inner</strong></p>
+<p><strong>Over Under Acc Rad Vcent</strong></p>
+</blockquote>
+<p>其中，第二行的五种在考虑间距时被视为 <strong>Ord</strong> 即可。</p>
+<p>我们先简单介绍一下第一行的几种原子，再去看一下再排版过程中它们之间的间距是如何安排的。</p>
+<ol type="1">
+<li><p>Ord atom（普通原子）</p>
+<p>默认的原子类型，用于普通数字、字母或无明显语法功能的符号，可使用
+<code>\mathord</code> 命令手动指定。</p>
+<p>e.g. <code>a, 2, \alpha, \mathrm&#123;xyz&#125;</code></p></li>
+<li><p>Op atom（操作符原子）</p>
+<p>大型运算符（如求和、积分符号），通常带有上下限，可使用
+<code>\mathop</code> 命令手动指定。</p>
+<p>e.g. <code>\sum, \int</code></p></li>
+<li><p>Bin atom（二元运算符原子）</p>
+<p>连接两个被操作数的运算符，如加减乘除，可使用 <code>\mathbin</code>
+命令手动指定。</p>
+<p>e.g. <code>+, -, \times</code></p></li>
+<li><p>Rel atom（关系符原子）</p>
+<p>表示具有逻辑关系的符号，如等于、不等号、箭头等，可使用
+<code>\mathrel</code> 命令手动指定。</p>
+<p>e.g. <code>=, \leq, \rightarrow</code></p></li>
+<li><p>Open/Close atom（开闭括号原子）</p>
+<p>括弧类符号，如 <code>(</code>、<code>[</code>、<code>\&#123;</code>
+等，可使用 <code>\mathopen</code> 和 <code>\mathclose</code>
+命令手动指定。</p>
+<p>e.g. <code>([])</code></p></li>
+<li><p>Punct atom（标点符号原子）</p>
+<p>公式中的标点符号，如逗号、分号等，可使用 <code>\mathpunct</code>
+命令手动指定。</p>
+<p>e.g. <code>, ;</code></p></li>
+<li><p>Inner atom（内部结构原子）</p>
+<p>由特定结构（如分数、根号、绝对值）产生的原子，可使用
+<code>\mathinner</code> 命令手动指定。</p>
+<p>e.g.
+<code>\frac&#123;a&#125;&#123;b&#125;, \sqrt&#123;x&#125;, \left| \sum_&#123;i&#125; v_i \right|</code></p>
+<p>注意这里由 <code>\left...\right</code> 命令包裹起来的整体被视为一个
+Inner atom，这就是为什么在一般的数学公式中使用
+<code>\left...\right</code> 时会产生间距问题，所以需要使用
+<code>mleftright</code> 宏包或 <code>physics2</code>
+宏包这样的宏包进行纠正。</p></li>
+</ol>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>我们以简单的公式整理为例，<code>$a+b=c$</code>
+相应的序列即</p>
+<blockquote>
+<p><strong>Ord Bin Ord Rel Ord</strong></p>
+</blockquote>
+<p><code>$(a+b)\cdot c=ac+bc$</code> 相应的序列即</p>
+<blockquote>
+<p><strong>Open Ord Bin Ord Close Bin Ord Rel Ord Ord Bin Ord
+Ord</strong></p>
+</blockquote>
+<p>括号中的部分被称为子公式，被视为 Ord atom。</p>
+<p><span class="math inline">\(\qquad\!\!\)</span>
+对于这些不同种类的原子，<span
+class="math inline">\(\mathrm{\TeX}\)</span>
+按照如下表格在其中插入间距，表格中的指标与原子按照如下的方式进行对应：0
+= <strong>Ord</strong>，1 = <strong>Op</strong>，2 =
+<strong>Bin</strong>，3 = <strong>Rel</strong>，4 =
+<strong>Open</strong>，5 = <strong>Close</strong>，6 =
+<strong>Punct</strong>，I = <strong>Inner</strong>。 <img
+src="/images/2025-02-21%2018.46.00.png" /> 本表格来自于 Reference
+2，其中行指标表示近邻的两个原子中左侧的那个，列指标表示近邻的两个原子中右侧的那个，表格中的数字大致表示这两个近邻原子的间距。如果数字在括号中，则当公式以下标/上标样式排版时，不会插入空格。</p>
+<ul>
+<li><code>0</code> = no space</li>
+<li><code>1</code> = thin space (<code>\thinmuskip</code>)</li>
+<li><code>2</code> = medium space (<code>\medmuskip</code>)</li>
+<li><code>3</code> = thick space (<code>\thickmuskip</code>)</li>
+<li><code>*</code> = impossible combination</li>
+</ul>
+<p><span class="math inline">\(\qquad\!\!\)</span>了解了最基本的 atom
+之后，我们就可以来看一下 <code>align</code>
+环境中的“对齐”，是如何影响公式中各部分的间距。最核心的原理就是 <span
+class="math inline">\(\mathrm{\LaTeX}\)</span> 对于列分隔符 &amp;
+的处理： <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\hfil</span> <span class="built_in">$</span><span class="keyword">\displaystyle</span> <span class="params">#</span><span class="built_in">$</span> <span class="built_in">&amp;</span> <span class="built_in">$</span><span class="keyword">\displaystyle</span> &#123;&#125;<span class="params">#</span><span class="built_in">$</span> <span class="keyword">\hfil</span></span><br></pre></td></tr></table></figure></p>
+<p>其中 # 分别代表 &amp; 前后的实际内容，&amp; 前的内容于 &amp;
+处右对齐，中间没有任何其他元素；&amp; 后的内容前添加了一个空的子公式
+<code>\displaystyle &#123;&#125;</code> 后于 &amp; 处左对齐。这自然就产生了当
+&amp;
+放在二元关系符前后时间距上的区别，我们还是以一个具体的例子来看：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;align*&#125;</span><br><span class="line">	a<span class="built_in">&amp;</span>=b+c</span><br><span class="line"><span class="keyword">\end</span>&#123;align*&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;align*&#125;</span><br><span class="line">	a=<span class="built_in">&amp;</span>b+c</span><br><span class="line"><span class="keyword">\end</span>&#123;align*&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\begin{align*}
+    a&amp;=b+c
+\end{align*}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align*}
+    a=&amp;b+c
+\end{align*}
+\]</span></p>
+<p>其中前式 &amp; 放在了二元关系符 = 前，后式 &amp; 放在了二元关系符 =
+后，能够直观地看到两者的区别。前式中 &amp; 左侧为
+<code>Ord</code>，右侧为
+<code>Ord Rel Ord Bin Ord</code>，两者分别右对齐、左对齐在一起，自然产生了正确的间距；后式中
+&amp; 左侧为 <code>Ord Rel</code> ，右侧为
+<code>Ord Ord Bin Ord</code>，两者分别右对齐、左对齐在一起，中间便缺少了正常情况下
+Rel atom 和 Ord atom 之间的 thick space
+(<code>\thickmuskip</code>)。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>所以要解决后式中的间距问题，就需要加入各种
+<span class="math inline">\(\mathrm{\LaTeX}\)</span>
+入门教程中都存在的关系符和 &amp; 中的那对括号 {}，代表在 &amp;
+前的内容后添加了一个空的子公式后再于 &amp;
+处右对齐，依然是上面的那个例子，在加了一对括号 {} 后：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;align*&#125;</span><br><span class="line">	a=&#123;&#125;<span class="built_in">&amp;</span>b+c</span><br><span class="line"><span class="keyword">\end</span>&#123;align*&#125;</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\begin{align*}
+    a={}&amp;b+c
+\end{align*}
+\]</span></p>
+<p>&amp; 左侧为 <code>Ord Rel Ord</code>，右侧为
+<code>Ord Ord Bin Ord</code>，两者分别右对齐、左对齐在一起，虽然中间没有间距，但是在左侧内部自然已经产生了
+Rel atom 和 Ord atom 之间的 thick space
+(<code>\thickmuskip</code>)，等价于以下手动添加空格的情况：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;align*&#125;</span><br><span class="line">	a=<span class="keyword">\mskip</span><span class="keyword">\thickmuskip</span> <span class="built_in">&amp;</span> b+c</span><br><span class="line"><span class="keyword">\end</span>&#123;align*&#125;</span><br></pre></td></tr></table></figure>
+<p>都能够使公式中产生正常的间距。</p>
+<p>注：在这里我们再整理一遍 <span
+class="math inline">\(\mathrm{\TeX}\)</span> 中的命令的长度及其对应的
+<span class="math inline">\(\mathrm{\LaTeX}\)</span>
+中的空格的长度：</p>
 <h3 id="幻影-phantom">幻影 <code>\phantom</code></h3>
 <h3 id="align-or-aligned-or-alignat"><code>align</code> or
 <code>aligned</code> or <code>alignat</code></h3>
@@ -423,14 +559,14 @@ class="math inline">\(\qquad\!\!\)</span>另外，<code>align</code>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">71k</span>
+    <span title="站点总字数">72k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">4:18</span>
+    <span title="站点阅读时长">4:23</span>
   </span>
 </div>
 <div class="busuanzi-count">
