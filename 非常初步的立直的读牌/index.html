@@ -19,32 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lhrg.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="\(\qquad\!\!\)今日在写近代物理实验报告时发现的一个小问题，遂记录之。 \(\qquad\!\!\)在需要插入带有层级性的子图（e.g. 图1(a)）时，使用非常简单的 subfig 宏包中的 subfloat 命令进行排版，与此同时还希望使用 hyperref 宏包中的 \autoref 命令进行便捷的超链接。这时发现，超链接形式近为 1a、1b 比较简单且与子图的 caption">
+    <meta name="description" content="\(\qquad\!\!\)读《统计学麻雀战术》又读到和一些基本的立直的读牌相关的部分，想到在《79博客》中有两小节相关的内容似乎可信度不是很高，于是想整体搜集一遍相关的最基本的资料整理出来，算是对于立直的读牌非常初步的学习，最后总结为《统计学麻雀战术》中的两节+几条小结论。">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="使用 \autoref 命令生成子图超链接的格式调整">
-<meta property="og:url" content="https://lhrg.github.io/%E4%BD%BF%E7%94%A8-autoref-%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E5%AD%90%E5%9B%BE%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A0%BC%E5%BC%8F%E8%B0%83%E6%95%B4/">
+<meta property="og:title" content="非常初步的立直的读牌">
+<meta property="og:url" content="https://lhrg.github.io/%E9%9D%9E%E5%B8%B8%E5%88%9D%E6%AD%A5%E7%9A%84%E7%AB%8B%E7%9B%B4%E7%9A%84%E8%AF%BB%E7%89%8C/">
 <meta property="og:site_name" content="LHRG 李的博客">
-<meta property="og:description" content="\(\qquad\!\!\)今日在写近代物理实验报告时发现的一个小问题，遂记录之。 \(\qquad\!\!\)在需要插入带有层级性的子图（e.g. 图1(a)）时，使用非常简单的 subfig 宏包中的 subfloat 命令进行排版，与此同时还希望使用 hyperref 宏包中的 \autoref 命令进行便捷的超链接。这时发现，超链接形式近为 1a、1b 比较简单且与子图的 caption">
+<meta property="og:description" content="\(\qquad\!\!\)读《统计学麻雀战术》又读到和一些基本的立直的读牌相关的部分，想到在《79博客》中有两小节相关的内容似乎可信度不是很高，于是想整体搜集一遍相关的最基本的资料整理出来，算是对于立直的读牌非常初步的学习，最后总结为《统计学麻雀战术》中的两节+几条小结论。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lhrg.github.io/images/2025-03-12%2000.35.00.png">
-<meta property="article:published_time" content="2025-03-11T15:49:51.000Z">
-<meta property="article:modified_time" content="2025-03-15T14:28:31.789Z">
+<meta property="article:published_time" content="2025-09-07T06:38:30.000Z">
+<meta property="article:modified_time" content="2025-09-07T06:40:16.667Z">
 <meta property="article:author" content="LHRG 李">
-<meta property="article:tag" content="LaTeX">
-<meta property="article:tag" content="hyperref">
-<meta property="article:tag" content="subfig">
-<meta property="article:tag" content="autoref">
+<meta property="article:tag" content="日本麻将">
+<meta property="article:tag" content="立直麻将">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lhrg.github.io/images/2025-03-12%2000.35.00.png">
 
 
-<link rel="canonical" href="https://lhrg.github.io/%E4%BD%BF%E7%94%A8-autoref-%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E5%AD%90%E5%9B%BE%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A0%BC%E5%BC%8F%E8%B0%83%E6%95%B4/">
+<link rel="canonical" href="https://lhrg.github.io/%E9%9D%9E%E5%B8%B8%E5%88%9D%E6%AD%A5%E7%9A%84%E7%AB%8B%E7%9B%B4%E7%9A%84%E8%AF%BB%E7%89%8C/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhrg.github.io/%E4%BD%BF%E7%94%A8-autoref-%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E5%AD%90%E5%9B%BE%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A0%BC%E5%BC%8F%E8%B0%83%E6%95%B4/","path":"使用-autoref-命令生成子图超链接的格式调整/","title":"使用 \\autoref 命令生成子图超链接的格式调整"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhrg.github.io/%E9%9D%9E%E5%B8%B8%E5%88%9D%E6%AD%A5%E7%9A%84%E7%AB%8B%E7%9B%B4%E7%9A%84%E8%AF%BB%E7%89%8C/","path":"非常初步的立直的读牌/","title":"非常初步的立直的读牌"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>使用 \autoref 命令生成子图超链接的格式调整 | LHRG 李的博客</title>
+<title>非常初步的立直的读牌 | LHRG 李的博客</title>
   
 
 
@@ -131,7 +127,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -144,6 +140,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%93%E9%A2%98%E4%BA%8C%E5%8D%81%E5%9B%9B-%E6%B3%A8%E6%84%8F%E5%88%871%E9%A5%BC%E5%90%AC%E9%9D%A0%E5%BC%A02-%E9%A5%BC%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">1.</span> <span class="nav-text">专题二十四
+注意切【1饼】听靠张【2 饼】的情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B"><span class="nav-number"></span> <span class="nav-text">总结一下：</span></a></div>
         </div>
         <!--/noindex-->
 
@@ -207,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E4%BD%BF%E7%94%A8-autoref-%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E5%AD%90%E5%9B%BE%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A0%BC%E5%BC%8F%E8%B0%83%E6%95%B4/">
+    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E9%9D%9E%E5%B8%B8%E5%88%9D%E6%AD%A5%E7%9A%84%E7%AB%8B%E7%9B%B4%E7%9A%84%E8%AF%BB%E7%89%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -220,12 +218,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="使用 \autoref 命令生成子图超链接的格式调整 | LHRG 李的博客">
+      <meta itemprop="name" content="非常初步的立直的读牌 | LHRG 李的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          使用 \autoref 命令生成子图超链接的格式调整
+          非常初步的立直的读牌
         </h1>
 
         <div class="post-meta-container">
@@ -235,15 +233,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2025-03-11 23:49:51" itemprop="dateCreated datePublished" datetime="2025-03-11T23:49:51+08:00">2025-03-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-15 22:28:31" itemprop="dateModified" datetime="2025-03-15T22:28:31+08:00">2025-03-15</time>
+      <time title="创建时间：2025-09-07 14:38:30 / 修改时间：14:40:16" itemprop="dateCreated datePublished" datetime="2025-09-07T14:38:30+08:00">2025-09-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -251,7 +243,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+          <a href="/categories/%E6%97%A5%E6%9C%AC%E9%BA%BB%E5%B0%86/" itemprop="url" rel="index"><span itemprop="name">日本麻将</span></a>
         </span>
     </span>
 
@@ -269,14 +261,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>510</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -287,43 +279,84 @@
     
     
     <div class="post-body" itemprop="articleBody"><p><span
-class="math inline">\(\qquad\!\!\)</span>今日在写近代物理实验报告时发现的一个小问题，遂记录之。</p>
-<p><span
-class="math inline">\(\qquad\!\!\)</span>在需要插入带有层级性的子图（e.g.
-图1(a)）时，使用非常简单的 <code>subfig</code> 宏包中的
-<code>subfloat</code> 命令进行排版，与此同时还希望使用
-<code>hyperref</code> 宏包中的 <code>\autoref</code>
-命令进行便捷的超链接。这时发现，超链接形式近为 1a、1b 比较简单且与子图的
-caption 中的带括号的 caption 不符，遂尝试对于 <code>\autoref</code>
-命令生成超链接的格式进行调整。</p>
+class="math inline">\(\qquad\!\!\)</span>读《统计学麻雀战术》又读到和一些基本的立直的读牌相关的部分，想到在《79博客》中有两小节相关的内容似乎可信度不是很高，于是想整体搜集一遍相关的最基本的资料整理出来，算是对于立直的读牌非常初步的学习，最后总结为《统计学麻雀战术》中的两节+几条小结论。</p>
 <span id="more"></span>
-<p><span class="math inline">\(\qquad\!\!\)</span>首先因为 <a
-target="_blank" rel="noopener" href="https://github.com/CastleStar14654/PKUMpLtX"><code>mpltx</code></a>
-文档类基于 <a
-target="_blank" rel="noopener" href="https://www.ctan.org/pkg/revtex"><code>revtex4-2</code></a>
-文档类，<code>subfig</code> 宏包默认调用了 <code>caption</code>
-，本不能在本文档类下使用，但是我们可以把 <code>subfig</code> 的
-<code>caption</code> 选项关闭即可使用：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[caption=false]&#123;subfig&#125;</span><br></pre></td></tr></table></figure>
-<p><span class="math inline">\(\qquad\!\!\)</span>根据
-<code>mpltx</code> 文档类的 <code>\autoref</code>
-本地化，子图也是图，自然在超链接时也应该加上相应的前缀：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\def</span><span class="keyword">\subfigureautorefname</span>&#123;图&#125;</span><br></pre></td></tr></table></figure>
-<p>因为超链接关于子图的后缀由 <code>\thesubfigure</code>
-提供，所以直接将 <code>\thesubfigure</code>
-定义为由小括号包裹的小写字母的计数器即可：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thesubfigure</span>&#123;(<span class="keyword">\alph</span>&#123;subfigure&#125;)&#125;</span><br></pre></td></tr></table></figure>
-<p>但是此时因为生成子图的标签样式本身就已经带有一对小括号，直接进行以上修改会导致子图的
-caption 中带上两层括号（e.g.
-((1))、((2))），所以需要先采用简单的标签格式：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\captionsetup</span>[subfloat]&#123;labelformat=simple&#125;</span><br></pre></td></tr></table></figure>
-<p><span class="math inline">\(\qquad\!\!\)</span>综上所述，我们对于
-<code>\autoref</code> 命令生成子图的超链接格式进行了符合
-<code>mpltx</code> 的本地化调整，下面给出一个可以完整运行的
-MWE（图片除外）：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;ctexart&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;graphicx&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;siunitx&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\usepackage</span>[caption=false]&#123;subfig&#125;</span><br><span class="line"><span class="keyword">\def</span><span class="keyword">\subfigureautorefname</span>&#123;图&#125;</span><br><span class="line"><span class="keyword">\captionsetup</span>[subfloat]&#123;labelformat=simple&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thesubfigure</span>&#123;(<span class="keyword">\alph</span>&#123;subfigure&#125;)&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;hyperref&#125;</span><br><span class="line"><span class="keyword">\hypersetup</span>&#123;hidelinks&#125;</span><br><span class="line"><span class="keyword">\hypersetup</span>&#123;colorlinks=true&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line">理论如<span class="keyword">\autoref</span>&#123;fig2&#125;，实验如<span class="keyword">\autoref</span>&#123;fig6&#125;。</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[htbp]</span><br><span class="line">    <span class="keyword">\centering</span></span><br><span class="line">    <span class="keyword">\subfloat</span>[汞 <span class="keyword">\qty</span>&#123;546.1&#125;&#123;nm&#125; 谱线的塞曼分裂示意图]&#123;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.85<span class="keyword">\linewidth</span>]&#123;fig2.pdf&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;fig2&#125;&#125;<span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\subfloat</span>[<span class="keyword">\qty</span>&#123;1.0&#125;&#123;T&#125;磁场作用时汞灯光谱线的扫描结果]&#123;</span><br><span class="line">    <span class="keyword">\includegraphics</span>[width=0.85<span class="keyword">\linewidth</span>]&#123;fig6.png&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;fig6&#125;&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
-<p>效果：</p>
-<p><img src="/images/2025-03-12%2000.35.00.png" /></p>
+<p>来自《科学麻将》</p>
+<ul>
+<li>“因为是立直宣言牌周边的牌所以危险”这句话未必是对的，立直宣言牌的旁边与普通的危险牌危险度一样。</li>
+<li>里筋并不危险，里筋与普通的危险牌的危险度一样。</li>
+<li>间四间的危险度只会提高那么一点点。</li>
+</ul>
+<p>来自《用数据读牌》</p>
+<ul>
+<li>“仅凭是里筋这一条理由就要作出必要程度以上的警戒”这个结论是错误的。</li>
+<li>很早切出5时对应作为里筋的14和69需要警戒。</li>
+<li>间四间要比一般的无筋牌在危险度上要略微上升的考量。</li>
+</ul>
+<p>来自《79博客》</p>
+<ul>
+<li>面对早巡切出了数牌5的立直，就应该警戒数牌5对应花色的14和69。</li>
+<li>间四间也比较危险。</li>
+<li>被拆掉的两面搭子的里筋：拆掉两面搭子的立直，要小心其二度进张。</li>
+<li>拆掉嵌张搭子的立直的跨筋是危险的。</li>
+<li>切安全牌立直，宣言牌的前一张牌可以看做和铳牌没有关联，切掉安全牌的立直，是由两个固定的两面搭子来的，几乎不会有双碰进张。</li>
+<li>逆切的跨筋：拆掉嵌张搭子的立直，逆切的跨筋安全度较高。</li>
+</ul>
+<p>来自《统计学麻雀战术》</p>
+<h4 id="专题二十四-注意切1饼听靠张2-饼的情况">专题二十四
+注意切【1饼】听靠张【2 饼】的情况</h4>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pV2wlpq"><img
+src="https://s21.ax1x.com/2025/09/07/pV2wlpq.png"
+alt="pV2wlpq.png" /></a></p>
+<ol type="1">
+<li>对于无筋3-5，并没有因为是立直宣言牌周边的牌所以危险，反而会更加安全一些。</li>
+<li>立直宣言牌周边牌危险度会上升的情况：
+<ol type="1">
+<li>切19立直的28：
+<ul>
+<li>无筋28铳率10.5%超过无筋37</li>
+<li>筋28铳率7.2%超过筋37～无筋19</li>
+</ul></li>
+<li>切28立直的19：
+<ul>
+<li>无筋19铳率9.6%～无筋37</li>
+<li>筋19铳率5.5%～筋37</li>
+</ul></li>
+<li>切37立直的19：
+<ul>
+<li>无筋19铳率8.4%～无筋28</li>
+<li>筋19铳率3.3%～筋28</li>
+</ul></li>
+<li>类间四间：切过37切82立直的64：
+<ul>
+<li>铳率9.4%～无筋37</li>
+</ul></li>
+</ol></li>
+<li>切字牌立直时筋牌会变安全。</li>
+</ol>
+<p>专题二十五 对于立直家切掉的【5 饼】有所反应</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pV2sz0f"><img
+src="https://s21.ax1x.com/2025/09/07/pV2sz0f.png"
+alt="pV2sz0f.png" /></a></p>
+<ol type="1">
+<li>筋28的危险度切过0相对于切过5要稍微低一些。</li>
+<li>切5立直的筋28引挂的铳率还是比筋28高～筋37。</li>
+<li>切过0筋37和半筋A46的铳率明显降低，比筋28还要安全。</li>
+<li>无筋19和半筋B46要比正常情况稍微危险一点。</li>
+<li>立直前同时切过5/0和19时，筋2837的铳率1.5～筋19。</li>
+</ol>
+<h3 id="总结一下">总结一下：</h3>
+<p>来自《统计学麻雀战术》的结论+如下：</p>
+<ol type="1">
+<li>立直宣言牌的旁边与普通的危险牌危险度基本相同甚至更加安全，在找安牌时更应该根据牌河的其他信息排除其危险。</li>
+<li>里筋并不危险，里筋与普通的危险牌的危险度一样。</li>
+<li>间四间的危险度确实会提高一点点，大约1.2倍左右。</li>
+<li>5&amp;0的里筋49确实是大家都会提到需要注意的危险牌，要比正常情况稍微危险一点但是也没有到上升一个等级的情况。</li>
+<li>被拆掉的两面搭子的里筋：拆掉两面搭子的立直，要小心其二度进张。</li>
+<li>顺切的跨筋：拆掉嵌张搭子的立直，顺切的跨筋危险度较高。</li>
+<li>逆切的跨筋：拆掉嵌张搭子的立直，逆切的跨筋安全度较高。</li>
+<li>切安全牌立直，宣言牌的前一张牌可以看做和铳牌没有关联，切掉安全牌的立直，是由两个固定的两面搭子来的，几乎不会有双碰进张。</li>
+</ol>
 
     </div>
 
@@ -355,7 +388,7 @@ MWE（图片除外）：</p>
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://lhrg.github.io/%E4%BD%BF%E7%94%A8-autoref-%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90%E5%AD%90%E5%9B%BE%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A0%BC%E5%BC%8F%E8%B0%83%E6%95%B4/" title="使用 \autoref 命令生成子图超链接的格式调整">https://lhrg.github.io/使用-autoref-命令生成子图超链接的格式调整/</a>
+      <a href="https://lhrg.github.io/%E9%9D%9E%E5%B8%B8%E5%88%9D%E6%AD%A5%E7%9A%84%E7%AB%8B%E7%9B%B4%E7%9A%84%E8%AF%BB%E7%89%8C/" title="非常初步的立直的读牌">https://lhrg.github.io/非常初步的立直的读牌/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -364,24 +397,19 @@ MWE（图片除外）：</p>
 </div>
 
           <div class="post-tags">
-              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
-              <a href="/tags/hyperref/" rel="tag"># hyperref</a>
-              <a href="/tags/subfig/" rel="tag"># subfig</a>
-              <a href="/tags/autoref/" rel="tag"># autoref</a>
+              <a href="/tags/%E6%97%A5%E6%9C%AC%E9%BA%BB%E5%B0%86/" rel="tag"># 日本麻将</a>
+              <a href="/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/" rel="tag"># 立直麻将</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/%E5%9C%A8-LaTeX-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F%E4%B8%AD-%E8%A1%A8%E7%A4%BA%E5%AF%B9%E9%BD%90%E6%97%B6%E5%89%8D%E5%90%8E%E7%9A%84%E9%97%B4%E8%B7%9D%E9%97%AE%E9%A2%98/" rel="prev" title="在 LaTeX 数学模式中 & 表示对齐时前后的间距问题">
-                  <i class="fa fa-angle-left"></i> 在 LaTeX 数学模式中 & 表示对齐时前后的间距问题
+                <a href="/%E9%9D%A2%E5%AF%B9%E4%BB%96%E5%AE%B6%E7%AB%8B%E7%9B%B4%E6%97%B6%E4%B8%A4%E9%9D%A2%E5%90%AC%E7%89%8C%E7%9A%84%E6%95%B0%E5%80%BC%E5%8C%96%E6%94%BB%E9%98%B2%E5%88%A4%E6%96%AD/" rel="prev" title="面对他家立直时两面听牌的数值化攻防判断">
+                  <i class="fa fa-angle-left"></i> 面对他家立直时两面听牌的数值化攻防判断
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C/" rel="next" title="近代物理实验">
-                  近代物理实验 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -496,7 +524,7 @@ MWE（图片除外）：</p>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"4b93d761701b632e2caa3c26b632ae27"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LHRG","repo":"blog-comments","client_id":"Ov23lidcIxGjNzke2NPL","client_secret":"795aa0aea75df99a821acd4884dc910c2a821866","admin_user":"LHRG","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"5a9c2b488002110b182e2423aa6010e8"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
