@@ -150,7 +150,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">博文</span>
         </a>
       </div>
@@ -161,7 +161,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">81</span>
+        <span class="site-state-item-count">82</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -189,6 +189,149 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.jpg">
+      <meta itemprop="name" content="LHRG 李">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LHRG 李的博客">
+      <meta itemprop="description" content="未经他人痛，莫劝他人善">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | LHRG 李的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">动态规划</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-06 14:49:58" itemprop="dateCreated datePublished" datetime="2020-08-06T14:49:58+08:00">2020-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-20 16:26:16" itemprop="dateModified" datetime="2025-02-20T16:26:16+08:00">2025-02-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">模板</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>745</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><span class="math inline">\(\qquad\!\!\)</span>在解决 dp
+问题时，主要要从两点思考：</p>
+<ul>
+<li>1、<strong>状态</strong>：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>通常来讲，状态的设立因题而异，大多数与答案的意义相同（dp数组
+中的某个值即为答案）或者与答案具有直接联系（比如再经过某种统计即可得到答案）。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>对于很难一眼看出状态（比如答案无法转移）的题，我们就要利用
+dp的本质：“把多阶段过程转化为一系列单阶段问题，利用各阶段之间的关系，逐个求解。”和
+dp 最重要的一个性质：“无后效性”去推理。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>根据无后效性，我们可以假设在这个阶段之前的阶段（注意，这个“之前”表示的是
+dp转移
+上的之前，可能是空间上的之前、数位上的之前、拓扑序上的之前……）都已经进行了最优化的决策。根据
+dp的本质，如果之前的阶段的最优决策映射出的一种“结果”能以
+<strong>某种方式</strong>
+转移到此阶段的这种“结果”，且此时的这种“结果”也恰好为此时的最优化决策的这种映射，那么这种“结果”即为
+dp的状态。</p>
+<ul>
+<li>2、<strong>转移方程</strong>：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>通常来讲，转移方程的确立也是因题而异的，不过在得出了正确的状态之后，转移方程的确立方式一般比较显然。</p>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>前文中加粗的的“<strong>某种方式</strong>”，即可理解为一种状态到状态的转移方式。我们在将其具体化以后，即可得到对于相邻状态的转移方程。同时，对于很多题目的转移方程可以利用数学的计算或者数据结构的辅助得以在复杂度上得以化简，即为
+dp的优化。</p>
+<ul>
+<li>3、<strong>实现方法</strong>：</li>
+</ul>
+<p><span
+class="math inline">\(\qquad\!\!\)</span>一般来说，动态规划可以通过递推和记忆化搜索两种方式实现。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1210,120 +1353,6 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U534158">�
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lhrg.github.io/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/avatar.jpg">
-      <meta itemprop="name" content="LHRG 李">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LHRG 李的博客">
-      <meta itemprop="description" content="未经他人痛，莫劝他人善">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | LHRG 李的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/" class="post-title-link" itemprop="url">题解 U534160 【进入 k 进制星球】</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-05-16 16:58:00" itemprop="dateCreated datePublished" datetime="2020-05-16T16:58:00+08:00">2020-05-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-11 16:43:41" itemprop="dateModified" datetime="2025-02-11T16:43:41+08:00">2025-02-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>题目链接：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U534160">进入 k
-进制星球</a>。</p>
-<p>关于题目：作为 T3，一道数学题。</p>
-<p>应用算法：数论？</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E9%A2%98%E8%A7%A3-U534160-%E3%80%90%E8%BF%9B%E5%85%A5-k-%E8%BF%9B%E5%88%B6%E6%98%9F%E7%90%83%E3%80%91/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1355,7 +1384,7 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U534158">�
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6:39</span>
+    <span title="站点阅读时长">6:40</span>
   </span>
 </div>
 <div class="busuanzi-count">
